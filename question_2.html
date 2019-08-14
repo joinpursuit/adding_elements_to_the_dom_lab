@@ -1,7 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Name List</title>
   </head>
   <body>
+    <h1 id="header"><center>That List You Asked For</center></h1>
+    <ul id="listyMcListface">
+    </ul>
+    <script>
+      class Results {
+        constructor(name){
+          this.name = name
+        }
+        getDescription() {
+          return `${this.name}`
+        }
+      }
+      let people = [
+      new Results("Anne"),
+      new Results("Bri"),
+      new Results("Chaz"),
+      new Results("Darlene"),
+      ]
+      let listElement = document.getElementById("listyMcListface")
+      for (let name of people) {
+        let newResultListItem = document.createElement("li")
+        newResultListItem.innerText = name.getDescription()
+        listElement.appendChild(newResultListItem)
+      }
+    </script>
   </body>
 </html>
