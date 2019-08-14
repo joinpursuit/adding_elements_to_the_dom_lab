@@ -6,7 +6,8 @@
 </head>
 
 <body>
-    <h1 id="heading">hello</h1>
+
+    <h1 id="heading">This is for question 10</h1>
 
     <p>
         Enter a number:
@@ -17,16 +18,11 @@
 
     <script>
         function replaceH() {
-            let header = document.querySelectorAll("#heading")
-            console.log(header);
-            console.log(header[0] = h6);
-            // let local = heade.
+            let header = document.querySelector("#heading")
             let input = document.querySelector("#num")
-            switch (header) {
-                case 1:
-
-
-            }
+            let replaceHeader = document.createElement(`h${input.value}`)
+            replaceHeader.innerText = header.innerText
+            header.parentNode.replaceChild(replaceHeader, header)
 
         }
     </script>
