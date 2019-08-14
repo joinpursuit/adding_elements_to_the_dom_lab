@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add To Our List</title>
+  </head>
+  <body>
+    <h1 id="header"><center>List Of Animals</center></h1>
+    <p id="para1"><center>Here is a list of animals in a very specific order.
+      Please do not mess this up for us. We're doing our best.</center>
+    </p>
+    <ol id="listyMcListface">
+      <li>Giraffe</li>
+      <li>Manatee</li>
+      <li>Goose</li>
+    </ol>
+    <p>DON'T ENTER ANY ANIMAL NAMES:
+      <input type="text" id="text_input" placeholder="Please don't" size=70>
+    </p>
+    <button onclick="addToList()">STOP</button>
+    <script>
+      const addToList = () => {
+        let newListItem = document.createElement("li")
+        let inputElement = document.getElementById("text_input")
+        let userSubmit1 = inputElement.value
+        newListItem.innerText = `${userSubmit1}`
+        listyMcListface.appendChild(newListItem)
+      }
+    </script>
+  </body>
+</html>
