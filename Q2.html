@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+      <h1>Question Two</h1>
+        <p>  Make a website that displays a list containing all of the names below.  Make all of your items inside of a script.</p>
+              <p>
+            </p>
+
+            <ul id = "player">
+
+            </ul>
+
+      <script>
+
+        let listEl = document.getElementById("player")
+
+        let results = [
+          { "name" : "Anne" },
+          { "name" : "Bri" },
+          { "name" : "Chaz" },
+          { "name" : "Darlene" }
+        ]
+
+            for(key of results){
+              let newNameList = document.createElement("li")
+              newNameList.innerText = key['name']
+              listEl.appendChild(newNameList)
+          }
+
+
+
+
+
+      </script>
+
+  </body>
+</html>

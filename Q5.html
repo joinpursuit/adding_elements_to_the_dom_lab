@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question Five</title>
+      <h1>Question Five</h1>
+         <p>Make a website with a text input and a button.  Clicking on the button should create a new list item
+           with its text the same as the text in the input.</p>
+
+
+        <p>Enter items
+             <input type="text" id = "items" placeholder="Items">
+        </p>
+            <button onclick = "addItems()">Submit</button>
+
+            <ul id = "list">
+
+            </ul>
+
+
+    <script>
+
+
+
+      function addItems (){
+        let list = document.getElementById("list")
+        let inputItems = document.getElementById("items")
+        let userInput = inputItems.value
+        let newItem = document.createElement("li")
+        newItem.innerText = userInput
+        list.appendChild(newItem)
+      }
+
+    </script>
+
+  </head>
+  <body>
+
+  </body>
+</html>
