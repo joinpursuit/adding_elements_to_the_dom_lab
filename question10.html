@@ -1,0 +1,40 @@
+<!doctype html>
+  <html>
+  <head>
+  <body>
+
+    <h1 id="thisHead"> This is the heading </h1>
+
+
+    <input type="number" name="num" id="num">
+    <button type="button" onclick="changeHead()"> Change the heading size </button>
+
+    <script>
+      function changeHead() {
+
+        let newSize = document.getElementById("num");
+        let userSize = newSize.value;
+        let words = "This is the heading"
+        let arr = [1]
+        arr.push(userSize)
+
+        if (userSize > 0 && userSize < 7) {
+
+        let currentHeading = document.getElementById("thisHead");
+        let newHead = document.createElement(`h${userSize}`)
+        newHead.id = "thisHead"
+        newHead.innerText = words;
+
+        document.body.replaceChild(newHead, currentHeading)
+
+    }
+
+       else {
+        window.alert("You have to pick a number between 1 and 6")
+      }
+
+      }
+    </script>
+  </body>
+  </head>
+  </html>

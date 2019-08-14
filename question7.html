@@ -1,0 +1,52 @@
+<!doctype html>
+  <html>
+    <head>
+    </head>
+    <body>
+      <h1> We do the Math for you! </h1>
+
+      <ul id="list">
+      </ul>
+
+      <p id="one"></p>
+      <p id="two"></p>
+      <p id="three"></p>
+
+
+      <input type="number" name="num" id="num">
+      <button type="button" onclick="doMath()"> Submit </button>
+
+      <script>
+        function doMath() {
+            let theList = document.getElementById("list");
+            let digit = document.getElementById("num");
+            let userDigit = digit.value;
+            let newEl = document.createElement("li");
+            newEl.innerText = userDigit;
+            theList.appendChild(newEl);
+            let allList = newEl.parentNode.querySelectorAll("li");
+
+            let sumForAv = 0;
+            let sum = 0;
+            let max = 1;
+
+            for (let i of allList) {
+              // console.log(i.innerText)
+
+            let para1 = document.getElementById("one")
+            para1.innerText = "The average value is " + ((sumForAv + i.innerText) / allList.length);
+
+            let para2 = document.getElementById("two")
+            para2.innerText = "The Max value is " + (max *= Number(i.innerText));
+
+            let para3 = document.getElementById("three");
+            para3.innerText = "The Min value is " + (sum += Number(i.innerText));
+
+
+          }
+
+        }
+        </script>
+
+    </body>
+  </html>

@@ -1,0 +1,38 @@
+<!doctype html>
+  <html>
+    <head>
+    </head>
+    <body>
+
+      <h1>Make a repeating list!</h1>
+
+      <ul id="list">
+      </ul>
+
+
+      <label for="str">Message:</label>
+      <input type="text" name="str" id="str">
+      <br>
+      <label for="num">Number of times</label>
+      <input type="number" name="num" id="num">
+      <br>
+      <button type="button" onclick="printXTimes()">Submit</button>
+
+      <script>
+        function printXTimes() {
+          let theList = document.getElementById("list");
+          let word = document.getElementById("str");
+          let userWord = word.value;
+          let times = document.getElementById("num")
+          let userTimes = times.value;
+          // let userTimesNum = Number(userTimes);
+
+          for (let i = 0; i < userTimes; i++) {
+            let newEl = document.createElement("li");
+            newEl.innerText = userWord;
+            theList.appendChild(newEl)
+          }
+        }
+      </script>
+    </body>
+  </html>

@@ -1,0 +1,26 @@
+<!doctype html>
+  <html>
+    <head>
+    </head>
+    <body>
+
+      <h1>Make your own list!</h1>
+
+    <ul id="list">
+    </ul>
+
+    <input type="text" name="newItem" id="newItem">
+    <button type="button" onclick="makeItem()">Submit</button>
+
+    <script>
+      function makeItem() {
+        let theList = document.getElementById("list")
+          let str = document.getElementById("newItem");
+          let userInput = str.value;
+          let newEl = document.createElement("li")
+          newEl.innerText = userInput
+          theList.appendChild(newEl);
+      }
+    </script>
+    </body>
+  </html>

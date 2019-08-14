@@ -1,0 +1,21 @@
+<!doctype html>
+  <html>
+  <head>
+  </head>
+  <body>
+    <h1> Hello </h1>
+    <h1>Stephanie</h1>
+    <input type="text" name="new" id="new">
+    <button type="button" onclick="replace()">Replace</button>
+    <script>
+      function replace() {
+        let input = document.getElementById("new");
+        let userInput = input.value;
+        let heading = document.querySelector("h1");
+        let newHeading = document.createElement("h1");
+        newHeading.innerText = userInput;
+        heading.parentNode.replaceChild(newHeading,heading)
+      }
+    </script>
+  <body>
+  </html>

@@ -1,0 +1,27 @@
+<!doctype html>
+  <html>
+    <head>
+    <body>
+      <p>Hi!</p>
+      <br>
+      <p>How</p>
+      <br>
+      <p>are</p>
+      <br>
+      <p>you</p>
+      <br>
+      <p>?</p>
+      <br>
+      <button type="button" onclick="removeParas()"> Get Rid of It!</button>
+
+      <script>
+        function removeParas() {
+          let paras = document.querySelectorAll("p")
+          for (let i of paras) {
+          document.body.removeChild(i)
+          }
+        }
+      </script>
+    </body>
+    </head>
+  </html>

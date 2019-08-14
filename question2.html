@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <body>
+    <ul id="list">
+
+    </ul>
+
+      <script>
+    let people = { results : [
+                      { "name" : "Anne" },
+                      { "name" : "Bri" },
+                      { "name" : "Chaz" },
+                      { "name" : "Darlene" }
+                    ]}
+console.log(people.results)
+
+                  for (let i of people.results) {
+                    let theList = document.getElementById("list");
+                    let newName = document.createElement("li");
+                    newName.innerText = i.name;
+                    theList.appendChild(newName)
+                  }
+      </script>
+  </body>
+</html>
