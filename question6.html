@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question 6 website</title>
+</head>
+
+<body>
+    <h1 id="header_for5">Question Six </h1>
+
+    <p>Make a website with a text input, a number input and a button. Clicking on the button should add that many copies
+        of the text in the text input to a list. </p>
+
+    <p>
+        Enter a string:
+        <input type="text" id="string_one">
+
+        Enter a number:
+        <input type="number" id="num">
+        <button onclick="listRepeater()">submit</button>
+
+        <ul id="input"></ul>
+
+    </p>
+
+    <script>
+        function listRepeater() {
+            let numIn = document.querySelector("#num")
+            let unOderList = document.querySelector("#input")
+            let strInput = document.querySelector("#string_one")
+            // let input_list = document.createElement("li")
+            console.log(numIn.value);
+
+            while (numIn.value > 0) {
+                let input_list = document.createElement("li")
+                input_list.innerText = strInput.value
+                unOderList.appendChild(input_list)
+                numIn.value--
+                console.log(numIn.value);
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

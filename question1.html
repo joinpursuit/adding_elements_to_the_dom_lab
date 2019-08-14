@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question 1 website</title>
+</head>
+
+<body>
+    <h1 id="header_for1">This heading will be changed with your input</h1>
+
+    <p>Make a website with a heading, an input text field and a button. Clicking the button should change the heading's
+        text to be the text in the input.
+    </p>
+
+    <p>
+        Enter a string:
+        <input type="text" id="string_one">
+        <button onclick="headReplacer()">submit</button>
+    </p>
+
+    <script>
+        function headReplacer() {
+            let header = document.getElementById("header_for1")
+            let strInput = document.getElementById("string_one")
+            let h = document.createElement("h1")
+            h.innerText = strInput.value
+            header.parentNode.replaceChild(h, header)
+        }
+    </script>
+
+</body>
+
+</html>

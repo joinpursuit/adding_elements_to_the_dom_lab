@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question 8 website</title>
+</head>
+
+<body>
+
+
+    <button onclick="buttonRemover()" id="button_id">wipe</button>
+
+    <div>
+        <p id="para_one">Hello agent 009 your mission</p>
+        <p id="para_two"> Is encoded in this message</p>
+        <p id="para_three">Read it properly and execute the orders</p>
+        <p id="para_four">commit all contents to memory</p>
+        <p id="para_five">Then wipe the message</p>
+    </div>
+
+    <script>
+        function buttonRemover() {
+            divs = document.querySelector('div')
+            let para = document.querySelectorAll("p")
+            for (let i = 0; i < para.length; i++) {
+                divs.removeChild(para[i])
+            }
+        }
+    </script>
+
+</body>
+
+</html>

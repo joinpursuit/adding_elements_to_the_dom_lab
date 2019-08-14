@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question 8 website</title>
+</head>
+
+<body>
+    <h1 id="header_for8">Question 8</h1>
+
+    <p id="para_one">Make a website with a button. Clicking on the button should remove the button. </p>
+
+
+    <p id="para_two">
+
+        <button onclick="buttonRemover()" id="button_id">submit</button>
+    </p>
+
+
+    <script>
+        function buttonRemover() {
+            let para = document.querySelector("#para_two")
+            let button = document.querySelector("#button_id")
+            para.removeChild(button)
+        }
+    </script>
+
+</body>
+
+</html>

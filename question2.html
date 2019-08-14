@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question 2 website</title>
+</head>
+
+<body>
+    <h1 id="header_for2">Question 2</h1>
+
+    <p>Make a website that displays a list containing all of the names below. Make all of your li items inside of a
+        script.
+
+        "results" : [
+        { "name" : "Anne" },
+        { "name" : "Bri" },
+        { "name" : "Chaz" },
+        { "name" : "Darlene" }
+        ]
+
+    </p>
+
+    <p>
+        <ul id="names"></ul>
+    </p>
+
+    <script>
+        let unOderList = document.getElementById("names")
+        let results = [{
+                "name": "Anne"
+            },
+            {
+                "name": "Bri"
+            },
+            {
+                "name": "Chaz"
+            },
+            {
+                "name": "Darlene"
+            }
+        ]
+
+        for (key of results) {
+            let newItem = document.createElement("li")
+            newItem.innerText = key['name']
+            console.log(newItem);
+
+            unOderList.appendChild(newItem)
+        }
+    </script>
+
+</body>
+
+</html>

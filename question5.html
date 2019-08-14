@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question 5 website</title>
+</head>
+
+<body>
+    <h1 id="header_for5">Question Five </h1>
+
+    <p>Make a website with a text input and a button. Clicking on the button should create a new list item with its
+        text the same as the text in the input.
+
+
+        <p>
+            Enter a string:
+            <input type="text" id="string_one">
+            <button onclick="newList()">submit</button>
+
+            <ul id="input"></ul>
+
+        </p>
+
+        <script>
+            function newList() {
+                let unOderList = document.querySelector("#input")
+                let strInput = document.querySelector("#string_one")
+                let input_list = document.createElement("li")
+                input_list.innerText += strInput.value
+                unOderList.appendChild(input_list)
+            }
+        </script>
+
+</body>
+
+</html>

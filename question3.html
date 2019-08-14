@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question 3 website</title>
+</head>
+
+<body>
+    <h1 id="header_for3">Question 3</h1>
+
+    <p> Make a website that displays a list containing all of the nationality, first name and last name of all of the
+        users below:
+    </p>
+
+    <p>
+        <ul id="names"></ul>
+    </p>
+
+    <script>
+        let unOderList = document.getElementById("names")
+        let results = [{
+                "gender": "female",
+                "name": {
+                    "title": "mademoiselle",
+                    "first": "ruth",
+                    "last": "nicolas"
+                },
+                "nat": "CH"
+            },
+            {
+                "gender": "female",
+                "name": {
+                    "title": "miss",
+                    "first": "رها",
+                    "last": "سلطانی نژاد"
+                },
+                "nat": "IR"
+            },
+            {
+                "gender": "female",
+                "name": {
+                    "title": "mrs",
+                    "first": "patricia",
+                    "last": "hale"
+                },
+                "nat": "GB"
+            },
+            {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "fernando",
+                    "last": "cooper"
+                },
+                "nat": "US"
+            },
+            {
+                "gender": "female",
+                "name": {
+                    "title": "mrs",
+                    "first": "یسنا",
+                    "last": "صدر"
+                },
+                "nat": "IR"
+            },
+            {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "eino",
+                    "last": "tuomala"
+                },
+                "nat": "FI"
+            },
+            {
+                "gender": "female",
+                "name": {
+                    "title": "ms",
+                    "first": "gonca",
+                    "last": "özkara"
+                },
+                "nat": "TR"
+            },
+            {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "kyle",
+                    "last": "castillo"
+                },
+                "nat": "US"
+            },
+            {
+                "gender": "female",
+                "name": {
+                    "title": "miss",
+                    "first": "olivia",
+                    "last": "kumar"
+                },
+                "nat": "NZ"
+            },
+            {
+                "gender": "male",
+                "name": {
+                    "title": "monsieur",
+                    "first": "raymond",
+                    "last": "durand"
+                },
+                "nat": "CH"
+            }
+        ]
+
+        for (key of results) {
+            let newItem = document.createElement("li")
+            newItem.innerText = `${key.name.first} ${key.name.last} ${key.nat}`
+            console.log(key.name.first);
+
+            unOderList.appendChild(newItem)
+        }
+        // for (let i = 0; i < results.length; i++) {
+        //     let newItem = document.createElement("li")
+        //     newItem.innerText = `${results[i].name.first} ${results[i].name.last} ${results[i].nat}`
+        //     console.log(results[i]['name'].first);
+        //     unOderList.appendChild(newItem)
+        // }
+    </script>
+
+</body>
+
+</html>
