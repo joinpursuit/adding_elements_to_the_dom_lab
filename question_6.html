@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Duplicator</title>
+  </head>
+  <body>
+    <h1 id="header"><center>Text Duplicator</center></h1>
+    <p id="para1"><center>Enter text below, and the number of times you would
+      like to have it duplicated!</center>
+    </p>
+    <ul id="listyMcListface">
+    </ul>
+    <p>ENTER YOUR WORD:
+      <input type="text" id="str_input" size=50>
+    </p>
+    <p>ENTER YOUR NUMBER:
+      <input type="text" id="num_input" size=50>
+    </p>
+    <button onclick="duplicateText()">SUBMIT</button>
+    <script>
+      const duplicateText = () => {
+      let numInputElement = document.getElementById("num_input")
+      let userSubmitNum = numInputElement.value
+      let strInputElement = document.getElementById("str_input")
+      let userSubmitStr = strInputElement.value
+      for (let i = 0; i < Number(userSubmitNum); i++) {
+        let newListItem = document.createElement("li")
+        newListItem.innerText = `${userSubmitStr}`
+        listyMcListface.appendChild(newListItem)
+      }
+    }
+    </script>
+  </body>
+</html>
