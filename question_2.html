@@ -8,26 +8,43 @@
     <ul id="listyMcListface">
     </ul>
     <script>
-      class Results {
-        constructor(name){
-          this.name = name
-        }
-        getDescription() {
-          return `${this.name}`
-        }
+      let obj = {
+        "results" : [
+          { "name" : "Anne" },
+          { "name" : "Bri" },
+          { "name" : "Chaz" },
+          { "name" : "Darlene" }
+        ]
       }
-      let people = [
-      new Results("Anne"),
-      new Results("Bri"),
-      new Results("Chaz"),
-      new Results("Darlene"),
-      ]
-      let listElement = document.getElementById("listyMcListface")
-      for (let name of people) {
-        let newResultListItem = document.createElement("li")
-        newResultListItem.innerText = name.getDescription()
-        listElement.appendChild(newResultListItem)
+
+      for (let n of obj.results) {
+        let newListItem = document.createElement("li")
+        newListItem.innerText = n.name
+        listyMcListface.appendChild(newListItem)
       }
+
+
+
+      // class Results {
+      //   constructor(name){
+      //     this.name = name
+      //   }
+      //   getDescription() {
+      //     return `${this.name}`
+      //   }
+      // }
+      // let people = [
+      // new Results("Anne"),
+      // new Results("Bri"),
+      // new Results("Chaz"),
+      // new Results("Darlene"),
+      // ]
+      // let listElement = document.getElementById("listyMcListface")
+      // for (let name of people) {
+      //   let newResultListItem = document.createElement("li")
+      //   newResultListItem.innerText = name.getDescription()
+      //   listyMcListface.appendChild(newResultListItem)
+      // }
     </script>
   </body>
 </html>
