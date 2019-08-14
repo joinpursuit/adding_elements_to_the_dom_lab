@@ -3,7 +3,10 @@
 <head>
   </head>
   <body>
+<table>
+  <tr><th>First Name</th><th>Last Name</th><th>Nationality</th></tr>
 
+</table>
     <script>
       let list = {
         "results": [
@@ -360,9 +363,20 @@
 }
 
       for(let i = 0;i<list.results.length;i++){
-        let li = document.createElement('li')
-        li.innerText = `First Name: ${list.results[i].name.first} Last Name: ${list.results[i].name.last} Nationality: ${list.results[i].nat} ${codeFlags[list.results[i].nat]}`
-        document.body.appendChild(li)
+        let li1 = document.createElement('td')
+        let li2 = document.createElement('td')
+        let li3 = document.createElement('td')
+        let row = document.createElement('tr')
+        let table = document.querySelector('table')
+
+
+        li1.innerText = `${list.results[i].name.first}`
+       li2.innerText = `${list.results[i].name.last}`
+        li3.innerText = `${list.results[i].nat} ${codeFlags[list.results[i].nat]}`
+        table.appendChild(row)
+        row.appendChild(li1)
+        row.appendChild(li2)
+        row.appendChild(li3)
       }
       </script>
     </body>
