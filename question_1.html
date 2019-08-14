@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anything Site</title>
+  </head>
+  <body>
+    <h1 id="heading"><center>Your Text Here!</center></h1>
+    <p id="para1"><center>We're selling out! Input your text below, and we'll replace our header with it!</center></p>
+    <p>INPUT TEXT:
+      <input type="text" id="oltexty" size=70 autofocus>
+    </p>
+    <button onclick="replaceHeader()">SUBMIT</button>
+    <script>
+      const replaceHeader = () => {
+        let newHead = document.getElementById("heading")
+        let newNode = document.createElement("h1")
+        let inputElement = document.getElementById("oltexty")
+        let userSubmit1 = inputElement.value
+        newNode.innerText = `${userSubmit1}`
+        newHead.parentNode.replaceChild(newNode, newHead)
+      }
+    </script>
+  </body>
+</html>
