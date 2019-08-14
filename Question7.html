@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang=en dir=ltr>
+    <head>
+        <title>Adding Elements to the DOM Lab</title>
+     </head>
+        
+    <body>
+        <h1>Adding Elements to the DOM Lab</h1>
+        <h2><u><font color="blue">Question Seven</font></u></h2>
+        <p> Make a website with a number input, a button, and 3 paragraphs. <br>
+            Clicking on the button should add the number to a list. <br>
+            The first paragraph should show the average of all the numbers, 
+            the second paragraph should show the maximum value, 
+            and the third paragraph should show the minimum value.      
+        </p>
+        <p>
+            <lable for="num_id">Please enter a name you would like to add to the list</lable>
+            <input id="num_id" type="number" name="input_number" placeholder="number"><br>
+
+            <button onclick=addNumber()>Add number</button>
+        </p>
+        <hr>
+        <p id=p1></p>
+        <p id=p2></p>
+        <p id=p3></p>
+
+
+        <script>
+            let newList = document.createElement("ul");
+            newList.innerText = "List of your entered numbers :";
+
+            const addNumber = () => {
+                document.body.appendChild(newList);
+
+                let num = parseInt(document.querySelector("#num_id").value);
+                if (!isNaN(num)) {
+                    let newListItem = document.createElement("li");
+                    newListItem.innerText = num;
+                    newList.appendChild(newListItem);
+                }
+                
+                let allNum = document.querySelectorAll("li");
+                if (allNum.length > 0) {
+                    let average = 0;
+                    let max = -Infinity;
+                    let min = Infinity;
+                    
+                    for (let i = 0; i < allNum.length; i++) {
+                        let intNum = parseInt(allNum[i].innerText);
+                        average += intNum;
+                        if (intNum > max) {
+                            max = intNum;
+                        }
+                        if (intNum < min) {
+                            min = intNum;
+                        }
+                    }
+                    average /= allNum.length;
+
+                    let firstParagraph = document.querySelector("#p1");
+                    let averageParagraph = document.createElement("p");
+                    averageParagraph.setAttribute("id", "p1");
+                    averageParagraph.innerText = `The average of all the numbers is ${average}`;
+                    firstParagraph.parentNode.replaceChild(averageParagraph, firstParagraph);
+
+                    let SecondParagraph = document.querySelector("#p2");
+                    let maxParagraph = document.createElement("p");
+                    maxParagraph.setAttribute("id", "p2");
+                    maxParagraph.innerText = `The biggest number of the list is ${max}`;
+                    SecondParagraph.parentNode.replaceChild(maxParagraph, SecondParagraph);
+
+                    let ThirdParagraph = document.querySelector("#p3");
+                    let minParagraph = document.createElement("p");
+                    minParagraph.setAttribute("id", "p3")
+                    minParagraph.innerText = `The smallest number of the list is ${min}`;
+                    ThirdParagraph.parentNode.replaceChild(minParagraph, ThirdParagraph);
+                }
+                
+            }
+        </script>
+    </body>
+</html>

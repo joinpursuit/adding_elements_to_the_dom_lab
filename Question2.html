@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang = en dir= ltr>
+    <head>
+        <title>Adding Elements to the DOM Lab</title>
+    </head>
+
+    <body>
+            <h1>Adding Elements to the DOM Lab</h1>
+            <h2><u><font color="blue">Question Two</font></u></h2>
+        <p> Make a website that displays a list containing all of the names below. <br>
+            Make all of your "li" items inside of a script.
+        </p>
+        <p>     {
+                "results" : [
+                  { "name" : "Anne" },
+                  { "name" : "Bri" },
+                  { "name" : "Chaz" },
+                  { "name" : "Darlene" }
+                ]
+              }
+        </p>
+       <hr>
+
+        <script>
+            let newList = document.createElement('ul');
+            newList.innerText = "List of names";
+            document.body.appendChild(newList);
+            
+            let results = [
+                { "name" : "Anne" },
+                { "name" : "Bri" },
+                { "name" : "Chaz" },
+                { "name" : "Darlene" }];
+
+            //let names = resuls.map(element => element.name);
+            //console.log(names);
+
+            for (let i = 0; i < results.length; i++) {
+                let newName = document.createElement('li');
+                newName.innerText = results[i].name;
+                newList.appendChild(newName);
+            }
+            
+        </script>
+    </body>
+</html>

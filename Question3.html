@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang = en dir= ltr>
+    <head>
+        <title>Adding Elements to the DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>Adding Elements to the DOM Lab</h1>
+        <h2><u><font color="blue">Question Three</font></u></h2>
+        <p>  Make a website that displays a list containing all of the nationality, 
+            first name and last name of all of the users below:
+        </p>
+        <p>  Source
+                
+                {
+                  "results": [
+                    {
+                      "gender": "female",
+                      "name": {
+                        "title": "mademoiselle",
+                        "first": "ruth",
+                        "last": "nicolas"
+                      },
+                      "nat": "CH"
+                    },<br>
+                    {
+                      "gender": "female",
+                      "name": {
+                        "title": "miss",
+                        "first": "رها",
+                        "last": "سلطانی نژاد"
+                      },
+                      "nat": "IR"
+                    },<br>
+                    {
+                      "gender": "female",
+                      "name": {
+                        "title": "mrs",
+                        "first": "patricia",
+                        "last": "hale"
+                      },
+                      "nat": "GB"
+                    },<br>
+                    {
+                      "gender": "male",
+                      "name": {
+                        "title": "mr",
+                        "first": "fernando",
+                        "last": "cooper"
+                      },
+                      "nat": "US"
+                    },<br>
+                    {
+                      "gender": "female",
+                      "name": {
+                        "title": "mrs",
+                        "first": "یسنا",
+                        "last": "صدر"
+                      },
+                      "nat": "IR"
+                    },<br>
+                    {
+                      "gender": "male",
+                      "name": {
+                        "title": "mr",
+                        "first": "eino",
+                        "last": "tuomala"
+                      },
+                      "nat": "FI"
+                    },<br>
+                    {
+                      "gender": "female",
+                      "name": {
+                        "title": "ms",
+                        "first": "gonca",
+                        "last": "özkara"
+                      },
+                      "nat": "TR"
+                    },<br>
+                    {
+                      "gender": "male",
+                      "name": {
+                        "title": "mr",
+                        "first": "kyle",
+                        "last": "castillo"
+                      },
+                      "nat": "US"
+                    },<br>
+                    {
+                      "gender": "female",
+                      "name": {
+                        "title": "miss",
+                        "first": "olivia",
+                        "last": "kumar"
+                      },
+                      "nat": "NZ"
+                    },<br>
+                    {
+                      "gender": "male",
+                      "name": {
+                        "title": "monsieur",
+                        "first": "raymond",
+                        "last": "durand"
+                      },
+                      "nat": "CH"
+                    }
+                  ],<br>
+                  "info": {
+                    "seed": "2cb086ce097c87ee",
+                    "results": 10,
+                    "page": 1,
+                    "version": "1.2"
+                  }
+                }
+        </p>
+        <hr>
+       
+
+        <script>
+            let newList = document.createElement('ul');
+            newList.innerText = "Users List";
+            document.body.appendChild(newList);
+            
+            let results = [
+                        {
+                        "gender": "female",
+                        "name": {
+                            "title": "mademoiselle",
+                            "first": "ruth",
+                            "last": "nicolas"
+                        },
+                        "nat": "CH"
+                        },
+                        {
+                        "gender": "female",
+                        "name": {
+                            "title": "miss",
+                            "first": "رها",
+                            "last": "سلطانی نژاد"
+                        },
+                        "nat": "IR"
+                        },
+                        {
+                        "gender": "female",
+                        "name": {
+                            "title": "mrs",
+                            "first": "patricia",
+                            "last": "hale"
+                        },
+                        "nat": "GB"
+                        },
+                        {
+                        "gender": "male",
+                        "name": {
+                            "title": "mr",
+                            "first": "fernando",
+                            "last": "cooper"
+                        },
+                        "nat": "US"
+                        },
+                        {
+                        "gender": "female",
+                        "name": {
+                            "title": "mrs",
+                            "first": "یسنا",
+                            "last": "صدر"
+                        },
+                        "nat": "IR"
+                        },
+                        {
+                        "gender": "male",
+                        "name": {
+                            "title": "mr",
+                            "first": "eino",
+                            "last": "tuomala"
+                        },
+                        "nat": "FI"
+                        },
+                        {
+                        "gender": "female",
+                        "name": {
+                            "title": "ms",
+                            "first": "gonca",
+                            "last": "özkara"
+                        },
+                        "nat": "TR"
+                        },
+                        {
+                        "gender": "male",
+                        "name": {
+                            "title": "mr",
+                            "first": "kyle",
+                            "last": "castillo"
+                        },
+                        "nat": "US"
+                        },
+                        {
+                        "gender": "female",
+                        "name": {
+                            "title": "miss",
+                            "first": "olivia",
+                            "last": "kumar"
+                        },
+                        "nat": "NZ"
+                        },
+                        {
+                        "gender": "male",
+                        "name": {
+                            "title": "monsieur",
+                            "first": "raymond",
+                            "last": "durand"
+                        },
+                        "nat": "CH"
+                        }
+                    ];
+
+            //let names = resuls.map(element => element.name);
+            //console.log(names);
+
+            for (let i = 0; i < results.length; i++) {
+                let newName = document.createElement('li');
+                newName.innerText = results[i].name.first + ' ' + results[i].name.last + ' from ' + results[i].nat;
+                newList.appendChild(newName);
+            }
+            
+        </script>
+    </body>
+</html>

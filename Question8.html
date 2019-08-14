@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=en dir=ltr>
+    <head>
+        <title>Adding Elements to the DOM Lab</title>
+     </head>
+        
+    <body>
+        <h1>Adding Elements to the DOM Lab</h1>
+        <h2><u><font color="blue">Question Eight</font></u></h2>
+        <p> Make a website with a button. Clicking on the button should remove the button.</p>
+        <p>
+            <button onclick=removeButton()>Bye bye</button>
+        </p>
+        <hr>
+
+
+
+        <script>
+            const removeButton = () => {
+                let button = document.querySelector("button");
+                button.parentNode.removeChild(button);
+            }
+        </script>
+    </body>
+</html>

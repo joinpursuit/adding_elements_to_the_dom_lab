@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang = en dir= ltr>
+    <head>
+        <title>Adding Elements to the DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>Adding Elements to the DOM Lab</h1>
+        <h2><u><font color="blue">Question One</font></u></h2>
+        <p> Make a website with a heading, an input text field and a button. <br>
+            Clicking the button should change the heading's text to be the text in the input.
+        </p>
+        <hr>
+        <div>
+            <lable for="input">Please enter a text here:</lable>
+            <input id="input" type="text" name="text_field" placeholder="your text here">
+            <button onclick = changeHeading()>Replace using innerText</button>
+        </div>
+        <br>
+        <div>
+            <lable for="input2">Please enter a text here:</lable>
+            <input id="input2" type="text" name="text_field2" placeholder="your text here">
+            <button onclick = changeHeading2()>Replace using replaceChild</button>
+        </div>
+
+        <script>
+            const changeHeading = () => {
+                let heading = document.querySelector("h2");
+                let newText = document.querySelector("input").value;
+                heading.innerText = newText;
+            }
+
+            const changeHeading2 = () => {
+                let head = document.querySelector('h2');
+                let newHeading = document.createElement('h2');
+                newHeading.innerText = document.querySelector('#input2').value;
+
+                head.parentNode.replaceChild(newHeading, head);
+            }
+        </script>
+    </body>
+</html>

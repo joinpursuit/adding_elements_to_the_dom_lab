@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang=en dir=ltr>
+    <head>
+        <title>Adding Elements to the DOM Lab</title>
+     </head>
+        
+    <body>
+        <h1>Adding Elements to the DOM Lab</h1>
+        <h2><u><font color="blue">Question Five</font></u></h2>
+        <p> Make a website with a text input and a button. <br>
+            Clicking on the button should create a new list item with its text the same as the text in the input.
+        </p>       
+        <p>
+            <lable for="text">Please enter a text :</lable>
+            <input id="text" type='text' name='input_text' placeholder="Enter a text">
+            <button onclick="createNewList()">Print the text bellow</button>
+        </p>
+        <hr>
+
+        <script>
+            const createNewList = () => {
+                let newLine = document.createElement("li");
+                newLine.innerText = document.querySelector("input").value;
+                document.body.appendChild(newLine)
+            }
+
+        </script>
+    </body>
+</html>

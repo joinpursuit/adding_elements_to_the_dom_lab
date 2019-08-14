@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang=en dir=ltr>
+    <head>
+        <title>Adding Elements to the DOM Lab</title>
+     </head>
+        
+    <body>
+        <h1>Adding Elements to the DOM Lab</h1>
+        <h2><u><font color="blue">Question Six</font></u></h2>
+        <p> Make a website with a text input, a number input and a button. <br> 
+            Clicking on the button should add that many copies of the text in the text input to a list.      
+        </p>
+        <p>
+            <label for="str_id">Please enter a text:</label>
+            <input id="str_id" type="text" name="input_text" placeholder="Text" size="65"><br>
+
+            <lable for="num_id">How many times would you like to repeat the previous text?</lable>
+            <input id="num_id" type="number" name="input_number" placeholder="number"><br>
+
+            <button onclick=duplicateText()>Duplicate</button>
+        </p>
+        <hr>
+
+        <script>
+            const duplicateText = () => {
+                let num = document.querySelector("#num_id").value;
+                let str = document.querySelector("#str_id").value;
+                let outputText = "";
+
+                for (let i = 0; i < num; i++) {
+                    outputText += str + " "
+                }
+                document.querySelector("#str_id").value = outputText;
+            }
+        </script>
+    </body>
+</html>
