@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  </head>
+  <body>
+
+    <script>
+      let list = {
+        "results" : [
+          { "name" : "Anne" },
+          { "name" : "Bri" },
+          { "name" : "Chaz" },
+          { "name" : "Darlene" }
+        ]
+      }
+      for(let i = 0;i<list.results.length;i++){
+        let li = document.createElement('li')
+        li.innerText = list.results[i].name
+        document.body.appendChild(li)
+      }
+      </script>
+    </body>
+</html>

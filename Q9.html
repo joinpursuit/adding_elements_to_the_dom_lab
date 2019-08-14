@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  </head>
+  <body>
+    <button onclick = "change()">Click</button>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+    <p>Paragraph</p>
+    <script>
+      function change(){
+    let p = document.querySelectorAll('p')
+    for(let i = 0;i< p.length;i++){
+    document.body.removeChild(p[i])}
+  }
+      </script>
+    </body>
+</html>

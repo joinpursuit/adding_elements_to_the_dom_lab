@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <input type = "number" />
+    <button onclick = "change()">Click</button>
+
+    <script>
+      function change(){
+    let header = document.body.childNodes[1]
+    let number = document.querySelector('input').value
+    let newHeader = document.createElement(`h${number}`)
+    newHeader.innerText = header.innerText
+
+
+    document.body.replaceChild(newHeader,header)}
+
+      </script>
+    </body>
+</html>

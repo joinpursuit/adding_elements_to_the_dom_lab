@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  </head>
+  <body>
+  <input type = "number"></input>
+    <button onclick = "change()">Click</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+      function change(){
+    let li = document.createElement('li')
+    li.innerText = document.querySelector('input').value
+  document.body.appendChild(li)
+    let lists = document.querySelectorAll('li')
+    let sum = 0;
+    let max = 0;
+    let min = parseInt(lists[0].innerText);
+    for(let i = 0; i < lists.length;i++){
+      let number = parseInt(lists[i].innerText)
+      sum += number
+      if(max<number){
+        max = number
+    }
+    if(min>number){
+      min = number
+    }}
+     let ps = document.querySelectorAll('p')
+     ps[0].innerText = "Avg: " + sum/lists.length
+     ps[1].innerText = "Max: " + max
+     ps[2].innerText = "Min: " + min
+
+}
+
+      </script>
+    </body>
+</html>

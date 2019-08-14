@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  </head>
+  <body>
+    Text:<input type = "text"></input>
+    Number:<input type = "number"></input>
+    <button onclick = "change()">Click</button>
+    <script>
+      function change(){
+        for(let i = 0;i<document.querySelectorAll('input')[1].value;i++){
+    let li = document.createElement('li')
+    li.innerText = document.querySelector('input').value
+  document.body.appendChild(li)}
+}
+      </script>
+    </body>
+</html>
