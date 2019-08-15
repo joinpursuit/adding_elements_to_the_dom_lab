@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 1</title>
+</head>
+<body>
+	<h1>Whats in the Input?</h1>
+	<h2>Placeholder</h2>
+	<input type='text'>
+	<button type='button' onClick='newText()'>Submit</button>
+	<script>
+		function newText(){
+			let value = document.querySelector('input').value;
+			document.querySelector('h2').innerText = value;
+		}
+	</script>
+
+</body>
+</html>

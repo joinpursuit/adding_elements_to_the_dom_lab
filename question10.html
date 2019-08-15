@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Question 10</title>
+</head>
+<body>
+		<h1>I am a heading!!!!!</h1>
+		<input type='number'>
+		<button type='button' onClick='changeHeading()'>Change the heading</button>
+		<script>
+			function changeHeading(){
+
+				let value = parseInt(document.querySelector('input').value);
+				let newHeader;
+				switch(value){
+					case 1: newHeader = document.createElement('h1');
+					break;
+					case 2: newHeader = document.createElement('h2');
+					break;
+					case 3: newHeader = document.createElement('h3');
+					break;
+					case 4: newHeader = document.createElement('h4');
+					break;
+					case 5: newHeader = document.createElement('h5');
+					break;
+					case 6: newHeader = document.createElement('h6');
+					break;
+					default: newHeader = false
+				}
+				if(newHeader){
+					newHeader.innerText = 'I am a heading!!!!!';
+					let allHeaders = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+					let oldChild = allHeaders[0];
+					document.body.replaceChild(newHeader, oldChild);
+				}
+				else{
+					window.alert('A header can only be from h1 to h6');
+				}
+			}
+		</script>
+
+</body>
+</html>

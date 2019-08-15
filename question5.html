@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 5</title>
+</head>
+<body>
+	<input type='text'>
+	<button type='button' onClick='createNewListItem()'>Send New Item</button>
+	<ol></ol>
+	<script>
+		function createNewListItem(){
+			let temp = document.createElement('li');
+			temp.innerText = document.querySelector('input').value;
+			document.querySelector('ol').appendChild(temp);
+		}
+	</script>
+</body>
+</html>

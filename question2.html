@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 2</title>
+</head>
+<body>
+	<ul>
+	</ul>
+	<script>
+	 	let object = {
+			  "results" : [
+			    { "name" : "Anne" },
+			    { "name" : "Bri" },
+			    { "name" : "Chaz" },
+			    { "name" : "Darlene" }
+			  ]
+			}
+
+		for(let i = 0; i < object.results.length; i++){
+			let temp = document.createElement('li');
+			temp.innerText = object.results[i].name;
+			document.querySelector('ul').appendChild(temp);
+		}
+
+
+
+	
+	</script>
+</body>
+</html>

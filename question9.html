@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Question 9</title>
+</head>
+<body>
+<p>First paragraph</p>
+<p>Second paragraph</p>
+<p>Third paragraph</p>
+<p>Fourth paragraph</p>
+<p>Fifth paragraph</p>
+<p>Sixth paragraph</p>
+
+<button type='button' onClick='deleteAllP()'>Delete all paragraphs</button>
+<script>
+	function deleteAllP(){
+		let allPara = document.querySelectorAll('p');
+		for(let i = 0; i< allPara.length; i++){
+			let temp = document.querySelector('p');
+			temp.parentNode.removeChild(temp);
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 7</title>
+</head>
+<body>
+	<input type='number'>
+	<p id='average'></p>
+	<p id='max'></p>
+	<p id='min'></p>
+	<ul>
+	</ul>
+	<button type='button' onClick='getAllData()'>Submit</button>
+	<script>
+		console.dir(document.querySelector('ul'));
+		function getAllData(){
+			let list = document.querySelector('ul');
+			let input = document.querySelector('input').value;
+			let newItem = document.createElement('li');
+			newItem.innerText = input;
+			list.appendChild(newItem);
+			let greatest = parseInt(list.children[0].innerText);
+			let least = parseInt(list.children[0].innerText);
+			console.log(greatest);
+			let average =0;
+			for(let i = 0; i < list.children.length; i++){
+				if(greatest < parseInt(list.children[i].innerText)){
+					greatest = parseInt(list.children[i].innerText);
+				}
+				if(least > parseInt(list.children[i].innerText)){
+					least = parseInt(list.children[i].innerText);
+				}
+				average += parseInt(list.children[i].innerText);
+			}
+			console.log(average);
+			average = average / list.children.length;
+
+			document.querySelector('#average').innerText = `The new average is ${average}`;
+			document.querySelector('#max').innerText = `The new max is ${greatest}`;
+			document.querySelector('#min').innerText = `The new min is ${least}`;
+
+
+		}
+	</script>
+
+</body>
+</html>

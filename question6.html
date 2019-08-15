@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 6</title>
+</head>
+<body>
+<input type='text'><br>
+<input type='number' id='number'><br>
+<button type='button' onClick='addItems()'>Submit</button>
+<ol></ol>
+
+<script>
+	function addItems(){
+		let times = document.querySelector('#number').value;
+		for(let i = 0; i < times; i++){
+			let value = document.querySelector('input').value;
+			let newItem = document.createElement('li');
+			newItem.innerText = value;
+			document.querySelector('ol').appendChild(newItem);
+		}
+	}
+</script>
+
+</body>
+</html>
