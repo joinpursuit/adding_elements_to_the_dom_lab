@@ -1,53 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Adding Elems to the DOM: Question 5</title>
+   <title>Question 5 | Adding Elems to the DOM</title>
 
-    <script>
-    function newItem(str) {
-      if (!str) {
-        window.alert("No input found. Please check and try again")
-      } else {
-        let listOL = document.getElementById('listgoeshere');
-        let item = document.createElement('li');
-        item.innerText = str;
-        listOL.appendChild(item);
+   <script>
+      function newItem(str) {
+         if (!str) {
+            window.alert("No input found. Please check and try again")
+         } else {
+            let item = document.createElement('li');
+            item.innerText = str;
+            let listOL = document.getElementById('listgoeshere');
+            listOL.appendChild(item);
+         }
       }
-    }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question Five</h1>
+   <h1>Question Five</h1>
 
-    <p>Make a website with a text input and a button.  Clicking on the button should create a new list item with its text the same as the text in the input.</p>
+   <p>Make a website with a text input and a button. Clicking on the button should create a new list item with its text
+      the same as the text in the input.</p>
 
-    <hr>
+   <hr>
 
-    <h1>Grow a List</h1>
+   <h1>Grow a List</h1>
 
-    <form id="growalist">
+   <form id="growalist">
       <div>
-        <label for="additem">Enter new item:</label>
-        <input type="text" name="additem" id="additem">
+         <label for="additem">Enter new item:</label>
+         <input type="text" name="additem" id="additem">
 
-        <input type="submit" value="Submit" onclick="newItem(additem.value); return false;">
+         <input type="submit" value="Submit" onclick="newItem(additem.value); return false;">
       </div>
-    </form>
+   </form>
 
-    <div>
-      <ol id="listgoeshere">
-      </ol>
-    </div>
+   <div>
+      <ol id="listgoeshere"></ol>
+   </div>
 
-    <script>
+   <script>
       document.getElementById('additem').focus();
       document.getElementById('additem').select();
-    </script>
+   </script>
 
-  </body>
+</body>
+
 </html>

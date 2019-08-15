@@ -1,41 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Adding Elems to the DOM: Question 2</title>
+   <title>Question 2 | Adding Elems to the DOM</title>
 
-    <script>
+   <script>
       let peopleObj = {
-        "results" : [
-          { "name" : "Anne" },
-          { "name" : "Bri" },
-          { "name" : "Chaz" },
-          { "name" : "Darlene" }
-        ]
+         "results": [
+            { "name": "Anne" },
+            { "name": "Bri" },
+            { "name": "Chaz" },
+            { "name": "Darlene" }
+         ]
       };
 
       function genList(arr) {
-        let makingUL = document.createElement("ul");
-        makingUL.id = "jslist";
-        for (let value of arr) {
-          let makingLI = makingUL.appendChild(document.createElement("li"));
-          makingLI.innerText = value.name;
-        }
-        let listDiv = document.getElementById('listgoeshere')
-        listDiv.appendChild(makingUL);
+         let makingUL = document.createElement("ul");
+         for (let value of arr) {
+            let makingLI = makingUL.appendChild(document.createElement("li"));
+            makingLI.innerText = value.name;
+         }
+         let listDiv = document.getElementById('listgoeshere');
+         listDiv.appendChild(makingUL);
       };
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question Two</h1>
+   <h1>Question Two</h1>
 
-      <p>Make a website that displays a list containing all of the names below.  Make all of your `&lt;li>` items inside of a script.</p>
-      
-      <pre>
+   <p>Make a website that displays a list containing all of the names below. Make all of your `&lt;li>` items inside of
+      a script.</p>
+
+   <pre>
         {
           "results" : [
             { "name" : "Anne" },
@@ -44,18 +44,18 @@
             { "name" : "Darlene" }
           ]
         }
-      </pre>
+   </pre>
 
-      <hr>
+   <hr>
 
-      <h1>List of Names</h1>
+   <h1>List of Names</h1>
 
-      <div id="listgoeshere">
-      </div>
+   <div id="listgoeshere"></div>
 
-      <script>
-        genList(peopleObj.results);
-      </script>
+   <script>
+      genList(peopleObj.results);
+   </script>
 
-  </body>
+</body>
+
 </html>

@@ -1,35 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Adding Elems to the DOM: Question 1</title>
+   <title>Question 1 | Adding Elems to the DOM</title>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question One</h1>
+   <h1>Question One</h1>
 
-    <p>Make a website with a heading, an input text field and a button.  Clicking the button should change the heading's text to be the text in the input.</p>
+   <p>Make a website with a heading, an input text field and a button. Clicking the button should change the heading's
+      text to be the text in the input.</p>
 
-    <hr>
+   <hr>
 
-    <h1 id="changingthis">This Header is Flexible</h1>
+   <h1 id="changingthis">This Header is Flexible</h1>
 
-    <form id="changeheader">
+   <form id="changeheader">
       <div>
-        <label for="makeheader">Input new header:</label>
-        <input type="text" name="makeheader" id="makeheader">
-      
-        <input type="submit" value="Submit" onclick="document.getElementById('changingthis').innerText = makeheader.value; return false;">
-      </div>
-    </form>
+         <label for="makeheader">Input new header:</label>
+         <input type="text" name="makeheader" id="makeheader">
 
-    <script>
+         <input type="submit" value="Submit"
+            onclick="document.getElementById('changingthis').innerText = makeheader.value; return false;">
+      </div>
+   </form>
+
+   <script>
       document.getElementById("makeheader").focus();
       document.getElementById("makeheader").select();
-    </script>
+   </script>
 
-  </body>
+</body>
+
 </html>

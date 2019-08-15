@@ -1,36 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Adding Elems to the DOM: Question 8</title>
+   <title>Question 8 | Adding Elems to the DOM</title>
 
-    <script>
+   <script>
       function killButton() {
-        let button = document.querySelector('input');
-        button.parentNode.removeChild(button);
+         let button = document.querySelector('input');
+         button.parentNode.removeChild(button);
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question Eight</h1>
+   <h1>Question Eight</h1>
 
-    <p>Make a website with a button.  Clicking on the button should remove the button.</p>
+   <p>Make a website with a button. Clicking on the button should remove the button.</p>
 
-    <hr>
+   <hr>
 
-    <h1>One Button to Rule Them All</h1>
-  
-    <form id="buttontroll">
-      <input type="submit" value="Click me to learn the secret of life" onclick="killButton(); return false;">
-    </form>
+   <h1>One Button to Rule Them All</h1>
 
-    <script>
+   <form id="buttontroll">
+      <input type="submit" value="Click ME to learn the secret of life" onclick="killButton(); return false;">
+   </form>
+
+   <script>
       document.querySelector('input').focus();
-    </script>
+   </script>
 
-  </body>
+</body>
+
 </html>

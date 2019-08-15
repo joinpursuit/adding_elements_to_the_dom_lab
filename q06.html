@@ -1,58 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Adding Elems to the DOM: Question 6</title>
-    
-    <script>
+   <title>Question 6 | Adding Elems to the DOM</title>
+
+   <script>
       function popList(str, num) {
-        if (!str) {
-          window.alert("Please enter a valid string");
-        } else if (!num || isNaN(num) || num < 0) {
-          window.alert("Please enter a valid number");
-        } else {
-          let listDiv = document.getElementById('listgoeshere');        
-          for (let i = 0; i < num; i++) {
-            let newItem = document.createElement('li');
-            newItem.innerText = str;          
-            listDiv.appendChild(newItem);
-          }
-        }
+         if (!str) {
+            window.alert("Please enter a valid string");
+         } else if (!num || isNaN(num)) { // checks for erroneous hyphens and periods
+            window.alert("Please enter a valid number");
+         } else {
+            let listDiv = document.getElementById('listgoeshere');
+            for (let i = 0; i < num; i++) {
+               let newItem = document.createElement('li');
+               newItem.innerText = str;
+               listDiv.appendChild(newItem);
+            }
+         }
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question Six</h1>
+   <h1>Question Six</h1>
 
-    <p>Make a website with a text input, a number input and a button.  Clicking on the button should add that many copies of the text in the text input to a list.</p>
+   <p>Make a website with a text input, a number input and a button. Clicking on the button should add that many copies
+      of the text in the text input to a list.</p>
 
-    <hr>
+   <hr>
 
-    <h1>Populate a List Fast</h1>
+   <h1>Populate a List Fast</h1>
 
-    <form id="populatelist">
+   <form id="populatelist">
       <div>
-        <label for="popstring">Enter a string:</label>
-        <input type="text" name="popstring" id="popstring">
+         <label for="popstring">Enter a string:</label>
+         <input type="text" name="popstring" id="popstring">
 
-        <label for="popnum">How many copies?:</label>
-        <input type="number" min="1" name="popnum" id="popnum">
+         <label for="popnum">How many copies?:</label>
+         <input type="number" min="1" name="popnum" id="popnum">
 
-        <input type="submit" value="Make it so" onclick="popList(popstring.value, popnum.value); return false;">
+         <input type="submit" value="Make it so" onclick="popList(popstring.value, popnum.value); return false;">
       </div>
-    </form>
+   </form>
 
-    <ol id="listgoeshere">
-    </ol>
+   <ol id="listgoeshere"></ol>
 
-    <script>
+   <script>
       document.getElementById('popstring').focus();
       document.getElementById('popstring').select();
-    </script>
+   </script>
 
-  </body>
+</body>
+
 </html>

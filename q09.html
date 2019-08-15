@@ -1,50 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Adding Elems to the DOM: Question 9</title>
+   <title>Question 9 | Adding Elems to the DOM</title>
 
-    <script>
+   <script>
       function killParas() {
-        let paragraphs = document.querySelector('div').querySelectorAll('p');
-        for (let i = paragraphs.length - 1; i >= 0; i--) {
-          paragraphs[i].parentNode.removeChild(paragraphs[i]);
-        }
+         let paragraphs = document.querySelector('div').querySelectorAll('p');
+         for (let i = paragraphs.length - 1; i >= 0; i--) {
+            paragraphs[i].parentNode.removeChild(paragraphs[i]);
+         }
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question Nine</h1>
+   <h1>Question Nine</h1>
 
-    <p>Make a website with a button, and 5 paragraph tags.  Clicking on the button should remove all of the paragraphs.</p>
+   <p>Make a website with a button, and 5 paragraph tags. Clicking on the button should remove all of the paragraphs.</p>
 
-    <hr>
+   <hr>
 
-    <h1>Paragraphs Be Gone</h1>
+   <h1>Paragraphs Be Gone</h1>
 
-    <form id="poofmaker">
+   <form id="poofmaker">
       <input type="submit" value="Abracadabra" onclick="killParas(); return false;">
-    </form>
+   </form>
 
-    <div id="container">
+   <div id="container">
       <p>Verse 1</p>
 
       <p>Verse 2</p>
-      
+
       <p>Verse 3</p>
-      
+
       <p>Verse 4</p>
 
       <p>Verse 5</p>
-    </div>
+   </div>
 
-    <script>
+   <script>
       document.querySelector('input').focus();
-    </script>
+   </script>
 
-  </body>
+</body>
+
 </html>
