@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Average Max Min</title>
+  </head>
+  <body>
+    <h1 id="header"><center>Average Maximum Minimum</center></h1>
+    <p id="intro"><center>Enter numbers below. All numbers will be logged
+      and as they accumulate, the Average, the Maximum, and the Minimum
+      will be displayed</center></p>
+    <p>ENTER YOUR NUMBER:
+      <input type="text" id="num_input" size=50>
+    </p>
+    <button onclick="activate()">SUBMIT</button>
+    <ul id="listyMcListface">
+    </ul>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <p id="para3"></p>
+    <script>
+      let collector = []
+      const activate = () => {
+        let maxInput = 0
+        let minInput = Infinity
+        let numInputElement = document.getElementById("num_input")
+        let userSubmitNum = numInputElement.value
+        collector.push(Number(userSubmitNum))
+        let newListItem = document.createElement("li")
+        newListItem.innerText = Number(userSubmitNum)
+        listyMcListface.appendChild(newListItem)
+        let paraOne = document.getElementById("para1")
+        let average = paraOne.value
+        let paraTwo = document.getElementById("para2")
+        let max = paraTwo.value
+        let paraThree = document.getElementById("para3")
+        let min = paraThree.value
+        for (let i = 0; i < collector.length; i++) {
+          if (collector[i] >= maxInput) {
+            maxInput = collector[i]
+          } else if (collector[i] < minInput) {
+            minInput = collector[i]
+          }
+        }
+        max.innerText = maxInput
+        min.innerText = minInput
+        console.log(collector)
+        console.log(maxInput)
+        console.log(minInput)
+        arrSum = function(arr){
+        return arr.reduce(function(a,b){
+          return a + b
+          }, 0);
+       }
+      }
+    </script>
+  </body>
+</html>

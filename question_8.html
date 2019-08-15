@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Useless Website</title>
+  </head>
+  <body>
+    <h1 id="header"><center>Useless Website</center></h1>
+    <button onclick="remove()">CLICK TO INCREASE USELESSNESS</button>
+    <script>
+      const remove = () => {
+        let button = document.querySelector("button")
+        button.parentNode.removeChild(button)
+      }
+    </script>
+  </body>
+</html>

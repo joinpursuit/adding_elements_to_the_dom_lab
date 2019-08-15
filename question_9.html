@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paragraph Remover</title>
+  </head>
+  <body>
+    <h1 id="header"><center>Paragraph Destroyer</center></h1>
+    <p id="para1">These paragraphs live on borrowed time.</p>
+    <p id="para2">They each love their families.</p>
+    <p id="para3">What did they ever do to you?</p>
+    <p id="para4">Think hard about what you are about to do.</p>
+    <p id="para5">This can not be undone.</p>
+    <button onclick="destroy()">DESTROY</button>
+    <script>
+      const destroy = () => {
+        let pOne = document.querySelector("#para1")
+        let pTwo = document.querySelector("#para2")
+        let pThree = document.querySelector("#para3")
+        let pFour = document.querySelector("#para4")
+        let pFive = document.querySelector("#para5")
+        let button = document.querySelector("button")
+        pOne.parentNode.removeChild(pOne)
+        pTwo.parentNode.removeChild(pTwo)
+        pThree.parentNode.removeChild(pThree)
+        pFour.parentNode.removeChild(pFour)
+        pFive.parentNode.removeChild(pFive)
+        button.parentNode.removeChild(button)
+      }
+    </script>
+  </body>
+</html>
