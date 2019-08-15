@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 1</title>
+    </head>
+    <body>
+        <h1>Question 1</h1>
+        <h2>Welcome to my website</h2>
+        <label for="user_input">Type in your text here: </label>
+        <input type="text" name='user_input' id="user_input">
+        <button 
+            id="user_click" 
+            name="user_input" 
+            onclick="changeHeader()"
+        >
+            Change the Header
+        </button>
+        <script>
+            function changeHeader() {
+                let inputText = document.querySelector('#user_input').value
+                document.querySelector('h2').innerText = inputText
+            }
+        </script>
+    </body>
+</html>

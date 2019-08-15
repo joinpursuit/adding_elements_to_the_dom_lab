@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 2</title>
+    </head>
+    <body>
+        <h1>Question 2</h1>
+        <h2>Display Names</h2>
+        <script>
+            let results = [
+                { "name" : "Anne" },
+                { "name" : "Bri" },
+                { "name" : "Chaz" },
+                { "name" : "Darlene" }
+            ]            
+            let unorderedList = document.createElement('ul')
+            for (let obj of results) {
+                let listItem = document.createElement('li')
+                listItem.innerText = obj.name
+                unorderedList.appendChild(listItem)
+            }
+            document.body.appendChild(unorderedList)
+        </script>
+    </body>
+</html>

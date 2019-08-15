@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quesiton 7</title>
+    </head>
+    <body>
+        <h1>Quesiton 7</h1>
+        <h2>Im not sure what this does!</h2>
+        <label for="number_input">Enter a number below to add to the log</label>
+        <br>
+        <input type="number" name='number_input' id="number_input">
+        <br>
+        <button name='number_input'id="number_input" onclick="addToLog()">Add to list</button>
+        <p id="average_of_all">The average of all numbers is: </p>
+        <p id="max_value"></p>
+        <p id="min_value"></p>
+        <ul id="entries"></ul>
+        <script>
+            let arrayOfAllNumbers = []
+            const addToLog = () => {
+                let input = document.createElement('li')
+                input.innerText = document.querySelector('input').value
+                document.querySelector('#entries').appendChild(input)
+                arrayOfAllNumbers.push(document.querySelector('input').value)
+                let avgOfAll = arrayOfAllNumbers.reduce((i, j) => i += (j * 1), 0) / arrayOfAllNumbers.length
+                document.querySelector('#average_of_all').innerText = `The average of all numbers is: ${avgOfAll}`
+                let minValue = arrayOfAllNumbers.reduce((i, j) => i > j ? i = j : i)
+                document.querySelector('#min_value').innerText = `The minimum value of all numbers is: ${minValue}`
+                let maxValue = arrayOfAllNumbers.reduce((i, j) => i < j ? i = j : i)
+                document.querySelector('#max_value').innerText = `The maximum value of all numbers is: ${maxValue}`
+                window.alert(maxValue)
+            }
+        </script>
+
+        
+
+    </body>
+</html>

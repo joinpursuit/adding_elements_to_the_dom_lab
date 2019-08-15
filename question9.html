@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 9</title>
+    </head>
+    <body>
+        <h1>Question 9</h1>
+        <h2>Remove all paragraphs</h2>
+        <button id="remove_all_para" name="remove_all_para" onclick="removeAllPara()">Remove Paragraphs</button>
+        <p>blah</p>
+        <p>more blah</p>
+        <p> blahasdjbfkahsdbfkjansjdkf</p>
+        <p>qwregsedff</p>
+        <p>qwrt34gtvw4f</p>
+        <script>
+            const removeAllPara = () => {
+                let allPs = document.querySelectorAll('p')
+                allPs.forEach(e => document.body.removeChild(e))
+            }
+
+        </script>
+    </body>
+</html>

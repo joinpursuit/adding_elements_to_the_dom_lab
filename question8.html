@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 8</title>
+    </head>
+    <body>
+        <h1>Question 8</h1>
+        <h2>Remove the button</h2>
+        <button id="delete" name="delete" onclick="remove()">Delete Me :(</button>
+        <script>
+            const remove = () => {
+                document.body.removeChild(document.querySelector('button'))
+            }
+        </script>
+    </body>
+</html>

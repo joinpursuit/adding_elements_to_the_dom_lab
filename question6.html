@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quesiton 6</title>
+    </head>
+    <body>
+        <h1>Quesiton 6</h1>
+        <h2>Display <strong>"this"</strong> <em>x</em> times</h2>
+        <label for="input_text">Enter your text here</label>
+        <br>
+        <input type="text" name="text_entry" id="input_text">
+        <br>
+        <label for="display_amount">Enter the amount of times you want your text to be displayed below</label>
+        <br>
+        <input type="number" name="text_entry" id="display_amount">
+        <br>
+        <button
+            id="add_entry"
+            name="text_entry"
+            onclick="dispXTimes()"
+        >
+            Add
+        </button>
+        <p id="entries"></p>
+        <script>
+            const dispXTimes = () => {
+                for (let i = 0; i < document.querySelector('#display_amount').value; i++) {
+                    document.querySelector('#entries').innerText += `${document.querySelector('#input_text').value}\n`
+                }
+            }
+        
+        </script>
+
+        
+
+    </body>
+</html>

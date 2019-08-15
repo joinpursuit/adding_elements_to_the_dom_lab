@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quesiton 5</title>
+    </head>
+    <body>
+        <h1>Quesiton 5</h1>
+        <h2>Create your own list</h2>
+        <label for="list_entry">Enter an item for your list: </label>
+        <input type="text" name="list_item" id="list_entry">
+        <button
+            id="add_entry"
+            name="list_item"
+            onclick="addItem()"
+        >
+            Add
+        </button>
+        <ul id="entries"></ul>
+        <script>
+        const addItem = () => {
+            let item = document.createElement('li')
+            item.innerText = document.querySelector('#list_entry').value
+            document.querySelector('#entries').appendChild(item)
+        }
+        
+        </script>
+
+        
+
+    </body>
+</html>
