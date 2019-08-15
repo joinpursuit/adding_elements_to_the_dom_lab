@@ -26,32 +26,35 @@
                 if (size < 1 || size > 6) {
                     window.alert("invalid input, please entrer a number between 1 and 6");
                 } else {
-                    let heading = document.querySelector("hr").nextElementSibling;
-                    let text = heading.innerText;
-                    let newHeading;
+                    //let header = document.querySelector("hr").nextElementSibling; OR :
+                    let allHeaders = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+                    header = allHeaders[2];
+                    let text = header.innerText;
+                    let newHeader;
 
                     if (size === 1) {
-                        newHeading = document.createElement("h1");
+                        newHeader = document.createElement("h1");
                     }
                     if (size === 2) {
-                        newHeading = document.createElement("h2");
+                        newHeader = document.createElement("h2");
                     }
                     if (size === 3) {
-                        newHeading = document.createElement("h3");
+                        newHeader = document.createElement("h3");
                     }
                     if (size === 4) {
-                        newHeading = document.createElement("h4");
+                        newHeader = document.createElement("h4");
                     }
                     if (size === 5) {
-                        newHeading = document.createElement("h5");
+                        newHeader = document.createElement("h5");
                     }
                     if (size === 6) {
-                        newHeading = document.createElement("h6");
+                        newHeader = document.createElement("h6");
                     }
-                    newHeading.innerText = text;
-                    heading.parentNode.replaceChild(newHeading, heading);
+                    newHeader.innerText = text;
+                    header.parentNode.replaceChild(newHeader, header);
                 }
             }
         </script>
     </body>
 </html>
+</DOCTYPE>
