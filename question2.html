@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question Two</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+      let object = {
+        "results" : [
+          { "name" : "Anne" },
+          { "name" : "Bri" },
+          { "name" : "Chaz" },
+          { "name" : "Darlene" }
+        ]
+      }
+      let list = document.querySelector("ul")
+      let array = object.results
+      console.log(array)
+      for (let name of array) {
+        let newName = document.createElement("li")
+        newName.innerText = name.name
+        list.appendChild(newName)
+      }
+    </script>
+  </body>
+</html>

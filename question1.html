@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question One</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <input type="text" id="text" placeholder="enter heading here">
+    <button onclick="changeHeading()">change</button>
+    <script>
+      function changeHeading() {
+        let heading = document.querySelector("h1")
+        let text = document.querySelector("#text")
+        heading.innerText = text.value
+      }
+    </script>
+  </body>
+</html>

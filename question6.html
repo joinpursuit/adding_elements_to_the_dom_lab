@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question Six</title>
+  </head>
+  <body>
+    <ul></ul>
+    <input type="text" id="text" placeholder="text">
+    <input type="text" id="number" placeholder="number">
+    <button onclick=createItem()>Add it</button>
+    <script>
+      function createItem () {
+        let list = document.querySelector("ul")
+        let text = document.getElementById("text")
+        let number = document.getElementById("number")
+        for (let i = 1; i <= number.value; i++) {
+          let item = document.createElement("li")
+          item.innerText = text.value
+          list.appendChild(item)
+        }
+      }
+    </script>
+  </body>
+</html>

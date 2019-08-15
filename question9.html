@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Question Nine</title>
+  </head>
+  <body>
+    <p>Hello</p>
+    <p>I love you</p>
+    <p>Won't you</p>
+    <p>Tell me</p>
+    <p>Your name</p>
+    <button onclick=removeParagraphs()>remove paragraphs</button>
+    <script>
+      function removeParagraphs() {
+        paragraphs = document.querySelectorAll("p")
+        body = document.querySelector("body")
+        for (let i = 0; i < paragraphs.length; i++) {
+          body.removeChild(paragraphs[i])
+        }
+      }
+    </script>
+  </body>
+</html>

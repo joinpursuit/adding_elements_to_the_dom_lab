@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question Five</title>
+  </head>
+  <body>
+    <ul></ul>
+    <input type="text" id="input">
+    <button onclick=createItem()>Add it</button>
+    <script>
+      function createItem () {
+        let list = document.querySelector("ul")
+        let input = document.querySelector("input")
+        let newItem = document.createElement("li")
+        newItem.innerText = input.value
+        list.appendChild(newItem)
+      }
+    </script>
+  </body>
+</html>
