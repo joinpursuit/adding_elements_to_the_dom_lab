@@ -22,7 +22,7 @@
         function headReplacer() {
             let header = document.getElementById("header_for1")
             let strInput = document.getElementById("string_one")
-            let h = document.createElement("h1")
+            let h = document.querySelector("h1")
             h.innerText = strInput.value
             header.parentNode.replaceChild(h, header)
         }

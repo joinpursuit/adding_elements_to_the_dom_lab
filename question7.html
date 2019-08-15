@@ -39,6 +39,8 @@
             unOderList.appendChild(input_list)
 
             let test = document.body.querySelectorAll('li')
+            console.log(test);
+
             let para = document.body.querySelectorAll('p')
             let total = 0;
             let max = 0;
@@ -56,7 +58,7 @@
             }
             // assigning the innerText value of the nodeList paragraphs their respective value
             console.log(min);
-            para[2].innerText = `The average of your list is now: ${total / test.length}`
+            para[2].innerText = `The average of your list is now: ${Number((total / test.length).toFixed(2))}`
             para[3].innerText = `The max of your list is now: ${max}`
             para[4].innerText = `The min of your list is now: ${min}`
         }
