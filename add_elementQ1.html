@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q1</title>
+  </head>
+  <body>
+    <h1>Welcome to my site!</h1>
+    <form>
+    <label for = "input">Enter a new title for website:</label>
+    <input type = 'text' name= "input" id = 'text_for_heading' autofocus><br>
+    </form><br>
+    <button onclick = "changeHeading()">Update the heading</button>
+    <script>
+      const changeHeading = () => {
+        let crrHeading = document.querySelector("h1")
+        let newNode = document.createElement("h1")
+        let inputElement = document.getElementById("text_for_heading").value
+        newNode.innerText = `${inputElement}`
+        crrHeading.parentNode.replaceChild(newNode, crrHeading)
+      }
+    </script>
+  </body>
+</html>

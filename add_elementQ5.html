@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q5</title>
+  </head>
+  <body>
+    <h1>Lets view your list of favorite movies</h1>
+    <p>Make a website with a text input and a button.  Clicking on the
+      button should create a new list item with its text the same as the
+      text in the input.</p>
+      <form>
+      <label for = "input">Enter a movie:</label>
+      <input type = 'text' name= "input" id = 'text_for_list' autofocus><br>
+      </form><br>
+      <button onclick = "createList()">See List</button>
+    <ul id = 'new_list'>
+    </ul>
+    <script>
+    const createList = () => {
+      let newItem = document.createElement("li")
+      let inputStr = document.getElementById("text_for_list").value
+      newItem.innerText = inputStr
+      new_list.appendChild(newItem)
+    }
+    </script>
+  </body>
+</html>

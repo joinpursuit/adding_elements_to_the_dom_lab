@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q2</title>
+  </head>
+  <body>
+    <h1>Let view the names</h1>
+    <ul id = 'names'>
+    </ul>
+    <script>
+      class Results {
+        constructor(name){
+          this.name = name
+        }
+      getName() {
+        return `${this.name}`
+      }
+    }
+    let allNames = let obj = {
+      "results" : [
+        { "name" : "Anne" },
+        { "name" : "Bri" },
+        { "name" : "Chaz" },
+        { "name" : "Darlene" }
+      ]
+    }
+
+    for (let n of obj.results) {
+      let createNameList = document.createElement('li')
+      createNameList.innerText = n.name
+      names.appendChild(createNameList)
+    }
+    </script>
+  </body>
+</html>

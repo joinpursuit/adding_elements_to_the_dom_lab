@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q6</title>
+  </head>
+  <body>
+    <h1>Lets see your list</h1>
+    <p>Make a website with a text input, a number input and a button.  <br>Clicking
+      on the button should add that many copies of the text in
+      the text input to a list.</p>
+      <form>
+      <label for = "input">Enter your name:</label>
+      <input type = 'text' name= "input" id = 'text_for_list' autofocus><br>
+      <br>
+      <label for = "inputNum">Enter a number:</label>
+      <input type = 'number' name= "inputNum" id = 'num_for_list'><br>
+      <br>
+      <button onclick = "copyList()">Make Copies</button>
+      </form><br>
+    <ul id = 'new_list'>
+    </ul>
+    <script>
+    const copyList = () => {
+      let inputStr= document.getElementById('text_for_list').value
+      let inputNum = document.getElementById("num_for_list").value
+      let newItem = document.createElement('li')
+      newItem.innerText = inputStr.repeat(parseInt(inputNum))
+      new_list.appendChild(newItem)
+
+    }
+    </script>
+  </body>
+</html>
