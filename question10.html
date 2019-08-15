@@ -22,6 +22,7 @@
             let input = document.querySelector("#num")
             let replaceHeader = document.createElement(`h${input.value}`)
             replaceHeader.innerText = header.innerText
+            replaceHeader.id = "heading"
             header.parentNode.replaceChild(replaceHeader, header)
         }
     </script>
