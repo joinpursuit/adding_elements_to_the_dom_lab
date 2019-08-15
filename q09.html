@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <title>Adding Elems to the DOM: Question 9</title>
+
+    <script>
+      function killParas() {
+        let paragraphs = document.querySelector('div').querySelectorAll('p');
+        for (let i = paragraphs.length - 1; i >= 0; i--) {
+          paragraphs[i].parentNode.removeChild(paragraphs[i]);
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Question Nine</h1>
+
+    <p>Make a website with a button, and 5 paragraph tags.  Clicking on the button should remove all of the paragraphs.</p>
+
+    <hr>
+
+    <h1>Paragraphs Be Gone</h1>
+
+    <form id="poofmaker">
+      <input type="submit" value="Abracadabra" onclick="killParas(); return false;">
+    </form>
+
+    <div id="container">
+      <p>Verse 1</p>
+
+      <p>Verse 2</p>
+      
+      <p>Verse 3</p>
+      
+      <p>Verse 4</p>
+
+      <p>Verse 5</p>
+    </div>
+
+    <script>
+      document.querySelector('input').focus();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <title>Adding Elems to the DOM: Question 5</title>
+
+    <script>
+    function newItem(str) {
+      if (!str) {
+        window.alert("No input found. Please check and try again")
+      } else {
+        let listOL = document.getElementById('listgoeshere');
+        let item = document.createElement('li');
+        item.innerText = str;
+        listOL.appendChild(item);
+      }
+    }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Question Five</h1>
+
+    <p>Make a website with a text input and a button.  Clicking on the button should create a new list item with its text the same as the text in the input.</p>
+
+    <hr>
+
+    <h1>Grow a List</h1>
+
+    <form id="growalist">
+      <div>
+        <label for="additem">Enter new item:</label>
+        <input type="text" name="additem" id="additem">
+
+        <input type="submit" value="Submit" onclick="newItem(additem.value); return false;">
+      </div>
+    </form>
+
+    <div>
+      <ol id="listgoeshere">
+      </ol>
+    </div>
+
+    <script>
+      document.getElementById('additem').focus();
+      document.getElementById('additem').select();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <title>Adding Elems to the DOM: Question 7</title>
+
+    <script>
+      function feedList(num) {
+        if (!num) {
+          window.alert("No input found");
+        } else if (isNaN(num)) {
+          window.alert("Not a valid number input!");
+        } else {
+          let listDiv = document.getElementById('listgoeshere');
+          let newItem = document.createElement('li');
+          newItem.innerText = num;
+          listDiv.appendChild(newItem);
+
+          document.getElementById('getnumber').value = '';
+          document.getElementById('getnumberlabel').innerText = "Added. Enter another number:";
+        }
+      }
+      function assessList() {
+        let numList = document.querySelectorAll('li');
+        let listSum = 0;
+        let largest = -Infinity;
+        let smallest = Infinity;
+        for (let li of numList) {
+          let liNum = Number(li.innerText);
+          listSum += liNum;
+          if (liNum > largest) {
+            largest = liNum;
+          }
+          if (liNum < smallest) {
+            smallest = liNum;
+          }
+        }
+        document.getElementById('p1').innerText = `List Average: ${listSum / numList.length}`;
+        document.getElementById('p2').innerText = `Max Item: ${largest}`;
+        document.getElementById('p3').innerText = `Min Item: ${smallest}`;
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Question Seven</h1>
+
+    <p>Make a website with a number input, a button, and 3 paragraphs.  Clicking on the button should add the number to a 
+      list.  The first paragraph should show the average of all the numbers, the second paragraph should show the maximum 
+      value, and the third paragraph should show the minimum value.</p>
+
+    <hr>
+
+    <h1>Three Paragraph Number Play</h1>
+
+    <form id="threeparaplay">
+      <div>
+        <label for="getnumber" id="getnumberlabel">Enter a number:</label>
+        <input type="number" name="getnumber" id="getnumber">
+
+        <input type="submit" value="Submit" onclick="feedList(getnumber.value); assessList(); return false;">
+      </div>
+    </form>
+
+    <p>Number Submissions</p>
+
+    <ul id="listgoeshere">
+    </ul>
+
+    <p id="p1">Paragraph 1</p>
+
+    <p id="p2">Paragraph 2</p>
+    
+    <p id="p3">Paragraph 3</p>
+
+    <script>
+      document.getElementById('getnumber').focus();
+      document.getElementById('getnumber').select();
+    </script>
+
+  </body>
+</html>

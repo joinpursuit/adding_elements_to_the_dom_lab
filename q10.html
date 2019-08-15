@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <title>Adding Elems to the DOM: Question 10</title>
+
+    <script>
+      function sizeHeader(num) {
+        if (!num) {
+          window.alert("No input found");
+        } else if (isNaN(num)) {
+          window.alert("Please check your number and try again");
+        } else {
+          let headerDiv = document.getElementById('headercontainer');
+          let oldHeader = headerDiv.childNodes[0]; // querySelector('h1','h2','h3','h4','h5','h6','h7') => bugs after first submit;
+          let newHeader = document.createElement(`h${num}`);
+          newHeader.innerText = oldHeader.innerText;
+          headerDiv.replaceChild(newHeader, oldHeader);
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Question Ten</h1>
+
+    <p>Make a website with a number input, a heading and a button. Clicking on the button should replace the heading with a heading matching the 
+      number in the input.  (e.g Entering 4 into the number input should turn the heading into `&lt;h4>`)</p>
+    
+    <hr>
+
+    <div id="headercontainer"><h1 id="chameleon">Size This Header</h1></div>
+
+    <form id="sizeheader">
+      <div>
+        <label for="size">Enter a Size (1-7):</label>
+        <input type="number" max="7" min="1" name="sizeinput" id="sizeinput">
+
+        <input type="submit" value="Size It" onclick="sizeHeader(sizeinput.value); return false;">
+      </div>
+    </form>
+
+    <script>
+      document.getElementById('sizeinput').focus();
+      document.getElementById('sizeinput').select();
+    </script>
+
+  </body>
+</html>
