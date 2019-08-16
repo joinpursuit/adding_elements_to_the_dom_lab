@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 5</title>
+    </head>
+    <body>
+        <h1>Make that List</h1>
+        <input id="new_items" type="type">
+        <button onclick="listMaker()">Create New List</button>
+        
+        <script>
+            function listMaker() {
+                // let newList = document.createElement('li')
+                // nameList.innerText = `Planet Name: ${value.name} || Population: ${value.population}`
+                // document.body.appendChild(nameList)
+
+                let newInput = document.createElement("li")
+                newInput.innerText = new_items.value
+                document.body.appendChild(newInput)
+
+            }
+        </script>
+    </body>
+</html>

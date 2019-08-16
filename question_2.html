@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 2</title>
+    </head>
+    <body>
+
+        <script>
+            // let p = document.createElement("p")
+
+            let results = [
+                { name: "Anne" },
+                { name: "Bri" },
+                { name: "Chaz" },
+                { name: "Darlene" }
+            ]
+
+            // p.innerText = "Cheese"
+            // document.body.appendChild(p)
+
+            for (let value of results) {
+               let newList = document.createElement('li')
+                newList.innerText = value.name
+                document.body.appendChild(newList)
+            }
+
+            // document.body.appendChild(list)
+
+        </script>
+    </body>
+</html>

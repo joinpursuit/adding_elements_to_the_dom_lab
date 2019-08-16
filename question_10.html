@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 10</title>
+    </head>
+    <body>
+        <h1 id="header">Ant Man</h1>
+        <input id="headerNumSize" type="number">
+        <button onclick="changeHeaderNum()">Change Header Size</button>
+
+        <script type="text/javascript">
+        function changeHeaderNum() {
+            let numSelected = document.querySelector("h1")
+            let newHeaderSize = document.createElement("h" + headerNumSize.value)
+
+            newHeaderSize.innerText = header.innerText
+            numSelected.parentNode.replaceChild(newHeaderSize, numSelected)
+            }
+        </script>
+    </body>
+</html>

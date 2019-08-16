@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 6</title>
+    </head>
+    <body>
+        <h1>Create Multiple Lists</h1>
+        <input id="items" type="text">
+        <input id="amount" type="number">
+        <button onclick="createLists()">Create Lists</button>
+        <script>
+            function createLists() {
+                let newInput = document.createElement("li")
+
+                for (let i = 0; i < amount.value; i++) {
+                    let newInput = document.createElement("li")
+                    newInput.innerText = items.value
+                    document.body.appendChild(newInput);
+                }
+            }
+        </script>
+    </body>
+</html>

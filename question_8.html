@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 8</title>
+    </head>
+    <body>
+        <h1>Button Remover</h1>
+        <button id="button1" onclick="removeButton()">Remove Me</button>
+
+        <script type="text/javascript">
+        function removeButton() {
+            let myButton = document.getElementById('button1')
+            myButton.parentNode.removeChild(myButton)
+        }
+            
+        </script>
+    </body>
+</html>

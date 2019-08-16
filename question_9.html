@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 9</title>
+    </head>
+    <body>
+        <h1>Remove Paragraphs</h1>
+
+        <button onclick="removeParagraphs()">Ban Paragraphs</button>
+        <p id="para1">Well I never!</p>
+        <p id="para2">You can't do this, I know my coded rights!</p>
+        <p id="para3">Meh, I'm cool with it.</p>
+
+        <script type="text/javascript">
+            function removeParagraphs() {
+                let doh = document.getElementById("para1")
+                let ray = document.getElementById("para2")
+                let meh = document.getElementById("para3")
+
+                doh.parentNode.removeChild(doh)
+                ray.parentNode.removeChild(ray)
+                meh.parentNode.removeChild(meh)
+            }
+        </script>
+    </body>
+</html>

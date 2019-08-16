@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question One</title>
+    </head>
+    <body>
+        <h1>Heading</h1>
+        <input id="change_input" type="text">
+        <button onclick="replaceText()">Replace Text</button>
+        <script type="text/javascript">
+            function replaceText() {
+                let firstHeader = document.querySelector("h1")
+                let newInput = document.createElement("h1")
+                newInput.innerText = change_input.value
+                firstHeader.parentNode.replaceChild(newInput, firstHeader)
+            }
+        </script>
+    </body>
+</html>

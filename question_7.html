@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 7</title>
+    </head>
+    <body>
+        <h1>Show Results</h1>
+        <input id="my_num" type="number">
+        <button onclick="addNumber()">Display Number</button>
+        <p id="para1"></p>
+        <p id="para2"></p>
+        <p id="para3"></p>
+        <script>
+            function addNumber() {
+                let newNum = document.createElement("li")
+                newNum.innerText = parseInt(my_num.value)
+                document.body.appendChild(newNum)
+
+                let listOfNums = document.querySelectorAll('li')
+                // let firstPara = document.getElementById("para1")
+                // let secondPara = document.getElementById("para2")
+                // let thirdPara = document.getElementById("para3")
+                let sum = 0;
+                let max = listOfNums[0].innerText;
+                let min = listOfNums[0].innerText;
+                let maxArray = [];
+
+                for (let i = 0; i < listOfNums.length; i++) {
+                    sum += parseInt(listOfNums[i].innerText)
+                    if(listOfNums[i].innerText > max) {
+                    max = listOfNums[i].innerText;
+                      }
+                    if(listOfNums[i].innerText < min) {
+                        min = listOfNums[i].innerText
+                    }
+                }
+
+
+                document.getElementById("para1").innerText = sum / listOfNums.length;
+                document.getElementById("para2").innerText = max
+                document.getElementById("para3").innerText = min
+            }
+        </script>
+    </body>
+</html>
