@@ -25,42 +25,44 @@
         </p>
     </div>
 
-    <p id="para_two"></p>
-    <p id="para_three"></p>
-    <p id="para_four"></p>
+    <p id="para_two" class="output"></p>
+    <p id="para_three" class="output"></p>
+    <p id="para_four" class="output"></p>
 
 
     <script>
-        function AveMinMax() {
-            let numIn = document.querySelector("#num")
-            let unOderList = document.querySelector("#input")
-            let input_list = document.createElement("li")
-            input_list.innerText = numIn.value
-            unOderList.appendChild(input_list)
+        let test = []
 
-            let test = document.body.querySelectorAll('li')
+        function AveMinMax() {
+            let num = document.querySelector("#num")
+            let input = document.querySelector("#input")
+            let input_li = document.createElement("li")
+            input_li.innerText = num.value
+            input.appendChild(input_li)
+
+            test.push(num.value)
+            let para_output = document.body.querySelectorAll('p.output')
+            console.log(para_output);
             console.log(test);
 
-            let para = document.body.querySelectorAll('p')
-            let total = 0;
-            let max = 0;
-            let min = Number(test[0].innerText)
-            let arr = [total, max, min]
             //creating a loop that looks inside the nodeList innerText while converting them to numbers
-            for (let i = 0; i < test.length; i++) {
-                let realNumber = Number(test[i].innerText)
-                total += realNumber
-                if (max < realNumber) {
-                    max = realNumber
-                } else if (min > realNumber) {
-                    min = realNumber
+            function getAvg(arr) {
+                let total = 0;
+                for (let i = 0; i < arr.length; i++) {
+                    total += Number(test[i]);
                 }
+                return total / arr.length
             }
+
+            let maximum = Math.max(...test)
+            let minimum = Math.min(...test)
+            let average = getAvg(test)
+
             // assigning the innerText value of the nodeList paragraphs their respective value
-            console.log(min);
-            para[2].innerText = `The average of your list is now: ${Number((total / test.length).toFixed(2))}`
-            para[3].innerText = `The max of your list is now: ${max}`
-            para[4].innerText = `The min of your list is now: ${min}`
+            console.log(minimum);
+            para_output[0].innerText = `The average of your list is now: ${Number(average.toFixed(2))}`
+            para_output[1].innerText = `The maximum value of your list is now: ${maximum}`
+            para_output[2].innerText = `The minimum value of your list is now: ${minimum}`
         }
     </script>
 
