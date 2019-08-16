@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 7</title>
+</head>
+<body>
+    <input type="number" name="" id="theNumberInput" placeholder="input a number">
+    <button id="theButton" onclick="clickFunction()">Press This</button>
+    <p id="p1">Average</p>
+    <p id="p2">Maximum 2</p>
+    <p id="p3">Minimum 3</p>
+
+    <script>
+            
+            let arr = []
+            console.log(arr)
+            let inputNumber = document.querySelector("#theNumberInput");
+            let p1 = document.querySelector("#p1");
+            let p2 = document.querySelector("#p2");
+            let p3 = document.querySelector("#p3")
+            let listOfParagraphs = document.querySelectorAll("p"); //makes an array of the p tags
+            let i = 0;
+            const clickFunction = () => {  
+                let newNum;
+                let max;
+                let min;
+                let average;
+                newNum = parseInt(inputNumber.value);
+                console.log("newNum is:" + newNum);
+                arr[i] = newNum;
+                console.log("arr: " + arr)
+                average = getAvg(arr);
+                max = getMax(arr);
+                min = getMin(arr)
+                console.log("max: " + max);
+                console.log("min: " + min);
+                p1.innerText = `The average of the number(s) inputed is: ${average}`;
+                p2.innerText = `The maximum number inputed is: ${max}`;
+                p3.innerText = `The minimum number inputed is: ${min}`;
+                average = 0;
+                i++;
+            }
+
+            const getAvg = (inputArray) => {
+                let total = inputArray.reduce( (accumulator, currentValue) => accumulator + currentValue, 0);
+                let average = total / inputArray.length;
+                console.log("average: " + average);
+                return average;
+            }
+
+            const getMax = (inputArray) => {
+                return Math.max(...inputArray)
+            }
+
+            const getMin = (inputArray) => {
+                return Math.min(...inputArray);
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 3</title>
+</head>
+<body>
+    <script>
+        let ul = document.createElement("ul");
+        document.body.appendChild(ul);
+        let results = [
+            {
+            "gender": "female",
+            "name": {
+                "title": "mademoiselle",
+                "first": "ruth",
+                "last": "nicolas"
+            },
+            "nat": "CH"
+            },
+            {
+            "gender": "female",
+            "name": {
+                "title": "miss",
+                "first": "رها",
+                "last": "سلطانی نژاد"
+            },
+            "nat": "IR"
+            },
+            {
+            "gender": "female",
+            "name": {
+                "title": "mrs",
+                "first": "patricia",
+                "last": "hale"
+            },
+            "nat": "GB"
+            },
+            {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "fernando",
+                "last": "cooper"
+            },
+            "nat": "US"
+            },
+            {
+            "gender": "female",
+            "name": {
+                "title": "mrs",
+                "first": "یسنا",
+                "last": "صدر"
+            },
+            "nat": "IR"
+            },
+            {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "eino",
+                "last": "tuomala"
+            },
+            "nat": "FI"
+            },
+            {
+            "gender": "female",
+            "name": {
+                "title": "ms",
+                "first": "gonca",
+                "last": "özkara"
+            },
+            "nat": "TR"
+            },
+            {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "kyle",
+                "last": "castillo"
+            },
+            "nat": "US"
+            },
+            {
+            "gender": "female",
+            "name": {
+                "title": "miss",
+                "first": "olivia",
+                "last": "kumar"
+            },
+            "nat": "NZ"
+            },
+            {
+            "gender": "male",
+            "name": {
+                "title": "monsieur",
+                "first": "raymond",
+                "last": "durand"
+            },
+            "nat": "CH"
+            }
+        ];
+        
+        for (let i = 0; i < results.length; i++) {
+                let listItem = document.createElement("li")
+                listItem.innerText = `${results[i].name.first}, ${results[i].name.last}, ${results[i].nat} `
+                ul.appendChild(listItem);
+            }
+    </script>
+</body>
+</html>

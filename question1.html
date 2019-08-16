@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">This is my heading</h1>
+    <input type="text" name="" id="name_input_element" placeholder="input somethang">
+    <button id="changingInput" onclick="changeHeader()">Click this</button>
+    <script>
+        function changeHeader() {
+            let nameInputElement = document.getElementById("name_input_element");
+            let userSubmittedThing = nameInputElement.value;
+            let heading = document.getElementById("header");
+            heading.innerText = `${userSubmittedThing}`
+        }
+    </script>
+</body>
+</html>
+
+

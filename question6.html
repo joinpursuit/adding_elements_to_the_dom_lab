@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 6</title>
+</head>
+<body>
+    <input type="text" name="" id="theTextInput" placeholder="text">
+    <br><br>
+    <input type="number" name="" id="theNumberInput" placeholder="number">
+    <br><br>
+    <button id="theButton" onclick="amountShowed()">Press This</button>
+
+    <script>
+        let ul = document.createElement("ul");
+        document.body.appendChild(ul);
+        function amountShowed() {
+            let textElem = document.getElementById("theTextInput");
+            let numberElem = document.getElementById("theNumberInput");
+            let word = theTextInput.value;
+            let amount = theNumberInput.value;
+            let listItem;
+
+            console.log(amount);
+            for(let i = 0; i < amount; i++) {
+                listItem = document.createElement("li");
+                listItem.innerText = word;
+                ul.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>

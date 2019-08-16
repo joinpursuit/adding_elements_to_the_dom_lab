@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 5</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Input something">
+    <button id="button1" onclick="addText()">Click here</button>
+
+    <script>
+        let ul = document.createElement("ul");
+        document.body.appendChild(ul);
+        function addText() {
+            let inputElem = document.getElementById("input1");
+            let userInputSomething = input1.value;
+            let listItem = document.createElement("li");
+            listItem.innerText = userInputSomething;
+            console.log(listItem.value)
+            ul.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

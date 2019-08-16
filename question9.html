@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 9</title>
+</head>
+<body>
+    <button id="theButton" onclick="deleteAllParagraphs()">Delete All the Paragraphs</button>
+    <p id="p1">Paragraph 1</p>
+    <p id="p2">Paragraph 2</p>
+    <p id="p3">Paragraph 3</p>
+    <p id="p4">Paragraph 4</p>
+    <p id="p5">Paragraph 5</p>
+
+    <script>
+        let p1 = document.querySelector("#p1");
+        let p2 = document.querySelector("#p2");
+        let p3 = document.querySelector("#p3");
+        let p4 = document.querySelector("#p4");
+        let p5 = document.querySelector("#p5");
+        const deleteAllParagraphs = () => {
+            p1.parentNode.removeChild(p1);
+            p2.parentNode.removeChild(p2);
+            p3.parentNode.removeChild(p3);
+            p4.parentNode.removeChild(p4);
+            p5.parentNode.removeChild(p5);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 10</title>
+</head>
+<body>
+    <input type="number" id="numberInput">
+    <h1>Enter a number 1 - 6</h1>
+    <p id="heading">Heading</p>
+    <button id="theButton" onclick="changeTheHeading()">Press this</button>
+
+    <script>
+        const changeTheHeading = () => {
+            let numberInput = document.querySelector("#numberInput");
+            let heading = document.querySelector("#heading");
+            let words = heading.innerText;
+            if(numberInput.value === 1) {
+                let newNode = document.createElement("h1")
+                newNode.innerText = words;
+                heading.parentNode.replaceChild(heading, newNode);
+
+            } else if(numberInput.value === 2) {
+                let newNode = document.createElement("h2");
+                newNode.innerText = words;
+                heading.parentNode.replaceChild(heading, newNode);
+
+            } else if(numberInput.value === 3) {
+                let newNode = document.createElement("h3");
+                newNode.innerText = words;
+                heading.parentNode.replaceChild(heading, newNode);
+
+            } else if(numberInput.value === 4) {
+                let newNode = document.createElement("h4");
+                newNode.innerText = words;
+                heading.parentNode.replaceChild(heading, newNode);
+
+            } else if(numberInput.value === 5) {
+                let newNode = document.createElement("h5");
+                newNode.innerText = words;
+                heading.parentNode.replaceChild(heading, newNode);
+
+            } else if(numberInput.value === 6) {
+                let newNode = document.createElement("h6");
+                newNode.innerText = words;
+                heading.parentNode.replaceChild(heading, newNode);
+
+            } else {
+                let newNode = document.createElement("h1");
+                newNode.innerText = "You screwed up";
+                heading.parentNode.replaceChild(heading, newNode);
+
+            }
+        }
+    </script>
+</body>
+</html>
