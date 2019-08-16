@@ -1,0 +1,38 @@
+ <!-- # Question Two
+Make a website that displays a list containing all of the names below.
+Make all of your `<li>` items inside of a script. -->
+<!--
+{
+  "results" : [
+    { "name" : "Anne" },
+    { "name" : "Bri" },
+    { "name" : "Chaz" },
+    { "name" : "Darlene" }
+  ]
+} -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <title> Question 2 </title>
+ </head>
+ <body>
+   <h1> Question 2 </h1>
+   <ul id = 'listparent'> </ul>
+   <script>
+     let names = {
+        "results" : [
+          { "name" : "Anne" },
+          { "name" : "Bri" },
+          { "name" : "Chaz" },
+          { "name" : "Darlene" }
+        ]
+      }
+      for (let name of names.results) {
+       let newListItem = document.createElement("li")
+       newListItem.innerText = name.name
+       listparent.appendChild(newListItem)
+     }
+  </script>
+ </body>
+</html>

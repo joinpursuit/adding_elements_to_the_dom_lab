@@ -1,0 +1,23 @@
+<!-- # Question One
+Make a website with a heading, an input text field and a button.
+Clicking the button should change the heading's text to be the text in the input. -->
+ <!DOCTYPE html>
+ <html>
+  <head>
+    <title> Question 1 </title>
+  </head>
+  <body>
+    <h1> Question 1 </h1>
+    <input type='text' name = 'word' id ='word'>
+    <button onclick = 'swap_heading()'> Swap </button>
+    <script>
+      const swap_heading = () => {
+        let heading = document.querySelector('h1')
+        let input = document.getElementById('word').value
+          heading.innerText = input
+          let newHead = document.createElement('h1')
+          heading.body.replaceChild(newHead, heading)
+      }
+     </script>
+  </body>
+ </html>

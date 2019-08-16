@@ -1,0 +1,52 @@
+<!-- # Question Ten
+
+Make a website with a number input, a heading and a button.
+Clicking on the button should replace the heading with a heading matching the number in the input.
+(e.g Entering 4 into the number input should turn the heading into `<h4>`) -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <title> Question 10 </title>
+ </head>
+ <body>
+   <h1> Question 10 </h1>
+   <input type='number' name = 'num' id ='numbers' min = '1' max = '6'>
+   <button onclick = 'make_a_heading()'> Make A Heading </button>
+   <script>
+     function make_a_heading() {
+       let head = document.querySelector('h1').innerText
+       let number = document.querySelector('input').value
+       console.log(head)
+       console.log(number)
+
+       if(number === 1){
+         let newHead = document.createElement('h1')
+         newHead.innerText = head
+         document.appendChild(newHead)
+       } else if(number === 2) {
+         let newHead = document.createElement('h2')
+         newHead.innerText = head
+         document.appendChild(newHead)
+       } else if(number === 3) {
+         let newHead = document.createElement('h3')
+         newHead.innerText = head
+         document.appendChild(newHead)
+       } else if(number === 4) {
+         let newHead = document.createElement('h4')
+         newHead.innerText = head
+         document.appendChild(newHead)
+       } else if (number === 5) {
+         let newHead = document.createElement('h5')
+         newHead.innerText = head
+         document.appendChild(newHead)
+       } else{
+         let newHead = document.createElement('h6')
+         newHead.innerText = head
+         document.appendChild(newHead)
+       }
+       console.log(newHead)
+     }
+    </script>
+ </body>
+</html>

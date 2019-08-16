@@ -1,0 +1,33 @@
+<!-- # Question Nine
+
+Make a website with a button, and 5 paragraph tags.  Clicking on the button should remove all of the paragraphs. -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <title> Question 9 </title>
+ </head>
+ <body>
+   <h1> Question 9 </h1>
+   <div id= "1">
+   <p> paragraph 1 </p>
+   <p> paragraph 2 </p>
+   <p> paragraph 3 </p>
+   <p> paragraph 4 </p>
+   <p> paragraph 5 </p>
+   </div>
+
+   <button onclick = 'removep()'> Remove Paragraphs </button>
+   <script>
+     function removep () {
+                let div1 = document.getElementById('1')
+                console.log("div1", div1)
+                let para = document.querySelectorAll('p')
+                for(let node of para) {
+                   console.log("node", node)
+                   div1.removeChild(node)
+                }
+              }
+    </script>
+ </body>
+</html>
