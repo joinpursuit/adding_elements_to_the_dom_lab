@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Question 5</title>
+  </head>
+  <body>
+    <p>
+      Make a website with a text input and a button. Clicking on the button
+      should create a new list item with its text the same as the text in the
+      input.
+    </p>
+    <input id="input" type="text" name="text" placeholder="Enter Text" />
+    <button onclick="newList()">Click Here</button>
+    <ol id="list"></ol>
+
+    <script type="text/javascript">
+      function newList() {
+        //  document.createElement("ol")
+        // list.innerText = "New List"
+        // document.body.appendChild(list)
+
+        let listItem = document.createElement("li");
+        let item = document.getElementById("input");
+
+        listItem.innerText += item.value + " ";
+        list.appendChild(listItem);
+
+        // let add = document.querySelector(input).value
+      }
+    </script>
+  </body>
+</html>

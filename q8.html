@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 8</title>
+  </head>
+  <body>
+    <p>Make a website with a button. Clicking on the button should remove the button.</p>
+    <button onclick="removeButton()" id="remove">Click Here</button>
+<script>
+  function removeButton(){
+  let del = document.getElementById("remove")
+  document.body.removeChild(del)
+}
+
+</script>
+  </body>
+</html>

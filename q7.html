@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Question 7</title>
+  </head>
+  <body>
+    <p>
+      Make a website with a number input, a button, and 3 paragraphs. Clicking
+      on the button should add the number to a list. The first paragraph should
+      show the average of all the numbers, the second paragraph should show the
+      maximum value, and the third paragraph should show the minimum value.
+    </p>
+    <input id="num" type="number" name="input" placeholder="Enter a Number" />
+    <button onclick="newList()">Click Here</button>
+    <p id="average">Average: </p>
+    <p id="max">Maxium Number:</p>
+    <p id="min">Minimum Number:</p>
+    <ul id="input"></ul>
+
+    <script>
+      function newList() {
+        let list = document.createElement("li");
+        let num = document.getElementById("num").value;
+        let input = document.getElementById("input");
+
+        list.innerText = num;
+        input.appendChild(list);
+
+        let elements = document.querySelectorAll("li");
+
+        let sum = 0;
+        let max = 0;
+        let min = elements[0].innerText;
+
+        for (let el of elements) {
+          sum += Number(el.innerText);
+          if (max < Number(el.innerText)) {
+            max = el.innerText;
+          }
+          if (min > Number(el.innerText)) {
+            min = el.innerText;
+          }
+        }
+
+        let average = sum;
+        document.getElementById("average").innerText = average/ elements.length + " average";
+        document.getElementById("max").innerText = max + " max";
+        document.getElementById("min").innerText = min + " min";
+
+        //querySelectorAll creates an objects.
+        // console.log(elements)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 6</title>
+  </head>
+  <body>
+    <p>
+      Make a website with a text input, a number input and a button. Clicking on the button should add that many copies of the text in the text input to a list.
+    </p>
+    <input id="input" type="text" name="text" placeholder="Enter a Text">
+    <input id="input2" type="number" name="text" placeholder="Enter a Number">
+    <button onclick="newList()">Click Here</button>
+    <ol id="input"> </ol>
+
+    <script>
+      function newList(){
+  let listItem = document.createElement("li")
+  let item = document.getElementById('input')
+  let num = document.getElementById('input2').value
+
+  while(num > 0){
+    listItem.innerText += item.value;
+    document.body.appendChild(listItem)
+    num--;
+  }
+  }
+    </script>
+
+  </body>
+</html>

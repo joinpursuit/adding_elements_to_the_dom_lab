@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 10</title>
+  </head>
+  <body>
+    <p>Make a website with a number input, a heading and a button. Clicking on the button should replace the heading with a heading matching the number in the input. (e.g Entering 4 into the number input should turn the heading into <h4>)
+</p>
+    <h1>Change Me</h1>
+    <input id="number" type="text" placeholder="Enter a number"/>
+    <button onclick="changeHeading()" name="button">Click to change</button>
+
+    <script>
+      function changeHeading(){
+        let heading = document.querySelector("h1")
+        let newNode = document.createElement("h4")
+        let input = document.getElementById("number")
+        let newHead = input.value
+        newNode.innerText = newHead
+
+        heading.parentNode.replaceChild(newNode, heading)
+
+      }
+    </script>
+  </body>
+</html>
