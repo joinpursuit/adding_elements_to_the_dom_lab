@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Question 6</h1>
+Text:<input type="text">
+Number:<input type="number" id = "number">
+  <button type="button" onclick="numberText()">Submit</button>
+  <ul></ul>
+  <script>
+  const numberText = () => {
+    let num = document.querySelector('#number').value;
+   for (let i = 0; i < num; i++) {
+      let text = document.querySelector("input").value;
+      let outputText = document.createElement("li");
+      outputText.innerText = text;
+      document.querySelector('ul').appendChild(outputText)
+
+  //  Make a website with a text input, a number input and a button.
+    //Clicking on the button should add that many copies of the text in the
+     //text input to a list.
+  }
+}
+  </script>
+</body>
+</html>

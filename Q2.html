@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Question 2</h1>
+  <div1 id="nameList">
+  </div1>
+
+  <!--ul>
+    <li>name:"Anne"</li>
+    <li> name:"Bri"</li>
+    <li> name:"Chaz"</li>
+    <li> name:"Darlene"</li>
+
+  </ul-->
+
+
+
+  <script>
+    let obj =  {
+      "results" : [
+        { "name" : "Anne" },
+        { "name" : "Bri" },
+        { "name" : "Chaz" },
+        { "name" : "Darlene" }
+      ]
+    }
+
+  //const listOfNames = () => {
+for (let i = 0; i < obj.results.length; i++) {
+  let listItem = document.createElement("li")
+  //let list = document.querySelectorAll("nameList")
+listItem.innerText = obj.results[i].name
+document.body.appendChild(listItem)
+  //for (let el of list) {
+
+  }
+
+//}
+
+  </script>
+</body>
+</html>

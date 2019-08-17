@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Question 3</h1>
+<ul id='objlist'>
+
+</ul>
+<script>
+let obj =  {
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+      "title": "mademoiselle",
+      "first": "ruth",
+      "last": "nicolas"
+      },
+      "nat": "CH"
+      },
+    {
+    "gender": "female",
+    "name": {
+    "title": "miss",
+    "first": "رها",
+    "last": "سلطانی نژاد"
+    },
+    "nat": "IR"
+    },
+  {
+    "gender": "female",
+    "name": {
+    "title": "mrs",
+    "first": "patricia",
+    "last": "hale"
+    },
+    "nat": "GB"
+    },
+  {
+    "gender": "male",
+    "name": {
+    "title": "mr",
+    "first": "fernando",
+    "last": "cooper"
+    },
+    "nat": "US"
+    },
+    {
+    "gender": "female",
+    "name": {
+    "title": "mrs",
+    "first": "یسنا",
+    "last": "صدر"
+    },
+    "nat": "IR"
+    },
+  {
+    "gender": "male",
+    "name": {
+    "title": "mr",
+    "first": "eino",
+    "last": "tuomala"
+    },
+    "nat": "FI"
+    },
+    {
+    "gender": "female",
+    "name": {
+    "title": "ms",
+    "first": "gonca",
+    "last": "özkara"
+    },
+    "nat": "TR"
+    },
+    {
+    "gender": "male",
+    "name": {
+    "title": "mr",
+    "first": "kyle",
+    "last": "castillo"
+    },
+    "nat": "US"
+    },
+    {
+    "gender": "female",
+    "name": {
+    "title": "miss",
+    "first": "olivia",
+    "last": "kumar"
+    },
+    "nat": "NZ"
+    },
+    {
+    "gender": "male",
+    "name": {
+    "title": "monsieur",
+    "first": "raymond",
+    "last": "durand"
+    },
+    "nat": "CH"
+    }
+    ],
+    "info": {
+    "seed": "2cb086ce097c87ee",
+    "results": 10,
+    "page": 1,
+    "version": "1.2"
+    }
+    }
+//const someObjects = () => {
+for (let i = 0; i < obj.results.length; i++) {
+      let listItem = document.createElement("li")
+      //let objectItem = `firstname:${obj.results[i].name.first}
+      //lastname:${obj.results[i].name.last} nationality:
+      //${obj.results[i].nat}`
+      //let list = document.querySelectorAll("nameList")
+    listItem.innerText = `First Name:${obj.results[i].name.first}
+    Last Name:${obj.results[i].name.last} Nationality: ${obj.results[i].nat}`
+    document.body.appendChild(listItem)
+  }
+//}
+  </script>
+</body>
+</html>

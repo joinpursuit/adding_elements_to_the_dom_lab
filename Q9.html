@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Question 9</h1>
+  <div1 id="div1">
+    <p id="para1"> First paragraph</p>
+    <p id="para2"> Second paragraph</P>
+    <p id="para3"> Third paragraph</p>
+    <p id="para4"> Fourth paragraph</p>
+    <p id="para5"> Fifth pararagraph</p>
+
+  </div1>
+  <button onclick="removeAll()">Remove all paragraphs</button>
+<script>
+// Make a website with a button, and 5 paragraph tags.
+//  Clicking on the button should remove all of the
+//  paragraphs.
+
+const removeAll = () => {
+  let div1 = document.querySelector("div1")
+  let p = document.querySelectorAll("p")
+  for(let i = 0; i < p.length; i++) {
+    div1.removeChild(p[i])
+}
+}
+</script>
+</body>
+</html>

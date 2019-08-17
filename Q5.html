@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Question 5</h1>
+  
+  <input type="text">
+  <button onclick="created()">submit</button>
+  <ol id="created_list">
+  </ol>
+  
+  <script>
+    const created = () => {
+    let list = document.createElement("li")
+    list.innerText = document.querySelector("input").value
+    let orderedList = document.getElementById("created_list")
+    orderedList.appendChild(list)
+    console.log(list)
+
+  }
+  </script
+</body>
+</html>

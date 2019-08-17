@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Question 1</h1>
+  <input type="text" id="heading_change">
+  <button onclick="replaceHeading()">Submit</button>
+  <script>
+    const replaceHeading = () => {
+    let oldText = document.querySelector("h1")
+    let inputText = document.getElementById("heading_change")
+    let newText = document.createElement("h1")
+    document.body.replaceChild(newText, oldText)
+    newText.innerText = oldText.value
+
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Question 10</h1>
+  <input type="number" id="number">
+  <button onclick="replace()">Replace Heading</<button>
+<script>
+  // Make a website with a number input, a heading and a button. Clicking on
+  // the button should replace the heading with a heading matching the number
+  // in the input. (e.g Entering 4 into the number input should turn the
+  // heading into `<h4>`)
+
+  const replace = () => {
+    let heading = document.querySelector("h1")
+    let num = document.querySelector("input").value
+    let newHeading = document.createElement("number")
+    newHeading.innerText = heading.innerText
+    document.body.replaceChild(newHeading, heading)
+}
+</script>
+</body>
+</html>
