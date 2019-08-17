@@ -1,34 +1,54 @@
 <!DOCTYPE html>
     <html>
+        <head>
+            <title> Question 7 </title>
+        </head>
         <body>
-            <h1>Question 7</h1>
-
-            <p id = "avgOfNums">What Is the average of numbers</p>
-            <p id = "maxOfNums">What is the maximum value</p>
-            <p id = "minOfNums">What is the minimum value</p>
-
-            <ul id = "unorderedL">Number List</ul>
-
-            
-            <label for = "num_input">Enter Number</label>
-            <input id = "num_input" type = "number">
-            <button id = "userClick"
-                    onclick = "multiDimensional()"
-                    >
-                    Submit
-            </button>
-
+            <input type ='text' id ='num1'>
+            <button type = 'button' onclick = 'getValues()' id = 'button'> Find the Min, Max & Average </button>
+            <p id = 'p1'></p>
+            <p id = 'p2'></p>
+            <p id = 'p3'></p>
             <script>
-                const multiDimensional = () => {
-                    let numInput = document.getElementById("num_input")
-                    let list = document.createElement("li")
-                    let numList = list.innerText = numInput.value
-                    let ul = document.getElementById("unorderedL")
-                    ul.appendChild(numList)
-
-                    //let avg = numList 
-                    const avg = arr => numList.reduce((a,b) => (a + b, 0) / numList.length)
-                    console.log(avg)
+​
+            let numberArray = []
+            function getValues () {
+            let userInput = document.querySelector('#num1').value
+            numberArray.push(Number(userInput))
+            console.log('numberArray', numberArray)
+            let p1 = document.querySelector('#p1')
+            let p2 = document.querySelector('#p2')
+            let p3 = document.querySelector('#p3')
+​
+            p1.innerText = findMinimum(numberArray)
+            p2.innerText = findMaximum(numberArray)
+            p3.innerText = averageAll(numberArray)
+            }
+            function findMinimum(arr) {
+                    let minimum = Infinity
+                    for (let number of arr) {
+                        if (number < minimum) {
+                            minimum = number
+                        }
+                    }
+                    return minimum
+                }
+                function findMaximum(arr) {
+                    let maximum = -Infinity
+                    for (let number of arr) {
+                        if (number > maximum) {
+                            maximum = number
+                        }
+                    }
+                    return maximum
+                }
+                function averageAll(arr) {
+                    let average = 0
+                    let total = 0
+                    for(let number of arr) {
+                        total += number
+                    }
+                    return total / arr.length
                 }
             </script>
         </body>
