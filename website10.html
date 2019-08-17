@@ -10,13 +10,16 @@ Clicking on the button should replace the heading with a heading matching the nu
    <title> Question 10 </title>
  </head>
  <body>
+   <div>
    <h1> Question 10 </h1>
+   </div>
    <input type='number' name = 'num' id ='numbers' min = '1' max = '6'>
    <button onclick = 'make_a_heading()'> Make A Heading </button>
    <script>
      function make_a_heading() {
        let head = document.querySelector('h1').innerText
        let number = document.querySelector('input').value
+       let div = document.querySelectorAll('div')
        console.log(head)
        console.log(number)
 
@@ -39,11 +42,11 @@ Clicking on the button should replace the heading with a heading matching the nu
        } else if (number === 5) {
          let newHead = document.createElement('h5')
          newHead.innerText = head
-         document.appendChild(newHead)
+         div.document.appendChild(newHead)
        } else{
          let newHead = document.createElement('h6')
          newHead.innerText = head
-         document.appendChild(newHead)
+         div.document.appendChild(newHead)
        }
        console.log(newHead)
      }
