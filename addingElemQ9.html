@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <body>
+        <h1>Question9</h1>
+        <p> Make a website with a button, and 5 paragraph tags. Clicking on the button should remove all of the paragraphs.     
+        </p>
+        <p>
+            <button onclick=removeAllParagraphs()>Remove All</button>
+        </p>
+
+        <p><u>Paragraph 1:</u> 
+            <br>
+        Make a website with a button, and 5 paragraph tags. Clicking on the button should remove all of the paragraphs.
+        </p>
+        <p><u>Paragraph 2:</u>
+            <br>
+                Make a website with a button, and 5 paragraph tags. Clicking on the button should remove all of the paragraphs.
+        </p>
+        <p><u>Paragraph 3:</u>
+            <br>
+                Make a website with a button, and 5 paragraph tags. Clicking on the button should remove all of the paragraphs.
+        </p>
+        <p><u>Paragraph 4:</u>
+            <br>
+                Make a website with a button, and 5 paragraph tags. Clicking on the button should remove all of the paragraphs.
+        </p>
+        <p><u>Paragraph 5:</u>
+            <br>
+                Make a website with a button, and 5 paragraph tags. Clicking on the button should remove all of the paragraphs.
+        </p>
+
+        <script>
+            const removeAllParagraphs = () => {
+                let allParagraphs = document.querySelectorAll("p");
+                for (let i = 2; i < allParagraphs.length; i++) {
+                    allParagraphs[i].setAttribute("id", "paragraph");
+                    let paraRemoved = document.querySelector("#paragraph");
+                    paraRemoved.parentNode.removeChild(paraRemoved);
+                }
+            }
+        </script>
+    </body>
+</html> 

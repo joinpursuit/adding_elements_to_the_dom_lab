@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+     </head>
+
+    <body>
+        <h1>Question6</h1>
+        <p> Make a website with a text input, a number input and a button. Clicking on the button should add that many copies of the text in the text input to a list.      
+        </p>
+        <p>
+            <lable for="text">Your Text </lable>
+             <input id="text"   placeholder="Your Text Here">
+        
+
+            <lable for="num_id"></lable>
+            <input id="num_id"   placeholder="number to duplicate "><br>
+
+            <button onclick=duplicateText()>Duplicate</button>
+        </p>
+        <hr>
+
+        <script>
+            const duplicateText = () => {
+                let num = document.querySelector("#num_id").value;
+                let str = document.querySelector("#text").value;
+                let outputText = "";
+                for (let i = 0; i < num; i++) {
+                    outputText += str + " "
+                }
+                document.querySelector("#text").value = outputText;
+            }
+        </script>
+    </body>
+</html> 
