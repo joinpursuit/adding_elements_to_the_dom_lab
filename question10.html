@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 10</title>
+    </head>
+    <body>
+        <h1>Quesiton 10</h1>
+        <h2 id="header">This is the header default: 2</h2>
+        <label for="new_header_size">New header size: </label>
+        <input type="number" id="new_header_size" name="new_header_size">
+        <button name='new_header_size' onclick="replaceSize()">Replace</button>
+        <script>
+            const replaceSize = () => {
+                let input = document.querySelector('input').value
+                if (input % 1 === 0 && input >= 1 && input <= 7) {
+                    let oldHeader = document.querySelector('#header')
+                    let text = oldHeader.innerText
+                    let newHeader = document.createElement(`h${input}`)
+                    newHeader.innerText = text
+                    newHeader.setAttribute('id', 'header')
+                    document.body.replaceChild(newHeader, oldHeader)
+                } else {
+                    window.alert('Invalid input. Header must be int from 1 to 6')
+                }
+            }
+        </script>
+    </body>
+</html>
