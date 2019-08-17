@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q10</title>
+  </head>
+  <body>
+    <div id="parent-div">
+      <h1 id="heading">Change the heading level</h1>
+    </div>
+    <p>Make a website with a number input, a heading and a button. Clicking on the button should replace the heading with a heading matching the number in the input.  <br>
+      (e.g Entering 4 into the number input should turn the heading into "h4")</p>
+      <form>
+        <label for="numInput">Type a number between 1 and 6</label>
+        <input type = 'number' name ="numInput" id = "num_heading" min = "1" max = "6" autofocus>
+      </form><br>
+      <button type = 'button' onclick ="changeHeadingLevel()">Change heading level</button>
+    <script>
+    const changeHeadingLevel = () => {
+      parentDiv = document.getElementById("parent-div")
+      //This to create a parent for the heading level.// console.log(parentDiv)
+      oldHeading= document.getElementById("heading")
+      getNum = document.getElementById("num_heading").value
+      //This will return the input number of the enduser// console.log(getNum)
+      newHeading = document.createElement("h"+getNum)
+      //concat the h with a the input number like h+'1'= h1
+      newHeading.innerText = oldHeading.innerText
+      newHeading.id = oldHeading.id
+      //This is keep the id of the heading so it can become dynamic// console.log(newHeading)
+      parentDiv.replaceChild(newHeading, oldHeading)
+      //The code below (return newHeading = crrHeading) code didn't work so I went with above.
+      //This when I didn't have a parent for the heading level
+      // return newHeading = crrHeading
+    }
+    </script>
+  </body>
+</html>

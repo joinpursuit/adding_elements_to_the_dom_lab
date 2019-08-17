@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title> Q9</title>
+ </head>
+ <body>
+   <h1> Remove all paragraphs </h1>
+   <h4>Make a website with a button, and 5 paragraph tags.  <br>
+     Clicking on the button should remove all of the paragraphs.</h4>
+     <div id= "multipara">
+     <p> paragraph 1 </p>
+     <p> paragraph 2 </p>
+     <p> paragraph 3 </p>
+     <p> paragraph 4 </p>
+     <p> paragraph 5 </p>
+     </div>
+
+     <button onclick = 'removep()'> Remove Paragraphs </button>
+     <script>
+      const removep = () => {
+      let div1 = document.getElementById('multipara')
+      let para = document.querySelectorAll('p')
+        for(let node of para) {
+          div1.removeChild(node)
+        }
+      }
+    </script>
+ </body>
+</html>

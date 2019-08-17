@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q7</title>
+  </head>
+  <body>
+    <h1>See the Average, Max and Min value</h1>
+    <p>Make a website with a number input, a button, and 3 paragraphs.
+      Clicking on the button should add the number to a list.  <br>The first
+      paragraph should show the average of all the numbers, the second paragraph
+      should show the maximum value, <br>and the third paragraph should
+      show the minimum value.</p>
+      <form>
+      <label for = "inputNum">Enter a number:</label>
+      <input type = 'number' name= "inputNum" id = 'num_for_list'autofocus><br>
+      <br>
+      <button type="button" onclick = "insertNum()">Insert Number to a list</button>
+      </form><br>
+    <ul id = 'new_list'>
+    </ul>
+    <!-- <p id = "para1"></p>
+    <p id = "para2"></p>
+    <p id = "para3"></p> -->
+
+    <script>
+    const insertNum = () => {
+      let inputNum = document.getElementById("num_for_list").value
+      let newList = document.getElementById("new_list")
+      for (let i = 0; i <= Number(inputNum); i++) {
+        newItem = document.createElement('li')
+        newItem.innerText = inputStr
+        newList.appendChild(newItem)
+        }
+      }
+      // let avgNum = [newList]
+      // console.log(avgNum)
+      // let sum = 0
+      // for (let n = 0; n)
+    </script>
+  </body>
+</html>
+<!-- var total = 0;
+for(var i = 0; i < grades.length; i++) {
+    total += grades[i];
+}
+var avg = total / grades.length; -->
