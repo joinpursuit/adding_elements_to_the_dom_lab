@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 6</title>
+    </head>
+    <body>
+        <h1>Question 6 </h1>
+        <div>
+        <label for='alpha'>Text</label>
+        <input type='text'id='alpha' placeholder='Enter text here'>
+        </div>
+
+        <br>
+        <div>
+        <label for='copies'>Number</label>
+        <input type='number' id='copies' placeholder='Enter number here'>
+        </div>
+
+        <br>
+        <button onclick='addTextThisMany()'>Submit</button>
+        <ol id='list'>
+        </ol>
+        <script>
+            function addTextThisMany(){
+                let grabInput = document.getElementById('alpha').value
+                let grabNum = document.getElementById('copies').value
+                let useList = document.getElementById('list')
+
+                 for (let i = 0; i< grabNum; i++){
+                    let makeElem = document.createElement('li') 
+                    makeElem.innerText = grabInput
+                    useList.appendChild(makeElem)
+
+                 }  
+                
+          }
+        </script>
+    </body>
+</html>

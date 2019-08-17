@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 7</title>
+    </head>
+    <body>
+        <h1>Question 7</h1>
+        <input type='text' id='num_input'>
+        <button onclick='getValues()'>Do it</button>
+        <ul id='ul_list'></ul>
+        <p id='paraone'></p>
+        <p id='paratwo'></p>
+        <p id='parathree'></p>
+
+        <script>
+            
+        let numberArray = []
+        
+           function getValues(){
+            let userInput = document.querySelector('#num_input').value
+            numberArray.push(Number(userInput))
+            let p1 = document.querySelector('#paraone')
+            let p2 = document.querySelector('#paratwo')
+            let p3 = document.querySelector('#parathree')
+           
+           p1.innerText = findMinimum(numberArray)
+           p2.innerText = findMax(numberArray)
+           p3.innerText = avgAll(numberArray)
+           }
+        function findMinimum(arr){
+            let minimum = Infinity
+            for(let num of arr){
+                if (num < minimum){
+                    minimum = num
+                }
+            }
+            return minimum
+        }
+
+        function findMax(arr){
+            let maximum = -Infinity 
+            for (let num of arr){
+                if(num > maximum){
+                    maximum = num 
+                }
+            }
+            return maximum
+        }
+
+        function avgAll(arr){
+            let total = 0
+            for (let num of arr){
+                total += num
+            }
+            return total/arr.length
+        }
+
+        </script>
+    </body>
+</html>

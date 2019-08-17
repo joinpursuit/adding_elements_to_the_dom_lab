@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 10</title>
+    </head>
+    <body>
+        <h1 id='heading'>This heading will change</h1>
+        <input type='number' id='num'>
+        <button onclick='changeHeadingTag()'>Switch</button>
+        <script>
+        function changeHeadingTag(){
+            let grabHeading = document.querySelector('#heading')
+            let grabNumber = document.querySelector('#num')
+            let NumberVal = grabNumber.value
+            let originalText = grabHeading.innerText
+            let headingNum = ''
+
+            if (NumberVal === "1"){
+                 headingNum = 'h1'    
+            }
+            else if (NumberVal === "2"){
+                 headingNum = 'h2'      
+            }
+            else if(NumberVal === "3"){
+                 headingNum = 'h3'         
+            }
+            else if(NumberVal === "4"){
+                 headingNum = 'h4'
+            }
+            else if(NumberVal === "5"){
+                 headingNum = 'h5'       
+            }
+            else if(NumberVal === "6"){
+                headingNum = 'h6'
+            } 
+            console.log("heading Num", headingNum)
+            let newHeading = document.createElement(`${headingNum}`)
+            newHeading.innerText = originalText
+            newHeading.id = "heading"
+           document.body.replaceChild(newHeading,grabHeading)
+
+        }
+        </script>
+    </body>
+</html>

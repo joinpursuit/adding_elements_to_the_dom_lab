@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 9</title>
+    </head>
+    <body>
+        <h1>Question 9</h1>
+        <button onclick='removePara()'>Delete</button>
+        <p>Hello</p>
+        <p>How</p>
+        <p>Are</p>
+        <p>You</p>
+        <p>Doing</p>
+        <script>
+        function removePara(){
+            let allPara = document.querySelectorAll('p')
+           
+            console.log(allPara)
+            for (let elem of allPara){
+            document.body.removeChild(elem)
+            }
+        }
+        </script>
+    </body>
+</html>

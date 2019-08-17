@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 5</title>
+    </head>
+    <body>
+        <h1>Question 5</h1>
+        <input type='text' id ='inputlist'>
+        <button onclick='createListItem()'>New Item</button>
+        <br>
+        <ol id='list'>
+        </ol>
+        <script>
+        function createListItem(){
+            let selectList = document.getElementById('list')
+            let inputVal = document.getElementById('inputlist').value
+            let makeListItem = document.createElement('li')
+            makeListItem.innerText = inputVal
+            selectList.appendChild(makeListItem)
+        }
+        </script>
+    </body>
+</html>
