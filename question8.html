@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 8</title>
+  </head>
+  <body>
+    <h1>Question 8</h1>
+
+    <p id ='intro'> When you press the button you will remove the button :) </p>
+    <button onclick = 'removeButton()' id = dontpress>When you click this will leave.</button>
+<script>
+  const removeButton =()=>{
+    let physicalButton = document.getElementById('dontpress')
+    physicalButton.parentNode.removeChild(physicalButton)
+  }
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Question 2</title>
+  </head>
+  <body>
+  <h1>List of Names</h1>
+<div id = "list"></div>
+
+
+
+  <script>
+  let resultsObj =  {
+      "results" : [
+        { "name" : "Anne" },
+        { "name" : "Bri" },
+        { "name" : "Chaz" },
+        { "name" : "Darlene" }
+      ]
+    }
+    let namesArr = resultsObj.results
+    // console.log(namesArr)
+    let ul = document.createElement('ul')
+    document.getElementById('list').appendChild(ul)
+
+   for (let name of namesArr) {
+    let newName = document.createElement("li")
+     newName.innerText = name.name
+     list.appendChild(newName)
+  }
+
+  </script>
+
+  </body>
+</html>

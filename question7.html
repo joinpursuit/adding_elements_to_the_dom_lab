@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 7</title>
+  </head>
+  <body>
+    <h1>Question 7</h1>
+
+    <label for = 'number' name = 'number_input' id="number">Enter number below:</label>
+    <br>
+    <input type = 'number' id='inputNum'></input>
+    <br>
+    <button onclick= 'addNum()'>Add number to list!</button>
+
+    <br>
+    <ul id = 'numList'></ul>
+    <hr>
+    <br>
+    <p id ='averageOfNums' ><strong>Find the average of all the numbers above by pressing the button <em>below</em>!</strong><br>
+    <button onclick ='findAvg()'>CLICK 4 AVG</button>
+    </p><hr>
+    <p id = 'maxValue'>Find the maximum value by pressing the button below!<br>
+      <button onclick = 'maxValue()'> MaxValue</button>
+    </p><hr>
+    <p id = 'minValue'> Find the minimum value by pressing the button below!</p><br>
+    <button onclick = 'minValue()'>MinValue</button>
+
+    <script>
+
+      const addNum = () =>{
+      let numberInput = document.getElementById('inputNum')
+      let numValue = numberInput.value;
+      let listItem = document.createElement('li')
+      listItem.innerText = numValue;
+      numList.appendChild(listItem);
+      let elements = document.querySelectorAll('li');
+      let sum = 0;
+      let max = 0;
+      let min = elements[0].innerText;
+      for(let el of elements){
+        sum += Number(el.innerText)
+        if(max < Number(el.innerText)){
+          max = el.innerText
+        }
+        if(min > Number(el.innerText)){
+          min = el.innerText
+        }
+      }
+      }
+
+
+      const findAvg = () =>{
+        let average = sum;
+        return document.getElementById("averageOfNums").innerText = average/ elements.length + " average"
+      }
+
+      const maxValue = () =>{
+        document.getElementById("maxValue").innerText = max + " max"
+      }
+
+      const minValue = () =>{
+        document.getElementById("minValue").innerText = min + " Min"
+      }
+    </script>
+  </body>
+</html>

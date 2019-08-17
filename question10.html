@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 10</title>
+  </head>
+  <body>
+    <h1 id ='mainheading'>Question 10</h1>
+    <label for = 'inputbox'> Please input a number</label>
+    <input type = 'number' id='numberInput'></input>
+    <button onclick = 'replaceHeading()'>Press to change heading!</button>
+
+    <script>
+      const replaceHeading = () =>{
+        let heading1 = document.querySelector('h1');
+        let newNode = document.createElement('h4');
+        let inputBox = document.getElementById('numberInput');
+        let inputVal = inputBox.value
+        newNode.innerText = inputVal;
+        heading1.parentNode.replaceChild(newNode,heading1)
+      }
+      </script>
+
+
+  </body>
+</html>

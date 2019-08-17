@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1 id='heading'>Question One</h1>
+    <label for='changed_text'>Please enter text below:</label>
+    <br>
+    <input type='text' id ='replace' placeholder="Text here"></input>
+    <br>
+    <button onclick ='changeHeading()'>Submit word</button>
+
+    <script>
+      const changeHeading = () =>{
+        let inputElement = document.getElementById('replace');
+        let inputValue = inputElement.value;
+        let mainHeading = document.querySelector('h1')
+        let newNode = document.createElement('h1')
+        newNode.innerText = inputValue
+        mainHeading.parentNode.replaceChild(newNode,mainHeading)
+      }
+      </script>
+
+  </body>
+</html>

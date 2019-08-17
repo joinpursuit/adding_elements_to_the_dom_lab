@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 6</title>
+  </head>
+  <body>
+    <h1> Question 6</h1>
+
+    <label for='text'>Please input text below:</label>
+    <br>
+    <input type = 'text' id = 'textInput' placeholder="Enter text here"></input>
+    <br>
+    <br>
+    <label for = 'number'>Please input a number below:</label>
+    <br>
+    <input type = 'number' id = 'numberInput' placeholder=" Enter number here"></input>
+    <br>
+    <button onclick = 'valueOfText()'>Submit!</button>
+
+    <ul id = 'listOfThings'></ul>
+
+<script>
+
+const valueOfText = () =>{
+  let textHolder = document.getElementById('textInput');
+  let text = textHolder.value;
+  let numberHolder = document.getElementById('numberInput');
+  let numberValue = parseInt(numberHolder.value)
+
+
+ for(let i = 1; i <= numberValue ; i++){
+   let listItem = document.createElement('li')
+   listItem.innerText = text
+   listOfThings.appendChild(listItem);
+ }
+}
+
+</script>
+
+
+  </body>
+</html>
