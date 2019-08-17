@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Average, Max, and Min</title>
+    </head>
+    <body>
+        <h1>Lets get the Average, Maximum, and Minimum Values!</h1>
+        <p>Enter your number: <input type="text" id="numberinput" placeholder="number"/>
+        </p>
+        <button onclick="numberList()">Add</button>
+        <button onclick="average()">Average</button>
+
+        <p id="numbers"></p>
+        <p id="average"></p>
+        <p id="maximum"></p>
+        <p id="minimum"></p>
+        <script>
+            const numberList = () => {
+                let listElement = document.getElementById("numbers")
+                let numberInputElement = document.getElementById("numberinput")
+                let userSubmittedNumber = numberInputElement.value
+                let listItem = document.createElement("li")
+                listItem.innerText = userSubmittedNumber
+                listElement.appendChild(listItem)
+            }
+            const average = () => {
+                let arr = document.querySelectorAll("li")
+                let sum = 0
+
+            console.log(arr)
+                for (let i = 0; i < arr.length; i++) {
+                    sum += parseInt(arr[i].innerText, 10)
+                    
+                }
+                
+                return window.alert(`${sum / arr.length} is the average`)
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nationalities</title>
+    </head>
+    <body>
+        <h1>User Info</h1>
+        <button onclick="listCreator()">Create!</button>
+        <div id="list">
+            
+        </div>
+        <script type="text/javascript">
+        let results = [
+            {
+              "gender": "female",
+              "name": {
+                "title": "mademoiselle",
+                "first": "ruth",
+                "last": "nicolas"
+              },
+              "nat": "CH"
+            },
+            {
+              "gender": "female",
+              "name": {
+                "title": "miss",
+                "first": "رها",
+                "last": "سلطانی نژاد"
+              },
+              "nat": "IR"
+            },
+            {
+              "gender": "female",
+              "name": {
+                "title": "mrs",
+                "first": "patricia",
+                "last": "hale"
+              },
+              "nat": "GB"
+            },
+            {
+              "gender": "male",
+              "name": {
+                "title": "mr",
+                "first": "fernando",
+                "last": "cooper"
+              },
+              "nat": "US"
+            },
+            {
+              "gender": "female",
+              "name": {
+                "title": "mrs",
+                "first": "یسنا",
+                "last": "صدر"
+              },
+              "nat": "IR"
+            },
+            {
+              "gender": "male",
+              "name": {
+                "title": "mr",
+                "first": "eino",
+                "last": "tuomala"
+              },
+              "nat": "FI"
+            },
+            {
+              "gender": "female",
+              "name": {
+                "title": "ms",
+                "first": "gonca",
+                "last": "özkara"
+              },
+              "nat": "TR"
+            },
+            {
+              "gender": "male",
+              "name": {
+                "title": "mr",
+                "first": "kyle",
+                "last": "castillo"
+              },
+              "nat": "US"
+            },
+            {
+              "gender": "female",
+              "name": {
+                "title": "miss",
+                "first": "olivia",
+                "last": "kumar"
+              },
+              "nat": "NZ"
+            },
+            {
+              "gender": "male",
+              "name": {
+                "title": "monsieur",
+                "first": "raymond",
+                "last": "durand"
+                },
+                "nat": "CH"
+                }
+            ];
+
+            const listCreator = () => {
+                
+                
+                for (let key of results) {
+                    let newList = document.createElement("ul")
+                    let listItem = document.createElement("li") 
+                    let listElement = document.getElementById("list")
+                    listItem.innerText = `FirstName: ${key.name.first} LastName: ${key.name.last} Nationality: ${key.nat}`
+                    listElement.appendChild(listItem)
+                }
+                
+
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lets make a list!</title>
+    </head>
+    <body>
+        <h1 id="changeMe">Make a List!</h1>
+        <p>Enter text to be added <input type="text" id="stringinput" placeholder="lets create!"/>
+        </p>
+        
+        <button onclick="createListItem()">Create!</button>
+        <script type="text/javascript">
+            const createListItem = () => {
+                let stringInputElement = document.getElementById("stringinput");
+                let userSubmittedString = stringInputElement.value
+                let newList = document.createElement("ul")
+                let listItem = document.createElement("li") 
+                let listElement = document.getElementById("list")
+                listItem.innerText = userSubmittedString
+                listElement.appendChild(listItem)
+            }
+        </script>
+        <div id="list">
+            
+        </div>
+    </body>
+</html>

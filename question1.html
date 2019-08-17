@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Heading</title>
+    </head>
+    <body>
+        <h1 id="changeMe">Change this text</h1>
+        <p>Enter string here: <input type="text" id="stringinput" placeholder="this will replace the text"/>
+        </p>
+
+        <button onclick="replaceHeading()">Change!</button>
+        <script type="text/javascript">
+            const replaceHeading = () => {
+                let stringInputElement = document.getElementById("stringinput");
+                let userSubmittedString = stringInputElement.value
+                let firstHeading = document.querySelector("h1")
+                let newNode = document.createElement("h1")
+                newNode.innerText = userSubmittedString
+                firstHeading.parentNode.replaceChild(newNode, firstHeading)
+            }
+        </script>
+    </body>
+</html>

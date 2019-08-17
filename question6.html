@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Heading</title>
+    </head>
+    <body>
+        <h1 id="changeMe">Make a List!</h1>
+        <p>Enter text to be multiplied <input type="text" id="stringinput" placeholder="lets create!"/>
+        </p>
+        <p>How many times should it be multiplied? <input type="text" id="numberinput" placeholder="lets create!"/>
+        </p>
+        
+        <button onclick="createListItem()">Create!</button>
+        <script type="text/javascript">
+            const createListItem = () => {
+                let stringInputElement = document.getElementById("stringinput");
+                let numberInputElement = document.getElementById("numberinput")
+                let userSubmittedString = stringInputElement.value
+                let userSubmittedNumber = numberInputElement.value
+                
+                
+                let listElement = document.getElementById("list")
+                
+                
+
+                for (let i = 0; i < userSubmittedNumber; i++) {
+                    let listItem = document.createElement("li")
+                    listItem.innerText = userSubmittedString
+                    listElement.appendChild(listItem)
+                }
+            }
+        </script>
+        <div id="list">
+            
+        </div>
+    </body>
+</html>
