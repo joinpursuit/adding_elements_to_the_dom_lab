@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>question 6</h1>
+      
+        <li id='listName' type='number'></li>
+        <p> add a number</p>
+        <input id='itemNumber' type='number'>
+        <input id='textIn' type='text'>
+        <button onClick='makeList()'>Click</button>
+        <script>
+            function makeList(){
+                for (let i=0; i <=number(itemNumber) ;i++) {
+                    let newList = document.creatElement('textIn')
+                    let newNum = document.createElement('itemNumber')
+                    let newStr = document.getElementById('nextItem')
+                    newList = document.createElement('li')
+                    newList.innerText = itemNumber.value
+                    document.body.appendChild(newList)
+
+                }
+            }
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        QUESTION 9
+    </title>
+    <body>
+        <h1> QUESTION9</h1>
+        <div id='first'>
+                <p>1st paragraph </p>
+                <p> 2nd paragraph</p>
+                <p> 3rd paragraph</p>
+                <p> 4th paragraph</p>
+                <p> 5th paragraph</p>
+        </div>
+        <button onClick = 'paragraphRemove()'> Paragraph Removal</button>
+        <script>
+            function paragraphRemove() {
+                let space1 = document.getElementById('first')
+                console.log('space1', space1)
+                let removePara = document.querySelectorAll('p')
+                for (let node of removePara){
+                    console.log('node', node)
+                    space1.removeChild(node)
+                }
+            }
+        </script>
+    </body>
+</html>

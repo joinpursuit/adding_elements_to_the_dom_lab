@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q10</title>
+  </head>
+  <body>
+    
+      <h1 id="heading">Change the heading level</h1>
+        <label for="numInput">Type a number between 1 and 6</label>
+        <input type = 'number'>
+      
+      <button onclick ="changeHeaderNumber()">Change heading level</button>
+    <script>
+        function changeHeaderNumber () {
+            let pullNumber = document.querySelector('h1')
+            let getNewSize = document.createElement(h + heading.value )
+        pullNumber.innerText = heading.innerText
+        getNewSize.parentNode.replaceChild(pullNumber, getNewSize)
+
+    }
+    </script>
+  </body>
+</html>

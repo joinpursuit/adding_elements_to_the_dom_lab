@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+            <h1>question5</h1>
+        <ul id='myfav'></ul>
+        <li>tacos</li>
+        <li>sushi</li>
+    </ul>
+        
+            <p>Click to add</p>
+            <input id='changeText'type='text'>
+            <button onClick="addFood()">click here</button>
+            <script>  
+            function addMoreFood() {
+                for(let value of changeText) {
+                    let newFood = document.createElement('text')
+                    newFood.innerText=changeText.value
+                    document.newFood('li')
+                    //changeText.appendChild(newFood)
+                    document.body.appendChild(newFood)
+            }          
+
+        }
+            </script>
+    </body>
+</html>

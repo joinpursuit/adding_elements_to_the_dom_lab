@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <heading> QUESTION1</heading>
+    <body>
+           <h1>question1</h1>
+           <input id='changeText'type='text'>
+           <button onClick="switchElement()">click here</button>
+           <script>
+               function switchElement() {
+                   let result1 = document.querySelector('h1')
+                   let newElement = document.createElement('h1')
+                   newElement.innerText = changeText.value
+                   result1.parentNode.replaceChild(newElement, result1)
+               }
+           </script>
+           
+
+       
+
+       
+    </body>
+</html>
