@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html >
-    <head></head>
-
-    <body>
-        <h1>Question10</h1>
-        
-        <p> Make a website with a number input, a heading and a button. 
-            Clicking on the button should replace the heading with a heading matching the number in the input. 
-            (e.g Entering 4 into the number input should turn the heading into &lt;h4&gt;)
-        </p>
-        <hr>
-
-        
-        </p>
-
-        <script>
-            
-        </script>
-    </body>
-</html> 
+  <head>
+    <title>Question10</title>
+  </head>
+  <body>
+    <h1 id="heading">EXISTING HEADING</h1>
+    <input type="text" id="num_input" >
+    <button type="button" onclick="changeHeading()" id="button">Click Here</button>
+    <script>
+      function changeHeading() {
+        let heading = document.querySelector("#heading")
+        let userInput = document.querySelector("#num_input")
+        let userInputValue = userInput.value
+        let headingNumber = ""
+        switch(userInputValue) {
+          case "1":
+          headingNumber = "h1"
+          break
+          case "2":
+          headingNumber = "h2"
+          break
+          case "3":
+          headingNumber = "h3"
+          break
+          case "4":
+          headingNumber = "h4"
+          break
+          case "5":
+          headingNumber = "h5"
+          break
+        }
+        let newHeading = document.createElement(`${headingNumber}`)
+        newHeading.innerText = "new blah blah"
+        document.body.replaceChild(newHeading, heading)
+        // let newHeading = document.createElement("")
+      }
+    </script>
+  </body>
+</html>
