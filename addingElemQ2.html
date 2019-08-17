@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question2</title>
+    </head>
+    <body>
+        <h1>List Display</h1>
+        <ol id= "Display"></ol>
+        <script>
+    
+        let obj =
+               {"results" : [
+                { "name" : "Anne" },
+                { "name" : "Bri" },
+                { "name" : "Chaz" },
+                { "name" : "Darlene" }
+            ]}
+
+let listElement = document.getElementById("Display")
+
+for(let i of obj.results){
+    let addAllNames = document.createElement("li")
+    addAllNames.innerText = i.name
+    listElement.appendChild(addAllNames)
+}
+        </script>
+
+    </body>
+</html>
