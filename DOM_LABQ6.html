@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html>
+        <h1>Question 6</h1>
+
+
+        <body>
+            <ul id = "uL">List</ul>
+            <div>multiClick</div>
+            <label for = "num_input">Enter Your Inputs</label>
+            <input id = "num_input" type = "number">
+            <input id = "text_input" type = "text">
+            <button id = "userClick"
+                    onclick = "textTimesNum()"
+                    >
+                    Submit
+            </button>
+            <script>
+                const textTimesNum = () => {
+                    let numInput = document.getElementById("num_input")
+                    let textInput = document.getElementById("text_input")
+                    console.log(textInput)
+                    for (i = 0; i < numInput.value; i ++) {
+                       let li = document.createElement("li")
+                        li.innerText = textInput.value
+                        let ul = document.getElementById("uL")
+                        ul.appendChild(li)
+                    }
+                    console.dir(numInput) 
+                }
+
+
+
+            </script>
+        </body>
+    </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 1</title>
+  </head>
+  <body>
+    <h1 id = "heading">Heading</h1>
+    <!-- <form> -->
+      <label for = "user_input">Enter Your Text </label>
+      <input id = "user_input" type = "text" >
+      <button id = "userclick" onclick = "changeHeader()">Submit</button>
+      <!-- </form> -->
+    <script>
+      const changeHeader = () => {
+        let input = document.getElementById("user_input").value
+        document.getElementById("heading").innerText = input
+        // document.body.removeChild(header)
+      }
+    </script>
+  </body>
+</html>

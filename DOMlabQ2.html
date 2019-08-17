@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Question 2</title>
+    </head>
+    <body>
+        <h1>Question 2</h1>
+        <script>
+            let results = [
+                { "name" : "Anne" },
+                { "name" : "Bri" },
+                { "name" : "Chaz" },
+                { "name" : "Darlene" }
+            ]
+
+            // unordered.innerText = "results"
+            // document.body.appendChild("ul")
+
+            // let list = document.createElement("li")
+            // li.innerText
+        
+            let unordered = document.createElement("ul")
+            for (obj of results) {
+                let listItem = document.createElement("li")
+                listItem.innerText = obj.name
+                unordered.appendChild(listItem)
+            }
+            document.body.appendChild(unordered)
+            // unordered.innerText = results.map(obj => <li> + obj.name + </li>)
+            // window.alert(unordered)
+            // document.body.
+
+        </script>
+    </body>
+</html>

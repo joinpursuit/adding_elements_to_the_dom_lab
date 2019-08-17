@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html>
+        <body> 
+            <div id = "seeYa">
+                <p>This is paragraph one</p>
+                <p>This is paragraph two</p> 
+                <p>This is paragraph three</p> 
+                <p>This is paragraph four</p> 
+                <p>This is paragraph five</p>     
+            </div>
+            <button id = "userClick"
+                    onclick = "removePara()"
+                    >
+                    Remove Para
+            </button>
+            <script>
+                const removePara = () => {
+                    let div = document.getElementById("seeYa")
+                    let paras = document.querySelectorAll("p")
+                    for (let node of paras) {
+                        console.log("node", node)
+                        div.removeChild(node)
+                    }
+                }
+            </script>
+
+        </body>
+    </html>

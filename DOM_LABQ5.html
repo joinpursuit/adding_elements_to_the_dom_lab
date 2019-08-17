@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+    <html>
+        <body>
+            <h1>QUESTION 5</h1>
+            <ul id = "unorderedList">List</ul>
+            <label for = "user_input">Enter List Item</label>
+            <input id = "user_input" type = "text">
+            <button id = "userClick"
+                    onclick = "newListItem()"
+                    > 
+                    Submit
+            </button>
+            <script>
+
+
+                const newListItem = () => {
+                let input = document.getElementById("user_input").value
+                let listItem = document.createElement("li")
+                    listItem.innerText = input
+                let ul =  document.getElementById("unorderedList")
+                    ul.appendChild(listItem)
+                }
+
+                // newItem.push(input)
+                //     document.getElementById("itemList").innerText = newItem
+            </script>
+        </body>
+    </html>

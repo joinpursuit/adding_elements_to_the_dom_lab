@@ -1,0 +1,18 @@
+<!DOCTYPE htm> 
+    <html>
+        <body>
+                <div>The Clicker</div>
+                <button id = "userClick"
+                        onclick = "buttonRemover()"
+                        >
+                        Press Me
+                </button>
+            <script>
+                const buttonRemover = () => {
+                    let byeButton = document.getElementById("userClick")
+                    byeButton.parentNode.removeChild(byeButton);
+                    return false
+                }
+            </script>
+        </body>
+    </html>
