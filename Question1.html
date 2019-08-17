@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>Question1</h1>
+<input type="text" id = text_input >
+
+<button onclick = "button_function()">Submit</button>
+
+
+
+<script>
+  function button_function() {
+    let replace =  document.querySelector("h1")
+    let text = document.getElementById("text_input")
+    let replace2 = document.createElement("h1")
+  document.body.replaceChild(replace2, replace)
+  replace2.innerText = text.value
+
+  }
+   </script>
+ </body>
+</html>

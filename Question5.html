@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1></h1>
+<input type="text" id = text_input >
+<button onclick = "button_function()">Submit</button>
+<div id = "list"></div>
+
+
+
+
+<script>
+  function button_function() {
+    let ul = document.createElement('ul')
+    document.getElementById('list').appendChild(ul)
+    let newName = document.createElement("li")
+      let textElement = document.getElementById("text_input")
+     newName.innerText = textElement.value
+     list.appendChild(newName)
+  }
+   </script>
+ </body>
+</html>
