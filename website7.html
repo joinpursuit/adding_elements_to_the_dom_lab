@@ -1,3 +1,4 @@
+
 <!-- # Question Seven
 Make a website with a number input, a button, and 3 paragraphs.
 b Clicking on the button should add the number to a list.
@@ -10,21 +11,53 @@ the second paragraph should show the maximum value, and the third paragraph shou
    <title> Question 7 </title>
  </head>
  <body>
-   <h1> Question 7 </h1>
-   <button onclick = 'number()'> Find the Min, Max & Average </button>
-   <p>paragraph 1</p>
-   <p>paragraph 2</p>
-   <p>paragraph 3</p>
-   <ul>
-  </ul>
-   <label for = number1>Select a number</label>
-   <input type='number' name = 'number1' id ='num1' min = '1' max = '6'>
-
-
+   <label for = 'numbers'>Enter a number: </label>
+   <input type ='number' id ='num1' name = 'numbers'><br><br>
+   <button type = 'button' onclick = 'getValues()'> Find the Min, Max & Average </button>
+   <p id = 'p1'></p>
+   <p id = 'p2'></p>
+   <p id = 'p3'></p>
    <script>
-     const numberCalc = () => {
 
-     }
-    </script>
- </body>
-</html>
+     let numberArray = []
+          function getValues () {
+            let userInput = document.querySelector('#num1').value
+            numberArray.push(Number(userInput))
+            console.log('numberArray', numberArray)
+              let p1 = document.querySelector('#p1')
+              let p2 = document.querySelector('#p2')
+              let p3 = document.querySelector('#p3')
+              p1.innerText = `Minimum: ${findMinimum(numberArray)}`
+              p2.innerText = `Maximum: ${findMaximum(numberArray)}`
+              p3.innerText = `Average: ${averageAll(numberArray)}`
+              document.querySelector('#num1').value = ''   //clears out the input box to an empty string
+            }
+              function findMinimum(arr) {
+                  let minimum = Infinity
+                  for (let number of arr) {
+                      if (number < minimum) {
+                          minimum = number
+                      }
+                  }
+                  return minimum
+              }
+              function findMaximum(arr) {
+                  let maximum = -Infinity
+                  for (let number of arr) {
+                      if (number > maximum) {
+                          maximum = number
+                      }
+                  }
+                  return maximum
+              }
+              function averageAll(arr) {
+                  let average = 0
+                  let total = 0
+                  for(let number of arr) {
+                      total += number
+                  }
+                  return total / arr.length
+              }
+          </script>
+      </body>
+  </html>

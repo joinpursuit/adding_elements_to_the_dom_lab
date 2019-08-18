@@ -6,50 +6,46 @@ Clicking on the button should replace the heading with a heading matching the nu
 
 <!DOCTYPE html>
 <html>
- <head>
-   <title> Question 10 </title>
- </head>
- <body>
-   <div>
-   <h1> Question 10 </h1>
-   </div>
-   <input type='number' name = 'num' id ='numbers' min = '1' max = '6'>
-   <button onclick = 'make_a_heading()'> Make A Heading </button>
-   <script>
-     function make_a_heading() {
-       let head = document.querySelector('h1').innerText
-       let number = document.querySelector('input').value
-       let div = document.querySelectorAll('div')
-       console.log(head)
-       console.log(number)
+  <head>
+    <title> Question 10 </title>
+  </head>
+  <body>
+    <h1 id = "heading"> Question 10 </h1>
+    <label for = "input"> Choose a number: </label>
+    <input type = "number" id = "num_input" name = "input" max = "6" min = "1">
+    <button type = "button" onclick = "changeHeading()" id = "button"> Click Here </button>
+    <script>
+      function changeHeading() {
+        let heading = document.querySelector("#heading")
+        let userInput = document.querySelector("#num_input")
+        let userInputValue = userInput.value
+        let headingNumber = ""
+        switch (userInputValue) {
+          case "1":
+          headingNumber = "h1"
+          break
+          case "2":
+          headingNumber = "h2"
+          break
+          case "3":
+          headingNumber = "h3"
+          break
+          case "4":
+          headingNumber = "h4"
+          break
+          case "5":
+          headingNumber = "h5"
+          break
+          case "6":
+          headingNumber = "h6"
+          break
 
-       if(number === 1){
-         let newHead = document.createElement('h1')
-         newHead.innerText = head
-         document.appendChild(newHead)
-       } else if(number === 2) {
-         let newHead = document.createElement('h2')
-         newHead.innerText = head
-         document.appendChild(newHead)
-       } else if(number === 3) {
-         let newHead = document.createElement('h3')
-         newHead.innerText = head
-         document.appendChild(newHead)
-       } else if(number === 4) {
-         let newHead = document.createElement('h4')
-         newHead.innerText = head
-         document.appendChild(newHead)
-       } else if (number === 5) {
-         let newHead = document.createElement('h5')
-         newHead.innerText = head
-         div.document.appendChild(newHead)
-       } else{
-         let newHead = document.createElement('h6')
-         newHead.innerText = head
-         div.document.appendChild(newHead)
-       }
-       console.log(newHead)
-     }
+        }
+
+        let newHeading = document.createElement(`${headingNumber}`)
+        newHeading.innerText = `Question 10 in heading size ${userInputValue}`
+        document.body.replaceChild(newHeading, heading)
+      }
     </script>
- </body>
+  </body>
 </html>
