@@ -1,0 +1,58 @@
+<!docttype html>
+    <html>
+
+    <head>
+        <title> Question Five </title>
+    </head>
+
+    <body>
+        <ul id="list"></ul>
+
+        <input type="text" id="item">
+        <button onclick="createNewList()">submit</button>
+        <script>
+            const createNewList = () => {
+                let getInput = document.getElementById("item")
+                let userInput = getInput.value
+                let answerInput = document.getElementById("list")
+                let newElement = document.createElement("li")
+                newElement.innerText = userInput
+                answerInput.appendChild(newElement)
+            }
+        </script>
+    </body>
+
+    </html>>
+
+
+    <!-- practice 
+    <!doctype html>
+    <head>
+        <title> Question Five </title>
+    </head>
+
+    <body>
+        <ul id='list'></ul>
+        // creating the placeholder for the list which is currently empty
+        <input type="text" id="item">
+        // creating a text box holding the user value 
+        <button onclick="createNewList()">submit</button>
+        <script> // introducing JS
+            const createNewList = () => {
+                let getInput = document.getElementById("item")
+                // testing to see if the id item can be pull from html
+                let userInput = getInput
+                    .value
+                // reassigning the value of getInput which is id = "item" to another variable in JS
+                let answerInput = document.getElementById("list")
+                // testing to see if the id list can be pull from html
+                let newElement = document.createElement("li")
+                // creating the html li- for list and assigning it to a new variable in JS
+                newElement.innerText = userInput
+                // go into the innerText of li which is under variable name newElement and equally it to the value of the getInput 
+                answerInput.appendChild(newElement) // userInput which is id item and its value is appended with list  
+            }
+        </script>
+
+    </body>
+</html>  the main goal create a input that display its value into a list -->

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Question Two</title>
+</head>
+
+<body>
+    <ul id="list">
+
+        </u1>
+
+        <script>
+            let element = {
+                "results": [{
+                        "name": "Anne"
+                    },
+                    {
+                        "name": "Bri"
+                    },
+                    {
+                        "name": "Chaz"
+                    },
+                    {
+                        "name": "Darlene"
+                    }
+                ]
+            }
+            for (let key of element.results) {
+                // console.log(key.name)
+                let newList = document.getElementById("list")
+                let newElement = document.createElement("li");
+                newElement.innerText = key.name;
+                newList.appendChild(newElement)
+            }
+            // console.log(element.results[0])
+        </script>
+</body>
+
+</html>

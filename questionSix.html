@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Question Six</title>
+</head>
+
+<body>
+    <ul id="list"> </ul>
+    <h1>Copy Text to List</h1>
+    <label for="anytext">Write text</label>
+    <input type="text" id="anyText">
+    <br>
+    <label for="anyNumber">Write a number</label>
+    <input type="number" id="anyNumber">
+    <button onclick="addInputTextCopies()">submit</button>
+
+    <script>
+        const addInputTextCopies = () => {
+            let getInput = document.getElementById("anyText")
+            let userInput = getInput.value
+
+            let getNumberInput = document.getElementById("anyNumber")
+            let userNumber = getNumberInput.value
+
+            console.log(typeof userNumber)
+            let ulList = document.getElementById("list")
+            let newElement = document.createElement("li")
+
+            for (let i = 0; i < Number(userNumber); i++) {
+                let li = document.createElement("li") // loop is creating li as many time as userName  
+                li.innerText = userInput
+                ulList.appendChild(li)
+            }
+            // newElement.innerText = userInput
+            // newElement.innerText = userNumber
+
+
+        }
+    </script>
+</body>
+
+</html>
+
+
+=================================Practice
+<!doctype html>
+<html>
+
+</html>
+
+<head></head>
+<title> </title>
+
+<body> </body>
+
+</html>
+
+
+
+<!-- read the Dom top to bottom
+parent and child relationship work
+how to grap elements such as core settler
+analyze the code from top to bottom
+line by line and letter by letter -->

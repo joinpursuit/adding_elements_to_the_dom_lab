@@ -1,0 +1,46 @@
+ <!-- Make a website with a number input, a button, and 3 paragraphs. 
+    Clicking on the button should add the number to a list. 
+    The first paragraph should show the average of all the numbers, 
+    the second paragraph should show the maximum value, 
+    and the third paragraph should show the minimum value. -->
+ <!doctype html>
+ <html>
+
+ <head>
+     <title>Question Seven</title>
+ </head>
+
+ <body>
+     <ul id="list"></ul>
+     <h1>Add number to List</h1>
+
+     <label for="anyNumber">Write a number</label>
+     <input type="number" id="anyNumber">
+     <button onclick="addNumberCopies()">submit</button>
+     <p id="average"></p>
+     <p id="maximumValue"></p>
+     <p id="minimumValue"></p>
+
+     <script>
+         const addNumbertCopies = () => {
+                 let getNumberInput = document.getElementById("anyNumber")
+                 let userNumber = getNumberInput.value
+                 console.log(typeof userNumber)
+
+                 let ulList = document.getElementById("list")
+                 let newElement = document.createElement("li")
+
+                 let paragraph = document.querySelectorAll("p")
+                 let averagePara = document.createElement("average")
+                 let maximumPara = document.createElement("maximumValue")
+                 let minimumPara = document.createElement("minimumValue")
+
+
+                 for (let i = 0; i < Number(userNumber); i++) {
+                     let para = document.createElement("p") // loop is creating li as many time
+                     as userName li.innerText = userInput ulList.appendChild(li)
+                 }
+     </script>
+ </body>
+
+ </html>

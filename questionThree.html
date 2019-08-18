@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Question Two</title>
+</head>
+
+<body>
+    <ul id="list">
+
+        </u1>
+
+        <script>
+            let element = {
+                "results": [{
+                        "gender": "female",
+                        "name": {
+                            "title": "mademoiselle",
+                            "first": "ruth",
+                            "last": "nicolas"
+                        },
+                        "nat": "CH"
+                    },
+                    {
+                        "gender": "female",
+                        "name": {
+                            "title": "miss",
+                            "first": "رها",
+                            "last": "سلطانی نژاد"
+                        },
+                        "nat": "IR"
+                    },
+                    {
+                        "gender": "female",
+                        "name": {
+                            "title": "mrs",
+                            "first": "patricia",
+                            "last": "hale"
+                        },
+                        "nat": "GB"
+                    },
+                    {
+                        "gender": "male",
+                        "name": {
+                            "title": "mr",
+                            "first": "fernando",
+                            "last": "cooper"
+                        },
+                        "nat": "US"
+                    },
+                    {
+                        "gender": "female",
+                        "name": {
+                            "title": "mrs",
+                            "first": "یسنا",
+                            "last": "صدر"
+                        },
+                        "nat": "IR"
+                    },
+                    {
+                        "gender": "male",
+                        "name": {
+                            "title": "mr",
+                            "first": "eino",
+                            "last": "tuomala"
+                        },
+                        "nat": "FI"
+                    },
+                    {
+                        "gender": "female",
+                        "name": {
+                            "title": "ms",
+                            "first": "gonca",
+                            "last": "özkara"
+                        },
+                        "nat": "TR"
+                    },
+                    {
+                        "gender": "male",
+                        "name": {
+                            "title": "mr",
+                            "first": "kyle",
+                            "last": "castillo"
+                        },
+                        "nat": "US"
+                    },
+                    {
+                        "gender": "female",
+                        "name": {
+                            "title": "miss",
+                            "first": "olivia",
+                            "last": "kumar"
+                        },
+                        "nat": "NZ"
+                    },
+                    {
+                        "gender": "male",
+                        "name": {
+                            "title": "monsieur",
+                            "first": "raymond",
+                            "last": "durand"
+                        },
+                        "nat": "CH"
+                    }
+                ],
+                "info": {
+                    "seed": "2cb086ce097c87ee",
+                    "results": 10,
+                    "page": 1,
+                    "version": "1.2"
+                }
+            }
+            for (let key of element.results) {
+                // for (let key in element) {
+                // console.log(key.name)
+                let newList = document.getElementById("list")
+                let newElement = document.createElement("li");
+                newElement.innerText = `${key.name.first} ${key.name.last} the nationality is ${key.nat}`
+                newList.appendChild(newElement)
+            }
+        </script>
+</body>
+
+</html>
+
+============================================practice
+<!doctype html>
+<html>
+
+<head>
+    <title>Question Three</title>
+</head>
+
+<body>
+    <ul id="list">
+        // creating a placeholder for list which is currently empty in the html
+        <script>
+            // introducing JS
+            let element = {
+                    []
+                }... // the information that needs to be converted to a list in html
+                for (let key of element.result) {
+                    // result its the only element in the object
+                    // loop directly into the object and array by key element.result
+                    let newList = document.getElementById("list"
+                        // requesting for the id name "list" in the html <ul id..> and reassigning it to a new variable newList)
+                        let newElement = document.createElement("li");
+                        // creating the element "li" for the html ul format and reassigning it to a new variable
+                        newElement.innerText = `${key.name.first} ${key.name.last} the nationality is ${key.nat}`
+                        // add the value key.name.first, key.name.last and key.nat into the newElement variable, <li>innerText </li>
+                        newList.appendChild(newElement)
+                        //   
+                    }
+        </script>
+
+
+</body>
+
+</html>

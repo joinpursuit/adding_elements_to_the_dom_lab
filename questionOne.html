@@ -1,0 +1,29 @@
+<!-- Question One
+
+Make a website with a heading, an input text field and a button. Clicking the button should change the heading's text to
+be the text in the input. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Question One</title>
+</head>
+
+<body>
+    <h1> Hello</h1>
+    <input type="text" id="anyText">
+    <button onclick="replaceHeading()"> Submit </button>
+    <script>
+        const replaceHeading = () => {
+            let input = document.getElementById("anyText")
+            let userInput = input.value
+            let currentHeading = document.querySelector("h1")
+            let newHeading = document.createElement("h1")
+            newHeading.innerText = userInput
+            currentHeading.parentNode.replaceChild(newHeading, currentHeading)
+        }
+    </script>
+</body>
+
+</html>
