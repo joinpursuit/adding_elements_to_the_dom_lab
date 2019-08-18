@@ -1,0 +1,86 @@
+<html>
+<head>
+  <title>Adding Elements to the DOM Lab Number 7</title>
+  </head>
+  <body>
+    <h5>Clicking on the button should add the number to a list. The first paragraph should show the average of all the numbers, the second paragraph should show the maximum value, and the third paragraph should show the minimum value. </h5>
+    <ul id="list" ></ul>
+    <p id="averageValue"></p>
+    <p id="maxValue"></p>
+    <p id="minValue"></p>
+   <input type="text" id="number" placeholder="Enter number here" />
+    <button onclick="addNumToList()"> Add a new number </button>
+    <script>
+      function addNumToList() {
+    let listItem = document.createElement("li");
+    let userInput = document.getElementById("number").value;
+    let list = document.getElementById("list");
+    listItem.innerText = userInput;
+    list.appendChild(listItem);
+
+    let elements = document.querySelectorAll("li");
+    let sum = 0;
+    let max = 0;
+    let min = elements[0].innerText;
+    for (let el of elements) {
+      sum += Number(el.innerText);
+      if (max < Number(el.innerText)) {
+        max = el.innerText;
+      }
+      if (min > Number(el.innerText)) {
+        min = el.innerText;
+      }
+    }
+    let average = sum/elements.length
+
+    document.getElementById("averageValue").innerText = "Average: " + average;
+    document.getElementById("maxValue").innerText = "Max: " + max;
+    document.getElementById("minValue").innerText = "Min: " + min;
+  }
+  
+      </script>
+    </body>
+    </html>
+
+    <!-- function addNumToList() {
+       let list = [];
+       let userInput = document.querySelector("#number").value
+       list.push(Number(userInput))
+//       console.log(list)
+
+       let averageNum = document.querySelector("#averageValue")
+       let maxNum =  document.querySelector("#maxValue")
+       let minNum = document.querySelector("#minValue")
+       averageNum.innerText = "Average: " + average(list)
+       maxNum.innerText = "Maximum: " + max(list)
+       minNum.innerText = "Minimum: " + min(list)
+
+        function min (arr) {
+          let minimum = 0
+          for (let number of arr) {
+            if (number < minimum) {
+              minimum = number
+            }
+          }
+          return minimum
+        }
+
+
+        function max (arr) {
+          let maximum = 0
+          for (let number of arr) {
+            if (number > maximum) {
+              maximum = number
+            }
+          }
+          return maximum
+        }
+
+        function average (arr) {
+          let total = 0
+          for (let number of arr) {
+            total += number
+          }
+          return total / (arr.length)
+        }
+  } -->

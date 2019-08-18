@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Adding Elements to the DOM Lab Number 5</title>
+  </head>
+  <body>
+    <h1>Create a new list</h1>
+    <ul id="newList" >
+      </ul>
+    <input type="text" id="text" placeholder="Enter item here" />
+    <button onclick="createNewListItem()"> Add to list </button>
+    <script>
+      function createNewListItem() {
+      let list = document.querySelector("ul")
+      let userInput = document.querySelector("#text")
+      let newListItem = document.createElement("li")
+       newListItem.innerText = userInput.value
+       list.appendChild(newListItem)
+    }
+      </script>
+    </body>
+    </html>

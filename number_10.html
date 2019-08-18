@@ -1,0 +1,43 @@
+<!DOCTYPE hmtl>
+<html lang="en" dir="ltr">
+<head>
+  <title>Adding Elements to the DOM Lab Number 10</title>
+  </head>
+  <body>
+    <h1 id="heading" > Heading </h1>
+    <input id="input" type="text" placeholder="Enter a number" </input>
+    <button id="button" onclick="changeHeadingSize()" > Change Heading Size </button>
+    <script>
+      function changeHeadingSize() {
+      let heading = document.querySelector("#heading")
+      let userInput = document.querySelector("#input")
+      let size = ""
+      switch(userInput) {
+        case "1":
+        size = "h1"
+        break
+        case "2":
+        size = "h2"
+        break
+        case "3":
+        size = "h3"
+        break
+        case "4":
+        size = "h4"
+        break
+        case "5":
+        size = "h5"
+        break
+        case "6":
+        size = "h6"
+        break
+      }
+
+  //    console.log(size)
+      let newHeading = document.createElement(size)
+      newHeading.innerText = "New Heading"
+      document.body.replaceChild(newHeading, heading)
+    }
+      </script>
+    </body>
+    </html>

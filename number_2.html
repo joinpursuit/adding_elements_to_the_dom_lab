@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Adding Elements to the DOM Lab Number 2</title>
+  </head>
+  <body>
+    <h2>List of names</h2>
+    <ul id="listOfNames">
+      </ul>
+    <script>
+  let object = {
+  "results" : [
+    { "name" : "Anne" },
+    { "name" : "Bri" },
+    { "name" : "Chaz" },
+    { "name" : "Darlene" }
+  ]
+}
+   let list = document.querySelector("ul")
+   let array = object.results
+   for (let name of array) {
+    let newName = document.createElement("li")
+     newName.innerText = name.name
+     list.appendChild(newName)
+  }
+      </script>
+    </body>
+    </html>

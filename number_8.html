@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adding Elements to the DOM Lab Number 8 </title>
+  </head>
+  <body>
+    <button id="button" onclick="removeButton()"> click here to remove button </button>
+    <script>
+      function removeButton() {
+     let body = document.querySelector("body")
+     let button = document.querySelector("#button")
+     body.removeChild(button)
+    }
+    </script>
+    </body>
+    </html>

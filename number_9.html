@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Adding Elements to the DOM Lab Number 9</title>
+  </head>
+  <body>
+    <p id="firstPara"> First paragraph </p>
+    <p id="secondPara"> Second paragraph </p>
+    <p id="thirdPara"> Third paragraph </p>
+    <p id="fourthPara"> Fourth paragraph </p>
+    <p id="fifthPara"> Fifth paragraph </p>
+    <button onclick="removeAllPara()"> Remove all paragraphs </button>
+    <script>
+      function removeAllPara() {
+      let paragraph = document.querySelectorAll("p")
+
+      for (let i = 0; i < paragraph.length; i++) {
+        paragraph[i].parentNode.removeChild(paragraph[i])
+      }
+   }
+     </script>
+    </body>
+    </html>
+
+    <!-- function removeAllPara() {
+//      let body = document.querySelector("body")
+      let paragraphs = document.querySelectAll("p")
+
+      for (let para of paragraphs) {
+       para.parentNode.removeChild(para)
+      }
+   } -->
