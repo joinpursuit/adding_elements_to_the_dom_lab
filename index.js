@@ -369,11 +369,44 @@ results3.forEach(element => {
     
 document.querySelector("#problem4").appendChild(ul3)
 
+// Problem 5
+submit = document.querySelector("#listBtn")
+
+submit.addEventListener("click",()=>{
+
+    let input = document.querySelector("#listInput")
+
+    let ul4 = document.createElement("ul")
+    let li4 = document.createElement("li")
+    li4.innerText = input.value
+    ul4.appendChild(li4)  
+    document.querySelector("#problem5").appendChild(ul4)
+})
+
+
+// Problem 6
+submit = document.querySelector("#listManyBtn")
+
+submit.addEventListener("click",()=>{
+
+    let inputItem = document.querySelector("#listItemInput")
+    let inputNum = document.querySelector("#listNumInput")
+
+    let ul5 = document.createElement("ul")
+    
+ for(let i = 0; i < inputNum.value; i ++){
+
+    let li5 = document.createElement("li")
+    li5.innerText = inputItem.value
+    ul5.appendChild(li5)  
+
+ }
+
+ document.querySelector("#problem6").appendChild(ul5)
 
 
 
-
-
+})
 
 
 
