@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
         // debugger
 
     })
+
     document.body.appendChild(ul)
     let hr = document.createElement("hr")
     document.body.appendChild(hr)
@@ -133,8 +134,18 @@ let obj2 = {
   }
 
   let newArr2 = obj2.results
-  console.log(newArr2)
-  debugger
+  newArr2.forEach((el) =>{
+    let li2 = document.createElement("li")
+    console.log(li2)
+    li2.innerText = (`${el.nat}, ${el.name.first} ${el.name.last}`)  
+    console.log(el)
+    ul.appendChild(li2)
+    // debugger
+
+})
+document.body.appendChild(ul)
+let hr2 = document.createElement("hr")
+document.body.appendChild(hr2)
 
 })
 
