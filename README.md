@@ -10,7 +10,7 @@ Make a website with a heading, an input text field and a button.  Clicking the b
 Make a website that displays a list containing all of the names below.  Make all of your `<li>` items inside of a script.
 
 ```js
-{
+let obj = {
   "results" : [
     { "name" : "Anne" },
     { "name" : "Bri" },
@@ -18,6 +18,7 @@ Make a website that displays a list containing all of the names below.  Make all
     { "name" : "Darlene" }
   ]
 }
+obj.results
 ```
 
 # Question Three
