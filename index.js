@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
     // Question 1
     const changeHead = () => {
         let str = document.querySelector("#string").value;
@@ -9,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     submit.addEventListener("click", ()=> {
         changeHead();
     })
+
 
 
     // Question 2
@@ -26,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
         li.innerText = el["name"];
         ul2.appendChild(li);
     })
+
+
 
     // Question 3 
     let userObj = {
@@ -439,18 +444,59 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#avgNums").innerText = average() 
     document.querySelector("#maxVal").innerText = maxVal();
     document.querySelector("#minVal").innerText = minVal();
+  
+  })
 
-    // Question 8
-    // Make a website with a button.  Clicking on the button should remove the button.
+// Question 8
+const removeBtn = () => {
+    let button = document.querySelector("#removeBtn");
+    button.parentNode.removeChild(button);
+}
 
 
-    //Question 9
-    // Make a website with a button, and 5 paragraph tags.  Clicking on the button should remove all of the paragraphs.
+//Question 9
+const removePar = () => {
+  let section = document.querySelectorAll("#div9");
+  section.forEach((el) => {
+      el.parentNode.removeChild(el);
+  })
+}
+
+// const addPar = () => {
+//   let section = document.querySelector("#div9");
+//   let para = document.createElement("P");
+//   para.innerText = "Make this new paragraph disappear!"
+//   section.appendChild(para);
+// }
+
+document.addEventListener("DOMContentLoaded", () => {
 
     // Question 10 
-    // Make a website with a number input, a heading and a button. Clicking on the button should replace the heading with a heading matching the number in the input.  (e.g Entering 4 into the number input should turn the heading into `<h4>`)
+    const changeSize = () => {
+      let h10 = document.getElementById("head10");
+      let headerText = document.querySelector("#head10").innerText
+      let newSize = document.querySelector("#num10").value;
 
+      if(newSize < 1 || newSize > 6){
+        alert("Please use heading levels 1-6")
+      } else {
+        let newTag = document.createElement("h"+newSize);
+        newTag.innerText = headerText;
 
+        //copies attributes over to newTag : source --> stackoverflow
+        for(let i = h10.attributes.length - 1; i >= 0; --i){
+          newTag.attributes.setNamedItem(h10.attributes[i].cloneNode());
+        }
 
+        h10.parentNode.replaceChild(newTag, h10);
+      }
+    }
+
+    let changeSizeBtn = document.querySelector("#changeSizeBtn");
+    changeSizeBtn.addEventListener("click", () => changeSize());
 
 })
+
+
+
+
