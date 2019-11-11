@@ -372,7 +372,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Question 5
-    
+    let ul5 = document.createElement("ul");
+
+    const addList = () => {
+      let li = document.createElement("li");
+      li.innerText = document.querySelector("#str5").value
+      ul5.appendChild(li);
+    }
+
+    let addToListBtn = document.querySelector("#addListBtn")
+    addToListBtn.addEventListener("click", () => addList())
+    document.querySelector("#question5").appendChild(ul5);
+
+
+
+    // Question 6
+    let ul6 = document.createElement("ul");
+    const addCopies = () => {
+      if(typeof document.querySelector("#str6").innerText !== "string" || !Number(document.querySelector("#num6").value)){
+        alert("Please enter valid string or number of copies");
+      } else {
+        for(let i = 0; i < document.querySelector("#num6").value; i++){
+          let li = document.createElement("li");
+          li.innerText = document.querySelector("#str6").value
+          ul6.appendChild(li);
+        }
+      }
+    }
+
+    let addCopiesBtn = document.querySelector("#addCopiesBtn")
+    addCopiesBtn.addEventListener("click", () => addCopies());
+    document.querySelector("#question6").appendChild(ul6);
+
+
+    // Make a website with a number input, a button, and 3 paragraphs.  Clicking on the button should add the number to a list.  The first paragraph should show the average of all the numbers, the second paragraph should show the maximum value, and the third paragraph should show the minimum value.
+    // Question 7
+    let ul7 = document.createElement("ul");
+    const addNumList = () => {
+      let li = document.createElement("li");
+      if(!Number(document.querySelector("#num7").value)){
+        alert("Please enter a valid number")
+      } else {
+        li.innerText = document.querySelector("#num7").value
+        ul7.appendChild(li);
+      }
+    }
+    let addNumBtn = document.querySelector("#addNumBtn");
+    addNumBtn.addEventListener("click", () => addNumList())
+    document.querySelector("#question7").appendChild(ul7);
+
+    const average = () => {
+      let sum = 0
+      let ulArr = document.querySelectorAll("#ul7");
+      ulArr.forEach((el) => {
+        sum += el;
+      })
+      return sum / ulArr.length;
+    }
+
+    const maxVal = () => {
+    }
+
+    const minVal = () => {
+    }
+    debugger
+    document.querySelector("#avgNums").innerText = average() 
+    document.querySelector("#maxVal").innerText = maxVal();
+    document.querySelector("#minVal").innerText = minVal();
+
+    // Question 8
+    // Make a website with a button.  Clicking on the button should remove the button.
+
+
+    //Question 9
+    // Make a website with a button, and 5 paragraph tags.  Clicking on the button should remove all of the paragraphs.
+
+    // Question 10 
+    // Make a website with a number input, a heading and a button. Clicking on the button should replace the heading with a heading matching the number in the input.  (e.g Entering 4 into the number input should turn the heading into `<h4>`)
 
 
 
