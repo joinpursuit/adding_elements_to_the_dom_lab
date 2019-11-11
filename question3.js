@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
      console.log(results)
      for(let key of results){
          let name = document.createElement("li")
-         name.innerText = `${key.nat} ${key.name.first } ${key.name.last}`
+         name.innerText = `${key.name.first } ${key.name.last} nationality is ${key.nat}`
          document.body.appendChild(name)
      }
  })
