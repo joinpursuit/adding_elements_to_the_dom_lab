@@ -27,6 +27,24 @@ const copyNumber = () =>{
     document.querySelector("body > ul:nth-child(18)").appendChild(addNumLi)
   }
 }
+const addN = () =>{
+  let input= document.querySelector("#inputNum2")
+  let inputV = input.value
+  let ulNum = document.querySelector("#ulNum")
+  if(inputV){
+    let addLi = document.createElement("li")
+    addLi.innerText=inputV
+    document.querySelector("body > ul:nth-child(23)").appendChild(addLi)
+  }
+  if(ulNum.innerText){
+    let avg = ulNum.innerText
+    document.querySelector("#p1").innerText= avg
+  }else if(ulNum){
+    console.log("please avg more")
+    console.log(false)
+  }
+
+}
 
 
 
