@@ -13,4 +13,4 @@ document.addEventListener("DOMContentLoaded", () =>{
       })
       document.body.appendChild(ul)
 })
-console.log("hello")
+// console.log("hello")
