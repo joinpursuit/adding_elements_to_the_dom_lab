@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded",()=>{
         numlist = document.querySelectorAll("li")
         console.log(numlist)
         // debugger
+        numlist.forEach(el => {
+            larg = -Infinity
+            if(el.innerText>larg){
+                larg = el.innerText
+            }
+            average = document.querySelector("#average")
+            average.innerText = larg
+            debugger
+        });
     })
     
 })
