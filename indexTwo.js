@@ -264,5 +264,8 @@ document.addEventListener("DOMContentLoaded",()=>{
  //Clicking on the button should create a new list item with
  // its text the same as the text in the input
 
+ document.addEventListener("DOMContentLoaded", () => {
+     const 
+ })
 
  
