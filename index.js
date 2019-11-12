@@ -406,12 +406,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     let addCopiesBtn = document.querySelector("#addCopiesBtn")
-    addCopiesBtn.addEventListener("click", () => addCopies());
+    addCopiesBtn.addEventListener("click", addCopies);
     document.querySelector("#question6").appendChild(ul6);
 
 
-    // Make a website with a number input, a button, and 3 paragraphs.  Clicking on the button should add the number to a list.  The first paragraph should show the average of all the numbers, the second paragraph should show the maximum value, and the third paragraph should show the minimum value.
     // Question 7
+    
     let ul7 = document.createElement("ul");
     const addNumList = () => {
       let li = document.createElement("li");
@@ -419,33 +419,48 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Please enter a valid number")
       } else {
         li.innerText = document.querySelector("#num7").value
-        ul7.appendChild(li);
+        ul7.appendChild(li).id = 'item';
       }
+      document.querySelector("#avgNums").innerText = average() 
+      document.querySelector("#maxVal").innerText = maxVal();
+      document.querySelector("#minVal").innerText = minVal();
     }
     let addNumBtn = document.querySelector("#addNumBtn");
-    addNumBtn.addEventListener("click", () => addNumList())
+    addNumBtn.addEventListener("click", addNumList)
     document.querySelector("#question7").appendChild(ul7);
 
     const average = () => {
-      let sum = 0
-      let ulArr = document.querySelectorAll("#ul7");
-      ulArr.forEach((el) => {
-        sum += el;
-      })
-      return sum / ulArr.length;
+        let sum = 0;
+        let ulArr = document.querySelectorAll("#item");
+        ulArr.forEach((el) => {
+            sum += Number(el.innerText);
+        })
+        return sum / ulArr.length;
     }
-
+    
     const maxVal = () => {
+        let ulArr = document.querySelectorAll("#item");
+        let largest = -Infinity;
+        ulArr.forEach((el) => {
+            if(Number(el.innerText) > largest){
+                largest = Number(el.innerText);
+            }
+        })
+        return largest;
+    }
+    
+    const minVal = () => {
+        let ulArr = document.querySelectorAll("#item");
+        let smallest = Infinity;
+        ulArr.forEach((el) => {
+            if(Number(el.innerText) < smallest){
+                smallest = Number(el.innerText);
+            }
+        })
+        return smallest;
     }
 
-    const minVal = () => {
-    }
-    debugger
-    document.querySelector("#avgNums").innerText = average() 
-    document.querySelector("#maxVal").innerText = maxVal();
-    document.querySelector("#minVal").innerText = minVal();
-  
-  })
+})
 
 // Question 8
 const removeBtn = () => {
@@ -464,7 +479,7 @@ const removePar = () => {
 
 // const addPar = () => {
 //   let section = document.querySelector("#div9");
-//   let para = document.createElement("P");
+//   let para = document.createElement("p");
 //   para.innerText = "Make this new paragraph disappear!"
 //   section.appendChild(para);
 // }
@@ -472,7 +487,9 @@ const removePar = () => {
 document.addEventListener("DOMContentLoaded", () => {
 
     // Question 10 
+
     const changeSize = () => {
+
       let h10 = document.getElementById("head10");
       let headerText = document.querySelector("#head10").innerText
       let newSize = document.querySelector("#num10").value;
@@ -483,7 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let newTag = document.createElement("h"+newSize);
         newTag.innerText = headerText;
 
-        //copies attributes over to newTag : source --> stackoverflow
+        // copies attributes over to newTag : source reference --> stackoverflow
         for(let i = h10.attributes.length - 1; i >= 0; --i){
           newTag.attributes.setNamedItem(h10.attributes[i].cloneNode());
         }
