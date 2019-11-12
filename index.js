@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Please enter a valid number")
       } else {
         li.innerText = document.querySelector("#num7").value
-        ul7.appendChild(li).id = 'item';
+        ul7.appendChild(li).className = 'item';
       }
       document.querySelector("#avgNums").innerText = average() 
       document.querySelector("#maxVal").innerText = maxVal();
@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const average = () => {
         let sum = 0;
-        let ulArr = document.querySelectorAll("#item");
+        let ulArr = document.querySelectorAll(".item");
         ulArr.forEach((el) => {
             sum += Number(el.innerText);
         })
@@ -439,7 +439,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     const maxVal = () => {
-        let ulArr = document.querySelectorAll("#item");
+        let ulArr = document.querySelectorAll(".item");
         let largest = -Infinity;
         ulArr.forEach((el) => {
             if(Number(el.innerText) > largest){
@@ -450,7 +450,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     const minVal = () => {
-        let ulArr = document.querySelectorAll("#item");
+        let ulArr = document.querySelectorAll(".item");
         let smallest = Infinity;
         ulArr.forEach((el) => {
             if(Number(el.innerText) < smallest){
@@ -490,7 +490,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const changeSize = () => {
 
-      let h10 = document.getElementById("head10");
+      let header = document.getElementById("head10");
       let headerText = document.querySelector("#head10").innerText
       let newSize = document.querySelector("#num10").value;
 
@@ -499,13 +499,9 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         let newTag = document.createElement("h"+newSize);
         newTag.innerText = headerText;
-
-        // copies attributes over to newTag : source reference --> stackoverflow
-        for(let i = h10.attributes.length - 1; i >= 0; --i){
-          newTag.attributes.setNamedItem(h10.attributes[i].cloneNode());
-        }
-
-        h10.parentNode.replaceChild(newTag, h10);
+        newTag.setAttribute("id","head10");
+        
+        header.parentNode.replaceChild(newTag, header);
       }
     }
 
