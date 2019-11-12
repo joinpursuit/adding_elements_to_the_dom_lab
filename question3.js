@@ -1,108 +1,115 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-let results2 = 
-[
+  results = [
     {
       "gender": "female",
       "name": {
-        "title": "Mrs",
-        "first": "Alie",
-        "last": "Van der Meeren"
-      },
-      "nat": "NL"
-    },
-    {
-      "gender": "female",
-      "name": {
-        "title": "Miss",
-        "first": "Rose",
-        "last": "White"
-      },
-      "nat": "CA"
-    },
-    {
-      "gender": "female",
-      "name": {
-        "title": "Mrs",
-        "first": "Lærke",
-        "last": "Skjelstad"
-      },
-      "nat": "NO"
-    },
-    {
-      "gender": "female",
-      "name": {
-        "title": "Mrs",
-        "first": "Marie",
-        "last": "Poulsen"
-      },
-      "nat": "DK"
-    },
-    {
-      "gender": "female",
-      "name": {
-        "title": "Miss",
-        "first": "Cariana",
-        "last": "da Conceição"
-      },
-      "nat": "BR"
-    },
-    {
-      "gender": "male",
-      "name": {
-        "title": "Mr",
-        "first": "Adem",
-        "last": "Balcı"
-      },
-      "nat": "TR"
-    },
-    {
-      "gender": "female",
-      "name": {
-        "title": "Mrs",
-        "first": "Milja",
-        "last": "Hakala"
-      },
-      "nat": "FI"
-    },
-    {
-      "gender": "female",
-      "name": {
-        "title": "Ms",
-        "first": "Margie",
-        "last": "Hawkins"
-      },
-      "nat": "US"
-    },
-    {
-      "gender": "female",
-      "name": {
-        "title": "Mademoiselle",
-        "first": "Noemi",
-        "last": "Rousseau"
+        "title": "mademoiselle",
+        "first": "ruth",
+        "last": "nicolas"
       },
       "nat": "CH"
     },
     {
       "gender": "female",
       "name": {
-        "title": "Miss",
-        "first": "Allison",
-        "last": "Fowler"
+        "title": "miss",
+        "first": "رها",
+        "last": "سلطانی نژاد"
+      },
+      "nat": "IR"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "mrs",
+        "first": "patricia",
+        "last": "hale"
+      },
+      "nat": "GB"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "fernando",
+        "last": "cooper"
       },
       "nat": "US"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "mrs",
+        "first": "یسنا",
+        "last": "صدر"
+      },
+      "nat": "IR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "eino",
+        "last": "tuomala"
+      },
+      "nat": "FI"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "gonca",
+        "last": "özkara"
+      },
+      "nat": "TR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "kyle",
+        "last": "castillo"
+      },
+      "nat": "US"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "miss",
+        "first": "olivia",
+        "last": "kumar"
+      },
+      "nat": "NZ"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "monsieur",
+        "first": "raymond",
+        "last": "durand"
+      },
+      "nat": "CH"
     }
   ],
-  "info": {
-    "seed": "bf68d45937d972fb",
+  info = {
+    "seed": "2cb086ce097c87ee",
     "results": 10,
     "page": 1,
-    "version": "1.3"
+    "version": "1.2"
   }
-}
-results2.forEach(el=>{
-    let li = document.createElement("li")
-    li.innerText= el.title
-    ul.appendChild(li)
+
+  let h2 = document.createElement("h2")
+  let ul = document.createElement("ul")
+  results.forEach(el=>{
+    h2.innerText = el.title + el.first + el.last
+      let li = document.createElement("li")
+      li.innerText= el.gender
+      li.innerText= el.nat
+      ul.appendChild(li)
+  
+  })
+      document.body.appendChild(h2)
+      document.body.appendChild(ul)
+  
 })
-    document.body.appendChild(ul)
-})
+
