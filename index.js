@@ -379,13 +379,11 @@ document.body.appendChild(ul)
 })
 
 const toDoList = () =>{
-  let userInput = document.querySelector("#list").value
-
-  let ul = document.createElement("ul")
+  let userInput = document.querySelector("#list")
+  let string = userInput.value
+  let ul = document.querySelector("#newList")
   let li = document.createElement("li")
-  li.innerText = userInput
+  li.innerText = string
   ul.appendChild(li)
-
-  document.querySelector("#newList").innerText =userInput
 }
 
