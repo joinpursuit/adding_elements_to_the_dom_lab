@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () =>{
       results.forEach(el =>{
           let li = document.createElement("li")
           li.innerText = el.name
-          ul.appendChild(li)
+          ul.appendChild(li)    
       })
 
       document.body.appendChild(ul)
