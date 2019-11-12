@@ -347,7 +347,7 @@
 // })
 // document.body.appendChild(info)
 
-//Problem 5
+// Problem 5
 // document.addEventListener("DOMContentLoaded",() =>{
 //     let submit = document.querySelector("#button")
 //     let list = document.createElement("ul")
@@ -358,3 +358,98 @@
 //     })
 //     document.body.appendChild(list)
 // })
+
+//Problem 6
+// document.addEventListener("DOMContentLoaded",() => {
+//     let submit = document.querySelector("#button")
+//     let list = document.createElement("ul")
+//     submit.addEventListener("click", () => {
+//         let num = document.querySelector("#number").value
+//         for (let i=0; i < num; i++){
+//         let li = document.createElement("li")
+//         li.innerText = document.querySelector("#string").value
+//         list.appendChild(li)
+//         } 
+//     })
+//     document.body.appendChild(list)
+// })
+
+// Problem 7 (How do we get the ul to print before the p's?????)
+// document.addEventListener("DOMContentLoaded",() =>{
+//     let submit = document.querySelector("#button")
+//     let list = document.createElement("ul")
+//     list.innerText = "This is the List"
+//     list.id = "list"
+    
+//     document.body.appendChild(list)
+    
+//     submit.addEventListener("click",() => {
+//         let ul = document.getElementById("list");
+//         let items = ul.getElementsByTagName("li");
+        
+//         const avgNum = () => {
+//             let sum = 0
+//             for (let li of items) {
+//                 sum += Number(li.innerText)
+//             }
+//             let avg = sum/items.length
+//             return avg
+//         }
+        
+//         const max = () => {
+//             let max = -Infinity
+//             for (let li of items) {
+//                 if (li.innerText > max){
+//                     max = Number(li.innerText)
+//                 }
+//             }
+//             return max
+//         }
+        
+//         const min = () => {
+//             let min = Infinity
+//             for (let li of items) {
+//                 if (li.innerText < min){
+//                     min = Number(li.innerText)
+//                 }
+//             }
+//             return min
+//         }
+        
+
+//         let li = document.createElement("li")
+//         li.innerText = Number(document.querySelector("#number").value)
+//         list.appendChild(li)
+        
+//         p1 = document.querySelector("#p1")
+//         p1.innerText = avgNum(list)
+//         p2 = document.querySelector("#p2")
+//         p2.innerText = max(list)
+//         p3 = document.querySelector("#p3")
+//         p3.innerText = min(list)
+
+//     })
+// })
+
+//Problem 8
+//  document.addEventListener("DOMContentLoaded",() =>{
+//     let submit = document.querySelector("#button")        
+//     submit.addEventListener("click",() => {
+//         document.body.removeChild(submit)
+//     })
+// })
+
+//Problem 9
+document.addEventListener("DOMContentLoaded",() =>{
+    let submit = document.querySelector("#submit")
+    let pgraph = document.main.childNodes
+    console.log(pgraph)
+    debugger
+
+    submit.addEventListener("click",() => {
+        for (let node of pgraph){
+            let childnode = node
+            document.main.removeChild(childnode)
+        }
+    })
+})
