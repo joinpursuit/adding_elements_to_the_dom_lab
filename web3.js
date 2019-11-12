@@ -103,9 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 for(let i of people.results) {
-    let newOl = document.createElement("ol")
-    newOl.innerText = i.name.first + " " + i.name.last + " " + i.nat
-    ol.appendChild(newOl)
+    let newLi = document.createElement("li")
+    newLi.innerText = i.name.first + " " + i.name.last + " " + i.nat
+    ol.appendChild(newLi)
 }
 
 document.body.appendChild(ol)
