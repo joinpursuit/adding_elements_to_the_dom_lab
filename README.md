@@ -34,7 +34,7 @@ Make a website with a heading, an input text field and a button. Clicking the bu
 ```
 
 Question Two
-Make a website that displays a list containing all of the names below. Make all of your <li> items inside of a script.
+Make a website that displays a list containing all of the names below. Make all of your "li" items inside of a script.
 
 ```
   
@@ -209,4 +209,4 @@ Question Nine
 Make a website with a button, and 5 paragraph tags. Clicking on the button should remove all of the paragraphs.
 
 Question Ten
-Make a website with a number input, a heading and a button. Clicking on the button should replace the heading with a heading matching the number in the input. (e.g Entering 4 into the number input should turn the heading into <h4>)
+Make a website with a number input, a heading and a button. Clicking on the button should replace the heading with a heading matching the number in the input. (e.g Entering 4 into the number input should turn the heading into <h4>
