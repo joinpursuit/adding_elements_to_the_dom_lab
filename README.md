@@ -369,7 +369,7 @@ Make a website with a text input, a number input and a button.  Clicking on the 
 
 # Question Seven
 
-Make a website with a number input, a button, and 3 paragraphs.  Clicking on the button should add the number to a list.  The first paragraph should show the average of all the numbers, the second paragraph should show the maximum value, and the third paragraph should show the minimum value.
+Make a website with a number input, a button, and 3 paragraphs.  Clicking on the button should add the number to a list.  The first paragraph should show the average of all the numbers, the second paragraph should show the maximum value, and the third paragraph should show the minimum value. 
 
 # Question Eight
 
