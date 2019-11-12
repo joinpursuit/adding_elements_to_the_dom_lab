@@ -77,13 +77,35 @@ const addN = () =>{
  
           
           document.addEventListener("DOMContentLoaded", ()=> {
-            let button = document.createElement("button")
-            button.innerText="press to Remove"
-            document.querySelector("body").appendChild(button)
-            button.addEventListener("click",()=>{
-              document.querySelector("body").removeChild(button)  
-            })
+            // let button = document.createElement("button")
+            // button.innerText="press to Remove"
+            // document.querySelector("body").appendChild(button)
+            // button.addEventListener("click",()=>{
+            //   document.querySelector("body").removeChild(button)  
+            // })
+
+            let h9 = document.createElement("h1")
+            h9.innerText = "Question Nine"
+            document.querySelector("body").appendChild(h9)
             
+            const mkPara = () =>{
+              for(let i=0; i<5; i++){
+                let newP = document.createElement("p")
+                newP.id = "p9"
+                newP.innerText=`it new paragraph${i}`
+                document.querySelector("body").appendChild(newP)
+              }
+            }
+            mkPara();
+
+            let button2 = document.createElement("button")
+            button2.innerText="press to Remove paragraph"
+            document.querySelector("body").appendChild(button2)
+            button2.addEventListener("click",()=>{
+              document.querySelector("body").removeChild(document.querySelector("#p9"))
+            })  
+          
+
             
             let obj = {
               "results" : [
