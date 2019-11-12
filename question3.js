@@ -98,17 +98,24 @@ document.addEventListener("DOMContentLoaded", ()=>{
     "version": "1.2"
   }
 
-  let h2 = document.createElement("h2")
+  
   let ul = document.createElement("ul")
   results.forEach(el=>{
-    h2.innerText = el.title + el.first + el.last
-      let li = document.createElement("li")
-      li.innerText= el.gender
+    let h2 = document.createElement("h2")
+    let h3 = document.createElement("h3")
+    let li = document.createElement("li")
+    // let fullname = h2 + "" + h3
+    // let fullname = el.name.first+ "" + el.name.last
+      h2.innerText= el.name.first
+      h3.innerText = el.name.last
       li.innerText= el.nat
+      
+
+      ul.appendChild(h2)
+      ul.appendChild(h3)
       ul.appendChild(li)
   
   })
-      document.body.appendChild(h2)
       document.body.appendChild(ul)
   
 })
