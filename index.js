@@ -1,9 +1,9 @@
 const changeHeading = () => {
-    let heading = document.querySelector("#inpuHeading")
-    let newHeading = heading.value
-    if(newHeading){
-        document.querySelector("#heading1").innerHTML = newHeading
-    }
+  let heading = document.querySelector("#inpuHeading")
+  let newHeading = heading.value
+  if(newHeading){
+    document.querySelector("#heading1").innerHTML = newHeading
+  }
 }
 const addingList = () =>{
   let input = document.querySelector("#inputList")
@@ -27,39 +27,68 @@ const copyNumber = () =>{
     document.querySelector("body > ul:nth-child(18)").appendChild(addNumLi)
   }
 }
+
+
+let newArr = []
+
+  const avg = ()=>{
+    let sum = 0
+    for (el of newArr){
+      sum+=Number(el)
+    }
+    return (sum/newArr.length)
+  }
+  
+  const largest = () =>{
+    let largest = Number(newArr[0]);
+    console.log(largest)
+    for(el of newArr){
+      if (largest<Number(el)){
+        largest=Number(el)
+      }
+    }
+    return largest 
+  }
+
+  const min = () =>{
+      let min = Number(newArr[0]);
+      for(el of newArr){
+          if(min>Number(el)){
+              min=Number(el)
+            }
+          }
+          return min
+          }
+
 const addN = () =>{
   let input= document.querySelector("#inputNum2")
   let inputV = input.value
-  let ulNum = document.querySelector("#ulNum")
   if(inputV){
     let addLi = document.createElement("li")
-    addLi.innerText=inputV
-    document.querySelector("body > ul:nth-child(23)").appendChild(addLi)
-  }
-  if(ulNum.innerText){
-    let avg = ulNum.innerText
-    document.querySelector("#p1").innerText= avg
-  }else if(ulNum){
-    console.log("please avg more")
-    console.log(false)
-  }
+    newArr.push(inputV)
+    addLi.innerText=newArr
 
-}
-
-
-
-document.addEventListener("DOMContentLoaded", ()=> {
-    let obj = {
-        "results" : [
-          { "name" : "Anne" },
-          { "name" : "Bri" },
-          { "name" : "Chaz" },
-          { "name" : "Darlene" }
-        ]
-      }
-
-      // let ul = document.createElement("ul")
-   
+          document.querySelector("#ulNum").appendChild(addLi)
+          document.querySelector("#p1").innerText=avg()
+          document.querySelector("#p2").innerText=largest()
+          document.querySelector("#p3").innerText=min()
+        }            
+          }
+          
+          
+          
+          document.addEventListener("DOMContentLoaded", ()=> {
+            let obj = {
+              "results" : [
+                { "name" : "Anne" },
+                { "name" : "Bri" },
+                { "name" : "Chaz" },
+                { "name" : "Darlene" }
+              ]
+            }
+            
+            // let ul = document.createElement("ul")
+            
       let newArr =obj.results
       newArr.forEach((el) =>{
         let li = document.createElement("li")
