@@ -482,6 +482,100 @@ numButton.addEventListener("click", () =>{
 })
 
 
+// PROBLEM 8
+let problem8 = document.querySelector("#problem8")
+
+let header = document.createElement("h1")
+header.innerText = "Problem 8"
+problem8.appendChild(header)
+
+
+let button8 = document.createElement("button")
+button8.innerText = "DON'T CLICK BUTTON"
+problem8.appendChild(button8)
+
+
+button8.addEventListener("click", () => {
+    problem8.removeChild(button8)
+})
+
+
+
+// PROBLEM 9
+let problem9 = document.querySelector("#problem9")
+
+let header9 = document.createElement("h1")
+header9.innerText = "Problem 9"
+problem9.appendChild(header9)
+
+let button9 = document.createElement("button")
+button9.innerText = "submit"
+problem9.appendChild(button9)
+
+let section2 = document.createElement("section")
+problem9.appendChild(section2)
+
+
+
+let para1 = document.createElement("p")
+para1.innerText = "paragraph 1"
+section2.appendChild(para1)
+
+let para2 = document.createElement("p")
+para2.innerText = "paragraph 2"
+section2.appendChild(para2)
+
+let para3 = document.createElement("p")
+para3.innerText = "paragraph 3"
+section2.appendChild(para3)
+
+let para4 = document.createElement("p")
+para4.innerText = "paragraph 4"
+section2.appendChild(para4)
+
+let para5 = document.createElement("p")
+para5.innerText = "paragraph 5"
+section2.appendChild(para5)
+
+
+
+
+
+problem9.appendChild(button9)
+
+button9.addEventListener("click" ,() => {
+    problem9.removeChild(section2) 
+
+})
+
+ 
+// PROBLEM 10
+
+
+let button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
