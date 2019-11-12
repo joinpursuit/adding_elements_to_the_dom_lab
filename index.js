@@ -75,6 +75,16 @@ const addN = () =>{
         }            
           }
  
+  const changeH =() =>{
+      let input = document.querySelector("#changeHeading")
+      let inputV = input.value
+      let inputWord = document.querySelector("#headingNum")
+      let inputWordV = inputWord.innerText
+      let newHeading = document.createElement("h")
+      console.log(newHeading)
+      console.log(inputV)
+      console.log(inputWordV)
+  }
           
           document.addEventListener("DOMContentLoaded", ()=> {
             // let button = document.createElement("button")
