@@ -7,3 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.appendChild(input)
     })
 })
+
+function copyList () {
+    let inputStr= document.getElementById('text_list').value
+    let inputNum = document.getElementById("num_list").value
+    let newList = document.getElementById("new_list")
+    for (let i = 1; i <= Number(inputNum); i++) {
+      newItem = document.createElement('li')
+      newItem.innerText = inputStr
+      newList.appendChild(newItem)
