@@ -260,9 +260,4 @@ document.addEventListener("DOMContentLoaded",()=>{
  })
  
 
- //question 5 Make a website with a text input and a button.  
- //Clicking on the button should create a new list item with
- // its text the same as the text in the input
-
-
  
