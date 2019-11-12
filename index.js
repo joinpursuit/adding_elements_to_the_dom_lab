@@ -74,10 +74,17 @@ const addN = () =>{
           document.querySelector("#p3").innerText=min()
         }            
           }
-          
-          
+ 
           
           document.addEventListener("DOMContentLoaded", ()=> {
+            let button = document.createElement("button")
+            button.innerText="press to Remove"
+            document.querySelector("body").appendChild(button)
+            button.addEventListener("click",()=>{
+              document.querySelector("body").removeChild(button)  
+            })
+            
+            
             let obj = {
               "results" : [
                 { "name" : "Anne" },
