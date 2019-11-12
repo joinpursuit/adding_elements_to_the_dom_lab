@@ -392,7 +392,7 @@ submit.addEventListener("click",()=>{
     let inputItem = document.querySelector("#listItemInput")
     let inputNum = document.querySelector("#listNumInput")
 
-    let ul5 = document.createElement("ul")
+   let ul5 = document.createElement("ul")
     
  for(let i = 0; i < inputNum.value; i ++){
 
@@ -409,6 +409,77 @@ submit.addEventListener("click",()=>{
 })
 
 
+// problem 7
+let section7 = document.querySelector("#problem7")
+let p1 = document.createElement("p")
+p1.innerText = "Enter Number Here"
+let numInput= document.createElement("input")
+
+section7.appendChild(p1)
+section7.appendChild(numInput)
+
+let numButton = document.createElement("button")
+numButton.innerText = "submit"
+section7.appendChild(numButton)
+let h3 = document.createElement("h3")
+h3.innerText = "List of your Numbers"
+section7.appendChild(h3)
+
+let avg = document.createElement("p")
+let min = document.createElement("p")
+let max = document.createElement("p")
+
+
+let numberList = []
+
+const averager = (arr) => {
+let averager = 0 
+
+arr.forEach((number) =>{
+averager += number
+})
+
+return averager/arr.length
+
+}
+
+const minNum = (arr) => {
+  let min = arr[0]
+  arr.forEach((number) =>{
+    if(number< min) min = number
+  })
+  return min
+  }
+  const maxNum = (arr) => {
+    let max = arr[0]
+    arr.forEach((number) =>{
+      if(number> max) max = number
+  })
+    return max
+  }
+
+ul = document.createElement("ul")
+
+numButton.addEventListener("click", () =>{
+
+  li = document.createElement("li")
+  li.innerText = numInput.value
+  numberList.push(Number(numInput.value))
+
+  ul.appendChild(li)
+  section7.appendChild(ul)
+
+  avg.innerText = "avg: " + averager(numberList)
+  min.innerText = "min: " + minNum(numberList)
+  max.innerText = "max: " + maxNum(numberList)
+
+  section7.appendChild(max)
+  section7.appendChild(min)
+  section7.appendChild(avg)
+
+
+
+})
 
 
 
