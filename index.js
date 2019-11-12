@@ -551,8 +551,12 @@ button9.addEventListener("click" ,() => {
  
 // PROBLEM 10
 
-
-let button
+let header10 = document.querySelector("#header10")
+let button10 = document.querySelector("#button10")
+let input10 = document.querySelector("#input10")
+button10.addEventListener("click",() => {
+  
+})
 
 
 
