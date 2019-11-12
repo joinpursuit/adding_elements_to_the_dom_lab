@@ -77,12 +77,12 @@ const addN = () =>{
  
           
           document.addEventListener("DOMContentLoaded", ()=> {
-            // let button = document.createElement("button")
-            // button.innerText="press to Remove"
-            // document.querySelector("body").appendChild(button)
-            // button.addEventListener("click",()=>{
-            //   document.querySelector("body").removeChild(button)  
-            // })
+            let button = document.createElement("button")
+            button.innerText="press to Remove"
+            document.querySelector("body").appendChild(button)
+            button.addEventListener("click",()=>{
+              document.querySelector("body").removeChild(button)  
+            })
 
             let h9 = document.createElement("h1")
             h9.innerText = "Question Nine"
@@ -104,7 +104,27 @@ const addN = () =>{
             button2.addEventListener("click",()=>{
               document.querySelector("body").removeChild(document.querySelector("#p9"))
             })  
-          
+
+              let hNum ="h1"
+            let h10 = document.createElement(hNum)
+            h10.innerText = "Question Ten"
+            h10.id = "h10"
+            document.querySelector("body").appendChild(h10)
+            let textbox10 = document.createElement("input")
+            textbox10.setAttribute("type", "number");
+            document.querySelector("body").appendChild(textbox10)
+
+            let button3 = document.createElement("button")
+            button3.innerText="press to Change Heading style"
+            document.querySelector("body").appendChild(button3)
+            button3.addEventListener("click",()=>{
+              let num = textbox10.value //saving the value of the number entered in textbox
+              console.log(num)
+              hNum = "h"+num //addin the number to hNum with h in front - ex. "h" + 1 = "h1"
+              
+            })  
+
+
 
             
             let obj = {
