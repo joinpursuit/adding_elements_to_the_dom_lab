@@ -477,7 +477,15 @@
 // }
 
 // QUESTION 8
-deleteButton = () => {
-    let button = document.querySelector("button");
-    document.body.removeChild(button);
+// deleteButton = () => {
+//     let button = document.querySelector("button");
+//     document.body.removeChild(button);
+// }
+
+// QUESTION 9
+deleteParagraphs = () => {
+    let paragraphs = document.querySelectorAll("p");
+    for(let i = 0; i < paragraphs.length; i++) {
+        document.body.removeChild(paragraphs);
+    }
 }
