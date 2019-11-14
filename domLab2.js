@@ -476,3 +476,8 @@
 
 // }
 
+// QUESTION 8
+deleteButton = () => {
+    let button = document.querySelector("button");
+    document.body.removeChild(button);
+}
