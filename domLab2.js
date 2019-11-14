@@ -423,38 +423,56 @@
 
 //Question 7
 
-const createPara = () => {
-    let strElement = document.querySelector("#id")
-    let ul = document.querySelector("#list")
-    let num = Number(strElement.value)
-    let li = document.createElement("li")
-    li.innerText = num
-    ul.appendChild(li)
-    let liArr = document.querySelectorAll("li")
-    let liValue = []
-    liArr.forEach(li => {
-        liValue.push(Number(li.innerText))
-    })
-    console.log(liArr)
-    let para1 = document.querySelector("#para1")
-    para1.innerText = average(liValue)
-}
+// const createPara = () => {
+//     let strElement = document.querySelector("#id")
+//     let num = Number(strElement.value)
 
-const average = arr => {
-    let sum = 0 
-    arr.forEach(num => {
-        sum += num
-    })
-    return sum/arr.length
-}
+//     let ul = document.querySelector("#list")
+//     let li = document.createElement("li")
+//     li.innerText = num
+//     ul.appendChild(li)
 
-const max = arr => {
-    let max = -Infinity
-    let min = Infinity
-    arr.forEach(num =>{
+//     let liArr = document.querySelectorAll("li")
+//     let liValues = []
+//     liArr.forEach(li => {
+//         liValues.push(Number(li.innerText))
+//     })
 
+//     let averageP = document.querySelector("#averageP")
+//     averageP.innerText = average(liValues)
+
+//     let maxP = document.querySelector("#maxP");
+//     let minP = document.querySelector("#minP");
+
+//     maxP.innerText = maxAndMin(liValues)[0];
+//     minP.innerText = maxAndMin(liValues)[1];
+// }
+
+// const average = arr => {
+//     let sum = 0 
+//     arr.forEach(num => {
+//         sum += num
+//     })
+//     return sum/arr.length
+// }
+
+// const maxAndMin = arr => {
+//     let max = -Infinity
+//     let min = Infinity
+
+//     let maxP = document.querySelector("#maxP");
+//     let minP = document.querySelector("#minP");
+
+//     arr.forEach(num =>{
+//         if(num > max) {
+//             max = num;
+//         }
         
-    })
+//         if(num < min) {
+//             min = num;
+//         }
+//     })
+//     return [max, min];
 
-}
+// }
 
