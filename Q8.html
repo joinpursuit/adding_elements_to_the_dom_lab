@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Q8</title>
+  </head>
+  <body>
+    <h1>Question Eight</h1>
+    <p>
+      Make a website with a button. Clicking on the button should remove the
+      button.
+    </p>
+    <hr />
+    <div id="div">
+      <button onclick="removeButton()" id="button">Submit</button>
+    </div>
+    <script>
+      const removeButton = () => {
+        let button = document.getElementById("button");
+        let div = document.getElementById("div");
+        div.removeChild(button);
+      };
+    </script>
+  </body>
+</html>

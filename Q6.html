@@ -1,46 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Q6</title>
   </head>
   <body>
-      <h1>Question Six</h1>
-        <p>Make a website with a text input, a number input and a button.  Clicking on the button should add that many
-          copies of the text in the text input to a list.</p>
-<hr>
-          <p>Enter items <br>
-            <br>
-               <input type="text" id = "items" placeholder="Items"> <br>
-               <input type="text" id = "num" placeholder="Number">
-          </p>
-              <button onclick = "addItems()">Submit</button>
+    <h1>Question Six</h1>
+    <p>
+      Make a website with a text input, a number input and a button. Clicking on
+      the button should add that many copies of the text in the text input to a
+      list.
+    </p>
+    <hr />
+    <input type="text" id="text" placeholder="Enter Text" />
+    <input type="number" id="number" placeholder="Enter number" />
+    <button onclick="textTimeNum()">Submit</button>
+    <div id="section"></div>
 
-              <ul id = "list">
+    <script>
+      const textTimeNum = () => {
+        let text = document.getElementById("text");
+        textVal = text.value;
+        let num = document.getElementById("number");
+        numVal = num.value;
+        console.log(numVal);
+        let section = document.getElementById("section");
 
-              </ul>
-
-
-      <script>
-
-          function addItems () {
-            let num = document.getElementById("num")
-            let inputNum = num.value
-            console.log(inputNum);
-            let inputItems = document.getElementById("items")
-            let userInput = inputItems.value
-            console.log(userInput);
-            for(let i = 0; i < inputNum; i++ ){
-            let newItem = document.createElement("li")
-            newItem.innerText = userInput
-            console.log(newItem.innerText);
-              list.appendChild(newItem)
-            }
+        for (let i = 0; i < numVal; i++) {
+          let para = document.createElement("p");
+          para.innerText = textVal;
+          section.appendChild(para);
         }
-
-      </script>
-
-
-
+      };
+    </script>
   </body>
 </html>

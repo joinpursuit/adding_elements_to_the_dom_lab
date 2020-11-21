@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title></title>
   </head>
   <body>
+    <h1>Question Two</h1>
+    <ol>
+      <li>
+        Make a website that displays a list containing all of the names below.
+        Make all of your items inside of a script.
+      </li>
+    </ol>
+    <hr />
 
-      <h1>Question Two</h1>
-        <p>  Make a website that displays a list containing all of the names below.  Make all of your items inside of a script.</p>
-              <p>
-            </p>
+    <script>
+      let result = [
+        { name: "Anne" },
+        { name: "Bri" },
+        { name: "Chaz" },
+        { name: "Darlene" },
+      ];
 
-            <ul id = "player">
-
-            </ul>
-
-      <script>
-
-        let listEl = document.getElementById("player")
-
-        let results = [
-          { "name" : "Anne" },
-          { "name" : "Bri" },
-          { "name" : "Chaz" },
-          { "name" : "Darlene" }
-        ]
-
-            for(key of results){
-              let newNameList = document.createElement("li")
-              newNameList.innerText = key['name']
-              listEl.appendChild(newNameList)
-          }
-
-
-
-
-
-      </script>
-
+      for (key of result) {
+        let list = document.createElement("ul");
+        let listItems = document.createElement("li");
+        listItems.innerText = "Name: " + key.name;
+        document.body.appendChild(list);
+        list.appendChild(listItems);
+      }
+    </script>
   </body>
 </html>

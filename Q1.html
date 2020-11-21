@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title></title>
   </head>
   <body>
-    <h1 id = "heading">Question One</h1>
-      <p>Make a website with a heading, an input text field and a button. Clicking the button should change the heading's text to be the text in the input.</p>
-  <hr>
+    <div id="top"></div>
+    <p>
+      Make a website with a heading, an input text field and a button. Clicking
+      the button should change the heading's text to be the text in the input.
+    </p>
+    <hr />
+    <input type="text" id="text" />
+    <button onclick="changeHeading()">Submit</button>
 
-  <p>Enter a sentence
-  <input type="text" id = "input" placeholder="enter sentence">
-  </p>
-    <button onclick = "changeHeading()">Submit</button>
-
-<script>
-
-
-function changeHeading() {
-
-  let userInput = document.getElementById("input")
-  let heading = document.getElementById("heading")
-  let newHeading = document.createElement("h1")
-  newHeading.innerText = userInput.value
-  heading.parentNode.replaceChild(newHeading, heading )
-
-}
-
-</script>
+    <script>
+      const changeHeading = () => {
+        let top = document.getElementById("top");
+        let heading = document.createElement("h1");
+        let text = document.getElementById("text");
+        let textVal = text.value;
+        heading.innerText = textVal;
+        top.appendChild(heading);
+      };
+    </script>
   </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Q9</title>
+  </head>
+  <body>
+    <h1>Question Nine</h1>
+    <p>
+      Make a website with a button, and 5 paragraph tags. Clicking on the button
+      should remove all of the paragraphs.
+    </p>
+    <hr />
+    <div id="div">
+      <p id="para1">P1</p>
+      <p id="para2">P2</p>
+      <p id="para3">P3</p>
+      <p id="para4">P4</p>
+      <p id="para5">P5</p>
+      <button onclick="removePara()" id="button">Submit</button>
+    </div>
+    <script>
+      const removePara = () => {
+        let para1 = document.querySelector("#para1");
+        let para2 = document.querySelector("#para2");
+        let para3 = document.querySelector("#para3");
+        let para4 = document.querySelector("#para4");
+        let para5 = document.querySelector("#para5");
+
+        let div = document.getElementById("div");
+        div.removeChild(para1);
+        div.removeChild(para2);
+        div.removeChild(para3);
+        div.removeChild(para4);
+        div.removeChild(para5);
+      };
+    </script>
+  </body>
+</html>

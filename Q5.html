@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <meta charset="utf-8" />
   <head>
-    <meta charset="utf-8">
     <title>Question Five</title>
-      <h1>Question Five</h1>
-         <p>Make a website with a text input and a button.  Clicking on the button should create a new list item
-           with its text the same as the text in the input.</p>
+  </head>
 
-
-        <p>Enter items
-             <input type="text" id = "items" placeholder="Items">
-        </p>
-            <button onclick = "addItems()">Submit</button>
-
-            <ul id = "list">
-
-            </ul>
-
+  <body>
+    <h1>Question Five</h1>
+    <p>
+      Make a website with a text input and a button. Clicking on the button
+      should create a new list item with its text the same as the text in the
+      input.
+    </p>
+    <hr />
+    <input type="text" id="item" placeholder="Enter List Item" />
+    <button onclick="createList()">Submit</button>
+    <div id="listSection"></div>
 
     <script>
-
-
-
-      function addItems (){
-        let list = document.getElementById("list")
-        let inputItems = document.getElementById("items")
-        let userInput = inputItems.value
-        let newItem = document.createElement("li")
-        newItem.innerText = userInput
-        list.appendChild(newItem)
-      }
-
+      const createList = () => {
+        let item = document.getElementById("item");
+        let itemVal = item.value;
+        let div = document.getElementById("listSection");
+        let list = document.createElement("ul");
+        let listItem = document.createElement("li");
+        listItem.innerText = itemVal;
+        div.appendChild(list);
+        list.appendChild(listItem);
+      };
     </script>
-
-  </head>
-  <body>
-
   </body>
 </html>

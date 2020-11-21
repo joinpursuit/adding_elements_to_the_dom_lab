@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Q7</title>
+  </head>
+
+  <body>
+    <h1>Question Seven</h1>
+    <p>
+      Make a website with a number input, a button, and 3 paragraphs. Clicking
+      on the button should add the number to a list. The first paragraph should
+      show the average of all the numbers, the second paragraph should show the
+      maximum value, and the third paragraph should show the minimum value.
+    </p>
+    <hr />
+    <input type="number" id="num" placeholder="Enter Number" />
+    <button onclick="math(arr)">Submit</button>
+    <div id="div"></div>
+
+    <p id="average"></p>
+    <p id="max"></p>
+    <p id="min"></p>
+
+    <script>
+      let arr = [];
+
+      const math = (arr) => {
+        let num = document.getElementById("num");
+        let max = document.getElementById("max");
+        let min = document.getElementById("min");
+        let avg = document.getElementById("average");
+        let numVal = parseInt(num.value);
+        let div = document.getElementById("div");
+        let ul = document.createElement("ul");
+        let li = document.createElement("li");
+        li.innerText = numVal;
+        div.appendChild(ul);
+        ul.appendChild(li);
+        arr.push(numVal);
+
+        let big = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (big < arr[i]) {
+            big = arr[i];
+          }
+          max.innerText = `Max = ${big}`;
+        }
+
+        let small = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (small > arr[i]) {
+            small = arr[i];
+          }
+          min.innerText = `Min = ${small}`;
+        }
+
+        let sum = arr.reduce((acc, el) => {
+          avg.innerText = `Average = ${(acc + el) / arr.length}`;
+        });
+      };
+    </script>
+  </body>
+</html>
