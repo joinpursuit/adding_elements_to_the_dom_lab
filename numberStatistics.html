@@ -7,18 +7,70 @@
     <h1>Number Statistics</h1>
 
     <ul>
-      <li>Make a form with id='number-statistics-form'</li>
       <li>
         The user should be able to enter a number into a number input with
         id='number-statistics-number-input'
       </li>
-      <li>They should then be able to click a "submit" button</li>
+      <li>They should then be able to click a "submit" button with id='number-statistics-button'</li>
       <li>
         Clicking the submit button will add that number to a list with
         id='number-statistics-numbers'. There should be three paragraphs on the
         page: id='number-statistics-average', id='number-statistics-maximum',
         and id='number-statistics-minimum'.
       </li>
+      <li>
+        The first paragraph should show the average of all the numbers, 
+        the second paragraph should show the maximum value, 
+        and the third paragraph should show the minimum value.
+      </li>
     </ul>
+
+    <input type='number' id='number-statistics-number-input' placeholder='Enter a number here'>
+    <button type='submit' id='number-statistics-button' onclick='handleNumberInput()'>Submit</button>
+    <ul id='number-statistics-numbers'></ul>
+    <p id='number-statistics-average'>Average:</p>
+    <p id='number-statistics-maximum'>Max:</p>
+    <p id='number-statistics-minimum'>Min:</p>
+
+    <script>
+      let numbers = [];
+
+      function averageNums(nums) {
+        let sum = 0;
+        for (num of nums) {
+          sum += num;
+        }
+        return sum / nums.length;
+      }
+
+      function handleNumberInput() {
+        let input = document.getElementById('number-statistics-number-input').value;
+        let num = Number(input);
+        numbers.push(num);
+
+        // add number to display list
+        let list = document.getElementById('number-statistics-numbers');
+        let item = document.createElement('li');
+        item.innerText = num;
+        list.appendChild(item);
+
+        // compute stats
+        let average = averageNums(numbers);
+        let max = Math.max(...numbers);
+        let min = Math.min(...numbers);
+
+        // display stats
+        let averageEl = document.getElementById('number-statistics-average');
+        averageEl.innerText = `Average: ${average}`;
+
+        let maxEl = document.getElementById('number-statistics-maximum');
+        maxEl.innerText = `Max: ${max}`;
+
+        let minEl = document.getElementById('number-statistics-minimum');
+        minEl.innerText = `Min: ${min}`;
+      }
+
+    </script>
+
   </body>
 </html>
