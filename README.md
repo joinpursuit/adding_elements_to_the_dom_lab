@@ -125,7 +125,7 @@ Make a website (`userList.html`) that displays a list with id='user-list' contai
       },
       "nat": "CH"
     }
-  ],
+  ]
   "info": {
     "seed": "2cb086ce097c87ee",
     "results": 10,
