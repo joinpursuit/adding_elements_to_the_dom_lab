@@ -222,13 +222,45 @@ planets = {
     ]
 }
 
-const userList = document.querySelector('#planets-list');
+// results = planets.results;
+// for(let i = 0; i < results.length;i++){
+//   const li = document.createElement('li');
+//   planetName = results[i].name;
+//   pop = results[i].population;
+//   li.textContent = `${planetName} (pop. ${pop})`;
+//   document.querySelector('#planets-list').appendChild(li);
+// }
 
-results = planets.results;
-for(let i = 0; i < results.length;i++){
-  const li = document.createElement('li');
-  planetName = results[i].name;
-  pop = results[i].population;
-  li.textContent = `${planetName} (pop. ${pop})`;
-  document.querySelector('#planets-list').appendChild(li);
-}
+// planetInfo = planets.results
+// for(let planet in planetInfo){
+//     const li = document.createElement('li');
+//     let planetName = planetInfo[planet].name;
+//     let pop = planetInfo[planet].population;
+//     li.textContent = `${planetName} (pop. ${pop})`;
+//     document.querySelector('#planets-list').appendChild(li);
+// }
+
+// planetInfo = planets.results
+// for(let planet of planetInfo){
+//     const li = document.createElement('li');
+//     let planetName = planet.name;
+//     let pop = planet.population;
+//     li.textContent = `${planetName} (pop. ${pop})`;
+//     document.querySelector('#planets-list').appendChild(li);
+// }
+
+// Object destructuring
+// planetInfo = planets.results
+// for(let planet of planetInfo){
+//     const li = document.createElement('li');
+//     const {name,population} = planet;
+//     li.textContent = `${name} (pop. ${population})`;
+//     document.querySelector('#planets-list').appendChild(li);
+// }
+
+planetInfo = planets.results
+planetInfo.forEach(({name,population}) => {
+    const li = document.createElement('li');
+    li.textContent = `${name} (pop. ${population})`;
+    document.querySelector('#planets-list').appendChild(li);
+});

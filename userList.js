@@ -2,7 +2,7 @@ users = {
   "results": [
     {
       "gender": "female",
-      "name": {
+      "cat": {
         "title": "mademoiselle",
         "first": "ruth",
         "last": "nicolas"
@@ -105,9 +105,17 @@ results = users.results;
 // console.log(results.length)
 for(let i = 0; i < results.length;i++){
   const li = document.createElement('li');
-  firstName = results[i].name.first;
-  lastName = results[i].name.last;
+  firstName = results[i]?.name?.first;
+
+  // firstName = results[i].name && results[i].name.first;
+  // old way to do check and balance if name exists
+
+  lastName = results[i]?.name?.last;
   nationality = results[i].nat;
   li.textContent = `${firstName} ${lastName} (${nationality})`;
   document.querySelector('#user-list').appendChild(li);
 }
+
+// change name to word cats or remove
+
+// look up optional chaining ? used in it
