@@ -1,11 +1,9 @@
 const numberStatistics = () => {
-  let userInput = document.querySelector("#number-statistics-number-input")
-    .value;
+  let userInput = document.querySelector("#number-statistics-number-input").value;
   let liTag = document.createElement("li");
   liTag.classList.add("numbers");
   liTag.textContent = Number(userInput);
   document.querySelector("#number-statistics-numbers").appendChild(liTag);
-  //   console.log(liTag.textContent)
 
   const listItems = document.querySelectorAll(".numbers");
   console.log(listItems);
