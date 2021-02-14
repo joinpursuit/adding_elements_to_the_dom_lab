@@ -221,3 +221,14 @@ planets = {
         }
     ]
 }
+
+const userList = document.querySelector('#planets-list');
+
+results = planets.results;
+for(let i = 0; i < results.length;i++){
+  const li = document.createElement('li');
+  planetName = results[i].name;
+  pop = results[i].population;
+  li.textContent = `${planetName} (pop. ${pop})`;
+  document.querySelector('#planets-list').appendChild(li);
+}
