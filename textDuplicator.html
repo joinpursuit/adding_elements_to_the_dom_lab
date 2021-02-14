@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Text Duplicator</title>
-  </head>
-  <body>
-    <h1>Text Duplicator</h1>
 
-    <ul>
-      <li>
-        The user should be able to enter a string into a text input with
-        id='text-duplicator-string-input'
-      </li>
-      <li>
-        The user should be able to enter a number into a number input with
-        id='text-duplicator-number-input'
-      </li>
-      <li>They should then be able to click a "submit" button with id='text-duplicator-button'</li>
-      <li>
-        Clicking the submit button will add that many copies of the string as
-        list items to an unordered list with id='text-duplicator-list'
-      </li>
-    </ul>
-  </body>
+<head>
+  <title>Text Duplicator</title>
+  <script src="./textDuplicator.js"></script>
+</head>
+
+<body>
+  <h1>Text Duplicator</h1>
+
+  <ul>
+    <li>
+      The user should be able to enter a string into a text input with
+      id='text-duplicator-string-input'
+    </li>
+    <li>
+      The user should be able to enter a number into a number input with
+      id='text-duplicator-number-input'
+    </li>
+    <li>They should then be able to click a "submit" button with id='text-duplicator-button'</li>
+    <li>
+      Clicking the submit button will add that many copies of the string as
+      list items to an unordered list with id='text-duplicator-list'
+    </li>
+  </ul>
+  <input type="text" id="text-duplicator-string-input">
+  <input type="number" id="text-duplicator-number-input">
+  <button id="text-duplicator-button" onclick="textDuplicate()">Submit</button>
+  <ul id="text-duplicator-list">
+  </ul>
+
+</body>
+
 </html>
