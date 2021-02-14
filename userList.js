@@ -2,7 +2,7 @@ users = {
   "results": [
     {
       "gender": "female",
-      "cat": {
+      "name": {
         "title": "mademoiselle",
         "first": "ruth",
         "last": "nicolas"
