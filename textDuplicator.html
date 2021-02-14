@@ -2,24 +2,30 @@
 <html>
   <head>
     <title>Text Duplicator</title>
+    <script src="./textDup.js"></script>
   </head>
   <body>
     <h1>Text Duplicator</h1>
 
-    <ul>
-      <li>
+    <input type="text" id="text-duplicator-string-input" placeholder="Enter your text here." >
+    <input type="number" id="text-duplicator-number-input" placeholder="Enter your number here.">
+    <ul id="text-duplicator-list">Waiting for input...<ul>
+    <button onclick="stringCopies()" id="text-duplicator-button" type="submit">Submit</button>
+
+    <!-- <ul> -->
+      <!-- <li>
         The user should be able to enter a string into a text input with
         id='text-duplicator-string-input'
       </li>
-      <li>
-        The user should be able to enter a number into a number input with
+      <li> -->
+        <!-- The user should be able to enter a number into a number input with
         id='text-duplicator-number-input'
-      </li>
-      <li>They should then be able to click a "submit" button with id='text-duplicator-button'</li>
-      <li>
+      </li> -->
+      <!-- <li>They should then be able to click a "submit" button with id='text-duplicator-button'</li> -->
+      <!-- <li>
         Clicking the submit button will add that many copies of the string as
         list items to an unordered list with id='text-duplicator-list'
-      </li>
-    </ul>
+      </li> -->
+    <!-- </ul> -->
   </body>
 </html>
