@@ -21,6 +21,7 @@ const statistics = () => {
         numArray.push(number);
         sum += number;
     }
+    console.log(numArray)
     max = Math.max(...numArray);
     min = Math.min(...numArray);
     average = sum/listNumber.length;
