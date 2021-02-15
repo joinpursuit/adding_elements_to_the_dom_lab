@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Number Statistics</title>
+    <link rel="stylesheet" href="./numberStatistics.css">
+    <script src="./numberStatistics.js" defer></script>
   </head>
   <body>
     <h1>Number Statistics</h1>
@@ -23,6 +25,15 @@
         the second paragraph should show the maximum value, 
         and the third paragraph should show the minimum value.
       </li>
+    </ul>
+
+    <input type="number" name="" id='number-statistics-number-input' placeholder="Please enter a number...">
+    <button type="submit" id='number-statistics-button' onclick="statistics()">Submit</button>
+
+    <ul id='number-statistics-numbers'>
+      <span>Average : <p id='number-statistics-average'></p></span>
+      <span>Maximun : <p id='number-statistics-maximum'></p></span>
+      <span>Minimum : <p id='number-statistics-minimum'></p></span>
     </ul>
   </body>
 </html>
