@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Number Statistics</title>
+    <script src = "./numberStatistics.js"></script>
   </head>
   <body>
     <h1>Number Statistics</h1>
@@ -11,6 +12,8 @@
         The user should be able to enter a number into a number input with
         id='number-statistics-number-input'
       </li>
+      <input type="number" id="number-statistics-number-input" placeholder="Enter Number">
+
       <li>They should then be able to click a "submit" button with id='number-statistics-button'</li>
       <li>
         Clicking the submit button will add that number to a list with
@@ -18,11 +21,16 @@
         page: id='number-statistics-average', id='number-statistics-maximum',
         and id='number-statistics-minimum'.
       </li>
+      <ul id='number-statistics-numbers'></ul>
+      <button id='number-statistics-button' type="submit" onclick="statistics()">Submit</button>
       <li>
         The first paragraph should show the average of all the numbers, 
         the second paragraph should show the maximum value, 
         and the third paragraph should show the minimum value.
       </li>
+      <p id="number-statistics-average"></p>
+      <p id = "number-statistics-maximum"></p>
+      <p id = "number-statistics-minimum"></p>
     </ul>
   </body>
 </html>
