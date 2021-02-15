@@ -5,6 +5,7 @@ const stringCopies = () => {
     while (i < numberInput) {
         let li = document.createElement("li");
         li.appendChild(document.createTextNode(textInput));
+        // li.textContent = textInput;
         document.querySelector("#text-duplicator-list").appendChild(li);
         i++
     }

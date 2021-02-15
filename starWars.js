@@ -205,15 +205,23 @@ window.onload = function () {
     ],
   };
 
+
   let planets = allPlanets.results;
-  for (let i = 0; i < planets.length; i++) {
-      let planetName = planets[i].name;
-      console.log(planetName);
-    let population = planets[i].population;
-        let li = document.createElement("li");
-    li.appendChild(
-      document.createTextNode(`${planetName} (pop. ${population})`)
-    );
+  planets.forEach((planet => {
+    const li = document.createElement("li");
+    li.textContent = `${planet.name} (pop. ${planet.population})`;
     document.querySelector("#planets-list").appendChild(li);
-  }
+  }))
+
+  
+  // let planets = allPlanets.results;
+  // for (let i = 0; i < planets.length; i++) {
+  //     let planetName = planets[i].name;
+  //   let population = planets[i].population;
+  //       let li = document.createElement("li");
+  //   li.appendChild(
+  //     document.createTextNode(`${planetName} (pop. ${population})`)
+  //   );
+  //   document.querySelector("#planets-list").appendChild(li);
+  // }
 };

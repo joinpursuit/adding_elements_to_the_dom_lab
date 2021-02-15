@@ -100,15 +100,22 @@ window.onload = function () {
     },
   };
 
+
   let users = allUsers.results;
-  for (let i = 0; i < users.length; i++) {
-    let firstName = users[i].name.first;
-    let lastName = users[i].name.last;
-    let nationality = users[i].nat;
-    let li = document.createElement("li");
-    li.appendChild(
-      document.createTextNode(`${firstName} ${lastName} (${nationality})`)
-    );
+  users.forEach((user => {
+    const li = document.createElement("li");
+    li.textContent = `${user.name.first} ${user.name.last} (${user.nat})`
     document.querySelector("#user-list").appendChild(li);
-  }
+  }))
+
+  // for (let i = 0; i < users.length; i++) {
+  //   let firstName = users[i].name.first;
+  //   let lastName = users[i].name.last;
+  //   let nationality = users[i].nat;
+  //   let li = document.createElement("li");
+  //   li.appendChild(
+  //     document.createTextNode(`${firstName} ${lastName} (${nationality})`)
+  //   );
+  //   document.querySelector("#user-list").appendChild(li);
+  // }
 };
