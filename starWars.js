@@ -199,7 +199,7 @@ const starWarsObj = [
   },
 ];
 
-starWarsObj.forEach((planets) => {
+starWarsObj.forEach(planets => {
   const list = document.createElement("li");
   let name = planets["name"];
   let pop = planets["population"];

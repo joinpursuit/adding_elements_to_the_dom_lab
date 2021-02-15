@@ -104,8 +104,3 @@ arrayOfObjects.forEach(user=>{
 
   document.querySelector("#user-list").appendChild(li) 
 })
-
-
-
-
-  //module.exports = arrayOfObjects

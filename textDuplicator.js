@@ -6,6 +6,5 @@ const textDuplicator = () => {
          let li=document.createElement("li")
          li.textContent = str
          document.querySelector('#text-duplicator-list').appendChild(li)
-
     }
 }
