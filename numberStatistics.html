@@ -26,12 +26,13 @@
       </li>
     </ul>
     <input type="number" id="number-statistics-number-input" placeholder="Enter a number here">
-    <li id="number-statistics-numbers" style="list-style-type: none";></li>   
-
+    <ul id="number-statistics-numbers" style="list-style-type: none";>
+    </ul>
+    <!-- <p id="num-stat-output">Waiting for input...</p> -->
     <p id="number-statistics-average"></p>
     <p id="number-statistics-maximum"></p>
     <p id="number-statistics-minimum"></p>
 
-    <button onclick="getNumStat()" id="number-statistics-button">Submit</button>
+    <button onclick="addInputToList()" id="number-statistics-button" type="submit">Submit</button>
   </body>
 </html>
