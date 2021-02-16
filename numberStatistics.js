@@ -22,17 +22,13 @@ const numberStatistics = () => {
   }
   let avg = sum / count;
 
-  document.querySelector(
-    "#number-statistics-average"
-  ).textContent = `This is the avg ${avg}`;
+  document.querySelector("#number-statistics-average").textContent = `This is the avg ${avg}`;
   
   let min = Infinity;
   for (const li of listItems) {
     if (li.textContent < min) {
       min = Number(li.textContent);
-      document.querySelector(
-        "#number-statistics-minimum"
-      ).textContent = `This is the min number ${min}`;
+      document.querySelector("#number-statistics-minimum").textContent = `This is the min number ${min}`;
     }
   }
 
@@ -40,9 +36,7 @@ const numberStatistics = () => {
   for (const li of listItems) {
     if (li.textContent > max) {
       max = Number(li.textContent);
-      document.querySelector(
-        "#number-statistics-maximum"
-      ).textContent = `This is the max number ${max}`;
+      document.querySelector("#number-statistics-maximum").textContent = `This is the max number ${max}`;
     }
   }
 };
