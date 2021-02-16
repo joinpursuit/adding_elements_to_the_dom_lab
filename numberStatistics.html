@@ -24,5 +24,53 @@
         and the third paragraph should show the minimum value.
       </li>
     </ul>
+
+    <input type="number" id="number-statistics-number-input" placeholder="Enter number here">
+    <button type="submit"  id='number-statistics-button' onclick="generate()">Get Statistics!</button>
+    
+    <ul id='number-statistics-numbers'></ul>
+
+  <p id='number-statistics-average'></p>
+  <p id='number-statistics-maximum'></p>
+  <p id='number-statistics-minimum'></p>
   </body>
+
+  <script>
+    let sum = 0
+    let count = 0 
+    let max = -Infinity 
+    let min = Infinity
+
+    function generate(){
+    const input = document.querySelector("#number-statistics-number-input").value 
+    const num = parseInt(input)
+
+    const list = document.querySelector("#number-statistics-numbers")
+    const newListItem = document.createElement("li")
+    newListItem.textContent = num
+    list.appendChild(newListItem)
+    
+    count += 1
+    sum += num
+
+    const avg = sum / count 
+    if (num > max){
+      max = num
+    }
+    if (num < min){
+      min = num
+    }
+
+    const firstP = document.querySelector("#number-statistics-average")
+    const secP = document.querySelector("#number-statistics-maximum")
+    const thirdP = document.querySelector("#number-statistics-minimum")
+
+    firstP.textContent = `The average is: ${avg}`
+    secP.textContent = `The maximum value is: ${max}`
+    thirdP.textContent = `The minimum value is: ${min}`
+
+    
+
+    }
+  </script>
 </html>
