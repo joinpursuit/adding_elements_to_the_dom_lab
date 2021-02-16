@@ -11,18 +11,59 @@
         The user should be able to enter a number into a number input with
         id='number-statistics-number-input'
       </li>
+      <input id="number-statistics-number-input" type="number" placeholder="Enter a Number"><br>
+
       <li>They should then be able to click a "submit" button with id='number-statistics-button'</li>
+        <button id="number-statistics-button" onclick="addToList()">Submit</button> 
+        <br>
+        <br>
+        <p id="number-statistics-average">Put Average Here</p>
+        <p id="number-statistics-maximum">Put Maximum Here</p>
+        <p id="number-statistics-minimum">Put Minimum Here</p> 
+
       <li>
         Clicking the submit button will add that number to a list with
         id='number-statistics-numbers'. There should be three paragraphs on the
         page: id='number-statistics-average', id='number-statistics-maximum',
         and id='number-statistics-minimum'.
       </li>
+      <br>
+      <br>
+      <ul id="number-statistics-numbers">List of Numbers</ul>
       <li>
         The first paragraph should show the average of all the numbers, 
         the second paragraph should show the maximum value, 
         and the third paragraph should show the minimum value.
       </li>
     </ul>
+    <script>
+      function addToList() {
+        let input = document.getElementById("number-statistics-number-input")
+        let storedNum = Number(input.value)
+        let liList = document.createElement("li")
+        console.log(typeof liList, liList)
+        let orderList = document.getElementById("number-statistics-numbers")
+        liList.textContent += storedNum;
+        orderList.appendChild(liList)
+        let average = document.getElementById("number-statistics-average")
+        let maximum = document.getElementById("number-statistics-maximum")
+        let minimum = document.getElementById("number-statistics-minimum")
+
+        let max = -Infinity;
+        let min = Infinity;
+        if(storedNum>max){
+          max = storedNum;
+          maximum.textContent = max;
+        }else if(storeNum < min){
+          storedNum = min;
+          minimum.textContent = minimum
+        }
+
+        for(let i=0;i<liList.length; i++){
+
+        }
+      }
+
+    </script>
   </body>
 </html>
