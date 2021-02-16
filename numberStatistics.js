@@ -1,6 +1,11 @@
 function statistics(){
     const number = document.getElementById('number-statistics-number-input')
     const num = number.value
+
+    const numList = document.createElement('li')
+    numList.innerText = num
+
+    console.log(numList)
    
     
 
@@ -19,5 +24,7 @@ maximun.textContent = num
 
 const minimum = document.querySelector("#number-statistics-minimum")
 minimum.textContent = num/num
+
+
 
 }
