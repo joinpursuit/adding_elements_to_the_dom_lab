@@ -17,7 +17,7 @@
 //       li.textContent = textInput.value;
 //       list.appendChild(li);
 //     }
-
+//const array = [] is a global array that can be added
 const expectStatistics = () => {
   const number = Number(
     document.getElementById("number-statistics-number-input").value
@@ -68,3 +68,52 @@ const maximum = (list) => {
   }
   return maxNum;
 };
+
+//Sparky Example
+// steps 1.grab user Input
+// 2. creat an li and give it the user input value
+// 3. add input to the list of numbers the unordered list
+// 4. then grab all li elements
+// 5. iterate through the li elements and calculate avg
+// 6. calculate max
+// 7 calculate min
+// 8 add these numbers (max,min,avg) to the p tags
+
+// const calulate = () => {
+//   const input = document.querySelector("#number-statistics-number-input")
+//     .valueAsNumber; //valueAsNumber changes the value to a number it replaces Number
+//   const li = document.createElement("li");
+//   li.textContent = input;
+//   document.querySelector("#number-statistics-numbers").appendChild("li");
+
+//   const listItems = document.querySelectorAll("#number-statistics-number li"); //this says select li can also use > decendants selectors
+//   let max = -Infinity;
+//   let min = Infinity;
+//   let sum = 0;
+
+//   for (let el of listItems) {
+//     sum += Number(el.textContent);
+//   }
+//   for (let el of listItems) {
+//     let num = Number(el.textContent);
+//     if (max < num) {
+//       max = num;
+//     }
+//   }
+//   for (let el of listItems) {
+//     let num = Number(el.textContent);
+//     if (min < num) {
+//       min = num;
+//     }
+//   }
+//   const avg = sum / listItems.length;
+//   const average = (document.querySelector("#number-statistics-average")
+//     //const average is a variable
+//   average.textContent = `This is the average ${avg}`; //created a new key of textContent and gave it = avg, this line we are reassigning the p tag to average
+
+//   const maximum = document.querySelector("#number-statistics-maximum")
+//   maximum.textContent = `This is the maximum ${max}`
+
+//   const minimum = document.querySelector("#number-statistics-minimum")
+//   minimum.textContent = `This is the minimum ${min}`
+// };
