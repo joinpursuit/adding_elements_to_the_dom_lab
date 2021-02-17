@@ -17,9 +17,9 @@
         <button id="number-statistics-button" onclick="addToList()">Submit</button> 
         <br>
         <br>
-        <p id="number-statistics-average">Put Average Here</p>
-        <p id="number-statistics-maximum">Put Maximum Here</p>
-        <p id="number-statistics-minimum">Put Minimum Here</p> 
+        <p id="number-statistics-average">The Average is: </p>
+        <p id="number-statistics-maximum">The Maximum is: </p>
+        <p id="number-statistics-minimum">The Minimum is: </p> 
 
       <li>
         Clicking the submit button will add that number to a list with
@@ -37,31 +37,48 @@
       </li>
     </ul>
     <script>
+      let max = -Infinity;
+        let min = Infinity;
+        let array = []
+        let sumOfNums = 0
+        let ave = 0
+
       function addToList() {
         let input = document.getElementById("number-statistics-number-input")
         let storedNum = Number(input.value)
         let liList = document.createElement("li")
-        console.log(typeof liList, liList)
         let orderList = document.getElementById("number-statistics-numbers")
         liList.textContent += storedNum;
         orderList.appendChild(liList)
         let average = document.getElementById("number-statistics-average")
         let maximum = document.getElementById("number-statistics-maximum")
         let minimum = document.getElementById("number-statistics-minimum")
+        array.push(storedNum);
+        sumOfNums += storedNum
 
-        let max = -Infinity;
-        let min = Infinity;
-        if(storedNum>max){
-          max = storedNum;
-          maximum.textContent = max;
-        }else if(storeNum < min){
-          storedNum = min;
-          minimum.textContent = minimum
+       
+        // if(storedNum>max){
+        //   max = storedNum;
+        //   maximum.textContent = "The Maximum is: " + max;
+        // }else if(storedNum < min){
+        //   min = storedNum;
+        //   minimum.textContent = "The Minimum is: " + min;
+        // }
+        for(let i=0;i<array.length;i++){
+          
+            // sumOfNums += array[i]
+            if(array[i] > max){
+              max = array[i]
+            } else if(sumOfNums<min){
+              min = array[i]
+            }
         }
-
-        for(let i=0;i<liList.length; i++){
-
-        }
+        let ave = sumOfNums/array.length
+        console.log(ave, sumOfNums,array.length)
+        maximum.textContent = "The Maximum is: " + max;
+        minimum.textContent = "The Minimum is: " + min;
+        average.textContent = "The Average is: " + ave;
+       
       }
 
     </script>
