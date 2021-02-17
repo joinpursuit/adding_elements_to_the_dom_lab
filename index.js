@@ -4,7 +4,6 @@ let counter = 0
 let min = Infinity
 let max = -Infinity
 function numberStatic(){
-    
     // 84 get added in the ul
       // get users input from the DOM
 const num = document.getElementById('number-statistics-number-input').value
@@ -43,8 +42,6 @@ p3.textContent =`Average: ${avg}`
 
 
 
-    // update average
-    
     
     //update min
     // const minimum = document.getElementById('id="number-statistics-minimum')
