@@ -4,14 +4,19 @@
     <title>Number Statistics</title>
   </head>
   <body>
+    <script src="numberStatistics.js" defer></script>
     <h1>Number Statistics</h1>
-
     <ul>
       <li>
         The user should be able to enter a number into a number input with
         id='number-statistics-number-input'
+        <br>
+        <input id="number-statistics-number-input" type="number" placeholder="Enter Number">
       </li>
-      <li>They should then be able to click a "submit" button with id='number-statistics-button'</li>
+      <li>They should then be able to click a "submit" button with id='number-statistics-button'
+        <br>
+        <button id="number-statistics-button" onclick="onSubmit()" type="submit">Submit!</button>
+      </li>
       <li>
         Clicking the submit button will add that number to a list with
         id='number-statistics-numbers'. There should be three paragraphs on the
@@ -24,5 +29,6 @@
         and the third paragraph should show the minimum value.
       </li>
     </ul>
+    <ul id="number-statistics-numbers"></ul>
   </body>
 </html>
