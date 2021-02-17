@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Text Duplicator</title>
+    <script src="textDuplicator.js" defer></script>
   </head>
   <body>
     <h1>Text Duplicator</h1>
@@ -21,5 +22,10 @@
         list items to an unordered list with id='text-duplicator-list'
       </li>
     </ul>
+    <input type="text" id="text-duplicator-string-input" placeholder="enter text here">
+    <input type="number" id="text-duplicator-number-input" placeholder="enter number here">
+    <button type="submit" id="text-duplicator-button" onclick="duplicator()">Duplicate!</button>
+    <br>
+    <ul id="text-duplicator-list"></ul>
   </body>
 </html>
