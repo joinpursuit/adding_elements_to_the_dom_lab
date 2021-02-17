@@ -1,0 +1,39 @@
+
+.container {
+    
+    
+    
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    
+    margin: 20px;
+    border: 1px solid black;
+    width: 80%;
+    max-width: 400px;
+    max-height: 214px;
+    border-radius: 15%;
+    text-align: center;
+  }
+
+  .container img {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    border-radius: 15%;
+  }
+
+.button {
+    background-color: #008CBA; 
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  }
