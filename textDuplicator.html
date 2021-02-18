@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Text Duplicator</title>
+    <script src="textduip.js" defer></script>
   </head>
   <body>
     <h1>Text Duplicator</h1>
@@ -10,6 +11,7 @@
       <li>
         The user should be able to enter a string into a text input with
         id='text-duplicator-string-input'
+        
       </li>
       <li>
         The user should be able to enter a number into a number input with
@@ -20,6 +22,14 @@
         Clicking the submit button will add that many copies of the string as
         list items to an unordered list with id='text-duplicator-list'
       </li>
+  
     </ul>
+    <ul id="text-duplicator-list">
+      
+    </ul>
+    <input id="text-duplicator-string-input" type="text" placeholder="Enter here">
+    <input id="text-duplicator-number-input" type="number" placeholder="Enter here">
+    <button id="text-duplicator-button"  type="submit" onclick="textDiplicator()">Submit</button>
+
   </body>
 </html>
