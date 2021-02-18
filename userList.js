@@ -109,3 +109,4 @@ const userList = () => {
   }
     
 }
+userList()
