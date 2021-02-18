@@ -42,10 +42,9 @@ const numberStatistics = () => {
     averagePTag.textContent = `Avg: ${avgNum}`
     maximumPTag.textContent = `Max: ${obj.maxNum}`
     minimumPTag.textContent = `Min: ${obj.minNum}`
-    //list sumbmisions
+    //list submissions
     let newLi = document.createElement("li")
     newLi.textContent = inputNum
     let domLocation = document.getElementById('number-statistics-numbers')
     domLocation.appendChild(newLi)
 }
-///////////Problem 3//////////////
