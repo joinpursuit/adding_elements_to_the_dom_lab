@@ -48,3 +48,4 @@ const numberStatistics = () => {
     let domLocation = document.getElementById('number-statistics-numbers')
     domLocation.appendChild(newLi)
 }
+///////////Problem 3//////////////
