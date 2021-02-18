@@ -1,40 +1,121 @@
-const getAverage = () => {
-    const num = Number(document.querySelector('#number-statistics-number-input').value)
-    
-    let uList = document.querySelector("#number-statistics-numbers")
-    
-    let listItem = document.createElement('li')
-    listItem.textContent = num
-    uList.appendChild(listItem)
 
-    let listLength = uList.children.length
+let arr = []
 
+const numberStats = () => {
+  let input = Number(document.querySelector('#number-statistics-number-input').value)
+  let ul = document.querySelector('#number-statistics-numbers')
+  let li = document.createElement('li')
+  let avg = document.querySelector('#number-statistics-average')
+  let max = document.querySelector('#number-statistics-maximum')
+  let min = document.querySelector('#number-statistics-minimum')
+
+  li.innerText = input
+  ul.appendChild(li)
+
+  arr.push(input)
+
+  const average = () => {
     let sum = 0
-    for(let i=0; i<listLength; i++){
-        sum += Number(uList.children[i].innerHTML)
-    }
-    
-    document.querySelector('#number-statistics-average').textContent = sum/listLength
-
-    let numArray = []
-    for(let i=0; i<listLength; i++){
-        numArray[i] = parseInt(uList.children[i].textContent)
-    }
-
-    let minimum = numArray[0]
-    numArray.forEach(num => {
-        num <=minimum ? minimum = num: minimum;
-    });
-
-    document.querySelector("#number-statistics-minimum").textContent = minimum;
-
-    let maximum = numArray[0]
-    numArray.forEach(num => {
-        num >= maximum ? maximum = num : maximum
+    arr.forEach((el) => {
+      sum += el
+      averageOfNums = sum / arr.length
+      return averageOfNums
     })
+  }
+  average()
+    
+  const maximum = () => {
+    maxVal = Math.max(...arr)
+    return maxVal
+  }
+  maximum()
 
-    document.querySelector("#number-statistics-maximum").textContent = maximum;
+  const minimum = () => {
+    minVal = Math.min(...arr)
+    return minVal
+  }
+  minimum()
+
+  avg.innerText = averageOfNums
+  max.innerText = maxVal
+  min.innerText = minVal
 }
+
+
+
+
+
+
+// let newArray = []
+
+// const getAverage = () => {
+//     let num = Number(document.querySelector("#number-statistics-number-input").value)
+//     let uList = document.querySelector('#number-statistics-numbers')
+//     let average = document.querySelector('#number-statistics-average')
+//     let max = document.querySelector('#number-statistics-maximum')
+//     let min = document.querySelector('#number-statistics-minimum')
+
+//     let li = document.createElement('li')
+//     li.innerText = num
+//     uList.appendChild(li)
+
+//     newArray.push(num)
+
+//     //Average 
+//     const findAverage = () => {
+//         let sum = 0
+//         newArray.forEach = ( (n) => {
+//             sum += n
+//             let avg = sum /newArray.length
+//             return avg
+//         })
+//         // for(let i = 0;i < newArray.length; i++){
+//         //     sum += newArray[i]
+//         //     let avg = sum/newArray.length
+//         //     return avg
+//         // }
+//     }
+//     findAverage()
+    
+//     average.innerText = avg
+//     //equal sign reassign the value avg
+
+
+//     //Max
+//     const findMaximum = () => {
+//         let maximum = Math.max(...newArray)   
+//         return maximum
+
+//     }
+//     findMaximum()
+
+//     max.innerText = maximum
+    
+//     //Min
+//     const findMinimum = () => {
+//         let minimum = Math.min(...newArray)
+//         return minimum
+//     }
+//     findMinimum()
+
+//     min.innerText= minimum
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------
 
 
 // const getAverage = () => {
