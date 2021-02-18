@@ -1,0 +1,45 @@
+
+.container {
+    
+    
+    
+    position: relative;
+   
+    
+    
+    margin: auto;
+    border: 1px solid black;
+    width: 80%;
+    max-width: 400px;
+    max-height: 214px;
+    border-radius: 15%;
+    
+  }
+
+  .container img {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    border-radius: 15%;
+  }
+
+.button {
+    background-color: #008CBA; 
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    margin: auto;
+    text-decoration: none;
+    display:block;
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+    width: 78px;
+    bottom: 130px;
+
+  }
+
+  body{
+    background:#1b1b1b;
+    color: white;
+  }

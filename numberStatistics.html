@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Number Statistics</title>
+    <link rel="stylesheet" href="./numberStatistics.css">
+    <script src="./numberStatistics.js" defer></script>
   </head>
   <body>
     <h1>Number Statistics</h1>
@@ -24,5 +26,20 @@
         and the third paragraph should show the minimum value.
       </li>
     </ul>
+
+    <input type="number" name="" id='number-statistics-number-input' placeholder="Please enter a number...">
+    <button type="submit" id='number-statistics-button' onclick="statistics()">Submit</button>
+    
+    
+
+    <br><br>
+    <span>Average : <p id='number-statistics-average'></p></span>
+    <span>Maximum : <p id='number-statistics-maximum'></p></span>
+    <span>Minimum : <p id='number-statistics-minimum'></p></span>
+    
+    <div class='container'>
+      <img src="https://www.sciencenews.org/wp-content/uploads/2018/05/050718_EC_numbers_feat.jpg" alt="numbers" style="width:100%">
+      <a href="#" class='button'>Refresh</a>
+    </div>
   </body>
 </html>
