@@ -1,5 +1,4 @@
-const userData = {
-  "results": [
+const userData = [
     {
       "gender": "female",
       "name": {
@@ -90,11 +89,23 @@ const userData = {
       },
       "nat": "CH"
     }
-  ],
-  "info": {
-    "seed": "2cb086ce097c87ee",
-    "results": 10,
-    "page": 1,
-    "version": "1.2"
-  }
-}
+];
+  
+// grap the element by id on the .html
+function userStored(el){
+    // create a var to store the user first name  and  last name 
+    let user = `${el.name.first} ${el.name.last} `
+    // return first name + last nanme and nationality
+    return user + `(${el.nat})`
+} 
+
+const listEle = document.getElementById('user-list')
+//create a loop to eterate through the list object.
+userData.forEach((elem)=>{
+    let newList = document.createElement('li')
+    newList.textContent = userStored(elem)
+    listEle.appendChild(newList)
+});
+// create and element
+//assign the element to your var element
+//append your new created element to element in your html.
