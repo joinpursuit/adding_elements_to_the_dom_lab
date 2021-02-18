@@ -99,18 +99,20 @@ const userData = {
     }
   }
 
+// let list = document.getElementById('user-list')
 let list = document.querySelector('#user-list')
- 
-const addUser = (arr) => {
+function printNames(arr) {
     for(let i =0; i < arr.length; i++){
         let firstName = arr[i].name.first
         let lastName = arr[i].name.last
-        let nationality = arr[i].nat
-        let user = `Name: ${firstName} ${lastName} Nationality: ${nationality}`
-        let li =document.createElement('li')
+        let nation = arr[i].nat
+        let user = `Name: ${firstName} ${lastName} Nationality: ${nation}`
+        let li = document.createElement("li")
         li.textContent = user
         list.appendChild(li)
     }
 }
 
-console.log(addUser(userData.results))
+console.log(printNames(userData.results))
+
+

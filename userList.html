@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="userList.js"></script>
+</head>
+<body>  
+       <ul: id="user-list">
+           User List
+        </ul> 
+
+        <script>
+            let list = document.querySelector('#user-list')
+ 
+            const addUser = (arr) => {
+                for(let i =0; i < arr.length; i++){
+                    let firstName = arr[i].name.first
+                    let lastName = arr[i].name.last
+                    let nationality = arr[i].nat
+                    let user = `Name: ${firstName} ${lastName} Nationality: ${nationality}`
+                    let li =document.createElement('li')
+                    li.textContent = user
+                    list.appendChild(li)
+                }
+ }
+        </script>
+</body>
+</html> 
+
