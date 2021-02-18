@@ -57,17 +57,14 @@
         sumOfNums += storedNum
 
        
-        // if(storedNum>max){
-        //   max = storedNum;
-        //   maximum.textContent = "The Maximum is: " + max;
-        // }else if(storedNum < min){
-        //   min = storedNum;
-        //   minimum.textContent = "The Minimum is: " + min;
-        // }
+    
         for(let i=0;i<array.length;i++){
-          
-            // sumOfNums += array[i]
-            if(array[i] > max){
+          if(min === Infinity && max === - Infinity){
+            min = array[i] ;
+             max = array[i];
+             
+          }
+            else if(array[i] > max){
               max = array[i]
             } else if(sumOfNums<min){
               min = array[i]

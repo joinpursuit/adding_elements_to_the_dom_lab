@@ -17,26 +17,17 @@ let people ={
     {
       "gender": "female",
       "name": {
-        "title": "Ms",
-        "first": "Milja",
-        "last": "Leppanen"
-      },
-      "nat": "FI"
-    },
-    {
-      "gender": "male",
-      "name": {
-        "title": "Monsieur",
-        "first": "Bruno",
-        "last": "Rolland"
+        "title": "mademoiselle",
+        "first": "ruth",
+        "last": "nicolas"
       },
       "nat": "CH"
     },
     {
-      "gender": "male",
+      "gender": "female",
       "name": {
-        "title": "Mr",
-        "first": "ماهان",
+        "title": "miss",
+        "first": "رها",
         "last": "سلطانی نژاد"
       },
       "nat": "IR"
@@ -44,93 +35,98 @@ let people ={
     {
       "gender": "female",
       "name": {
-        "title": "Ms",
-        "first": "Enni",
-        "last": "Kauppi"
-      },
-      "nat": "FI"
-    },
-    {
-      "gender": "male",
-      "name": {
-        "title": "Mr",
-        "first": "Davut",
-        "last": "Kahveci"
-      },
-      "nat": "TR"
-    },
-    {
-      "gender": "male",
-      "name": {
-        "title": "Mr",
-        "first": "Eddie",
-        "last": "Soto"
-      },
-      "nat": "US"
-    },
-    {
-      "gender": "male",
-      "name": {
-        "title": "Mr",
-        "first": "Kuzey",
-        "last": "Orbay"
-      },
-      "nat": "TR"
-    },
-    {
-      "gender": "female",
-      "name": {
-        "title": "Ms",
-        "first": "Maya",
-        "last": "Bowman"
+        "title": "mrs",
+        "first": "patricia",
+        "last": "hale"
       },
       "nat": "GB"
     },
     {
       "gender": "male",
       "name": {
-        "title": "Mr",
-        "first": "Deniz",
-        "last": "Storm"
+        "title": "mr",
+        "first": "fernando",
+        "last": "cooper"
       },
-      "nat": "NO"
+      "nat": "US"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "mrs",
+        "first": "یسنا",
+        "last": "صدر"
+      },
+      "nat": "IR"
     },
     {
       "gender": "male",
       "name": {
-        "title": "Mr",
-        "first": "Marvão",
-        "last": "Almeida"
+        "title": "mr",
+        "first": "eino",
+        "last": "tuomala"
       },
-      "nat": "BR"
+      "nat": "FI"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "gonca",
+        "last": "özkara"
+      },
+      "nat": "TR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "kyle",
+        "last": "castillo"
+      },
+      "nat": "US"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "miss",
+        "first": "olivia",
+        "last": "kumar"
+      },
+      "nat": "NZ"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "monsieur",
+        "first": "raymond",
+        "last": "durand"
+      },
+      "nat": "CH"
     }
   ],
   "info": {
-    "seed": "11051141398b7521",
+    "seed": "2cb086ce097c87ee",
     "results": 10,
     "page": 1,
-    "version": "1.3"
+    "version": "1.2"
   }
 }
     // let fullName = firstlast
  const orderedList = document.getElementById('user-list')
+ let value = []
  for(let person in people){
      value = people["results"]
+ }
      for(let i=0;i<value.length; i++){
-         name = value[i]["name"]["first"] +  " " + value[i]["name"]["last"]
-         nationality = value[i]["nat"]
-       fullName = name + " " + "(" + nationality +")"
+         console.log(value.length,value[i])
+         name = value[i]["name"]["first"] +  " " + value[i]["name"]["last"] + " " + "(" + value[i]["nat"] + ")"
         newElement = document.createElement('li')
-     newElement.textContent= fullName;
+     newElement.textContent= name;
      orderedList.appendChild(newElement)
      }
    
- }
-//   let newElement = document.createElement('li')
-//   newElement.textContent= fullName;
-//   orderedList.appendChild(newElement)
-
-
+ 
 
  </script>   
 </body>
