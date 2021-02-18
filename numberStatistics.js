@@ -1,22 +1,32 @@
+let array = []
+
 function onSubmit() {
-    //86 gets added to the ul:
         const num = Number(document.querySelector('#number-statistics-number-input').value)
-        // create a new li and set its text content to the users input
         const li = document.createElement('li')
+        const inputList = document.querySelector('#number-statistics-numbers')
+        const average = document.querySelector('#number-statistics-average')
+        const minimum = document.querySelector('#number-statistics-minimum')
+        const maximum = document.querySelector('#number-statistics-maximum')
         li.textContent = num
-        // get the ul from the DOM
-        const list = document.querySelector('#numbers-statistics-numbers')
-        // append users input to the ul
-        list.appendChild(li)
+        inputList.appendChild(li)
 
-    //update average
-    //update min
-    //update max
-        console.log('I have been clicked')
+        let min = Infinity
+        let max = -Infinity
+        let avgNum = 0
+        let totalNum = 0
+
+        array.push(num)
+        for (let i = 0; i < array.length; i++) {
+            totalNum += array[i]
+            if (array[i] < min) {
+                min = array[i]
+            }
+            if (array[i] > max) {
+                max = array[i]
+            }
+        }
+        avgNum = totalNum / array.length
+        average.textContent = avgNum
+        minimum.textContent = min
+        maximum.textContent = max
 }
-
-//got user input from the DOM
-//transformed that input (converted it to a number)
-//created a new DOM element and set it's text content
-//grabbed a parent element from the DOM
-//we append our new DOM element to parent
