@@ -16,11 +16,11 @@ const recalculate =() =>{
         listArray.push(Number(el.innerText))
     }
     pMax.textContent =max(listArray)
-    console.log(max(listArray))
+    //console.log(max(listArray))
     pMin.textContent =min(listArray)
-    console.log(min(listArray))
+    //console.log(min(listArray))
     pAverage.textContent =average(listArray)
-    console.log(average(listArray))
+   // console.log(average(listArray))
 
 }
 
