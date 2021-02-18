@@ -223,8 +223,14 @@ const starWarsPlanets = {
   }
 
 let list = document.getElementById('planets-list')
-
+let planet = starWarsPlanets.results
 const getPlanetStats = () =>{
+    planet.forEach((stats)=>{
+    let li = document.createElement('li')
+    li.textContent = `${stats["name"]} (pop. ${stats["population"]})`
+    list.appendChild(li)
+    })
     
-
 }
+
+getPlanetStats()
