@@ -224,7 +224,8 @@ const world = (el) =>{
     return `${el.name} (pop. ${el.population})`
 }
 
-const listplanet = document.getElementById('planets-list')
+const listplanet = document.getElementById("planets-list")
+
 planets.forEach((elem)=>{
     let listPlant = document.createElement("li")
     listPlant.textContent = world(elem)
