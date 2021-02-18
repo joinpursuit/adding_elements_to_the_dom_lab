@@ -11,15 +11,43 @@
         The user should be able to enter a string into a text input with
         id='text-duplicator-string-input'
       </li>
+      <input id="text-duplicator-string-input" type="text" placeholder="I eat strings. Feed me!">
       <li>
         The user should be able to enter a number into a number input with
         id='text-duplicator-number-input'
       </li>
+      <input id="text-duplicator-number-input" type="number" placeholder="Numbers are my favorite">
       <li>They should then be able to click a "submit" button with id='text-duplicator-button'</li>
+      <button id="text-duplicator-button" onclick="addStringToNum()">Submit</button>
       <li>
         Clicking the submit button will add that many copies of the string as
         list items to an unordered list with id='text-duplicator-list'
       </li>
     </ul>
+
+    <ul id="text-duplicator-list">Hi, I exist!</ul> 
+
+
+
+    <script>
+      function addStringToNum() {
+        let input = document.getElementById("text-duplicator-string-input");
+        let inputValue = input.value;
+        const num = document.getElementById("text-duplicator-number-input")
+        let numValue = num.value
+        let trueNum = Number(numValue)
+        let newEl = document.createElement("li")
+        newEl.textContent = inputValue;
+        let orderList = document.getElementById("text-duplicator-list")
+        // orderList.appendChild(newEl)
+        for(let i=1;i<=trueNum;i++){
+          console.log(trueNum)
+          let newEl = document.createElement("li")
+          newEl.textContent = inputValue;
+          orderList.appendChild(newEl)
+        }
+
+      }
+    </script>
   </body>
 </html>
