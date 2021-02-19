@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Text Duplicator</title>
+    <script src="./textDuplicator.js"></script>
   </head>
   <body>
     <h1>Text Duplicator</h1>
@@ -20,6 +21,13 @@
         Clicking the submit button will add that many copies of the string as
         list items to an unordered list with id='text-duplicator-list'
       </li>
+
     </ul>
+    <input type="text" id="text-duplicator-string-input" placeholder="Enter a string here">
+    <input type="number" id="text-duplicator-number-input" placeholder="Enter a number here">
+  
+    <ul id="text-duplicator-list"></ul>
+  
+    <button onclick="duplicateText()" id="text-duplicator-button" type="submit">Duplicate Text</button>
   </body>
 </html>
