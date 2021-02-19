@@ -32,6 +32,7 @@ const expectStatistics = () => {
   let list = document.querySelectorAll("#number-list li");
   p1.textContent = average(list);
   p2.textContent = maximum(list);
+  p3.textContent = minimum(list);
   //for (let value of number) {
   //let li = document.createElement("li");
 };
@@ -58,15 +59,14 @@ const maximum = (list) => {
   return maxNum;
 };
 
-const maximum = (list) => {
-  let maxNum = 0;
+const minimum = (list) => {
+  let minNum = Infinity;
   for (let value of list) {
-    if (Number(value.textContent) > maxNum) {
-      console.log(value);
-      maxNum = Number(value.textContent);
+    if (Number(value.textContent) < minNum) {
+      minNum = Number(value.textContent);
     }
   }
-  return maxNum;
+  return minNum;
 };
 
 //Sparky Example
