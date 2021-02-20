@@ -22,4 +22,27 @@
       </li>
     </ul>
   </body>
+  <input type="text" id="text-duplicator-string-input" placeholder="Enter text">
+    <input type="number" id="text-duplicator-number-input" placeholder="Enter number">
+    <button type="submit" id="text-duplicator-button" onclick="duplicateInput()">Submit</button>
+
+    <ul id="text-duplicator-list">
+
+    </ul>
+    <script>
+      function duplicateInput() {
+        const numInputVal = document.getElementById('text-duplicator-number-input').value;
+        const num = parseInt(numInputVal);
+
+        const text = document.getElementById('text-duplicator-string-input').value;
+        const list = document.getElementById('text-duplicator-list');
+
+        for (let i = 0; i < num; i ++) {
+          let el = document.createElement('li');
+          el.innerText = text;
+          list.appendChild(el);
+        }
+      }
+    </script>
+
 </html>

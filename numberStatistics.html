@@ -24,5 +24,51 @@
         and the third paragraph should show the minimum value.
       </li>
     </ul>
+    <input type='number' id='number-statistics-number-input' placeholder='Enter your number here'>
+    <button type='submit' id='number-statistics-button' onclick='numberStatistics()'>Submit</button>
+    <ul id='number-statistics-numbers'></ul>
+    <p id='number-statistics-average'>Paragraph 1 Average :</p>
+    <p id='number-statistics-maximum'>Paragraph 2 Max:</p>
+    <p id='number-statistics-minimum'>Paragraph 3 Min:</p>
+
+    <script>
+      let numbers = [];
+
+      function averageNums(numbs) {
+        let sum = 0;
+        for (number of numbs) {
+          sum += number;
+        }
+        return sum / numbs.length;
+      }
+
+      function numberStatistics() {
+        let input = document.getElementById('number-statistics-number-input').value;
+        let number = Number(input);
+        numbers.push(number);
+
+        let list = document.getElementById('number-statistics-numbers');
+        let display = document.createElement('li');
+        display.innerText = number;
+        list.appendChild(display);
+
+        
+        let average = averageNums(numbers);
+        let max = Math.max(...numbers);
+        let min = Math.min(...numbers);
+
+
+        let averageElement = document.getElementById('number-statistics-average')
+        averageElement.innerText = `Average: ${average}`;
+
+        let maxElement = document.getElementById('number-statistics-maximum');
+        maxElement.innerText = `Max: ${max}`;
+
+        let minElement = document.getElementById('number-statistics-minimum');
+        minElement.innerText = `Min: ${min}`;
+      }
+
+    </script>
+  
   </body>
 </html>
