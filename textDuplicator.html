@@ -2,24 +2,40 @@
 <html>
   <head>
     <title>Text Duplicator</title>
+    <script src="./textDuplicator.js" defer></script>
   </head>
   <body>
     <h1>Text Duplicator</h1>
 
-    <ul>
+    <!-- <ul>
       <li>
         The user should be able to enter a string into a text input with
         id='text-duplicator-string-input'
+        <input type="text" id="text-duplicator-string-input" placeholder="Enter a string here">
       </li>
+      <br> 
       <li>
         The user should be able to enter a number into a number input with
         id='text-duplicator-number-input'
+        <input type="text" id="text-duplicator-number-input" placeholder="Enter a number here">
       </li>
-      <li>They should then be able to click a "submit" button with id='text-duplicator-button'</li>
+     <br>
+      <li>They should then be able to click a "submit" button with id='text-duplicator-button'
+        <button id="text-duplicator-button" onclick="textDuplicator()">Submit</button>
+      </li>
       <li>
         Clicking the submit button will add that many copies of the string as
         list items to an unordered list with id='text-duplicator-list'
+        <ul id="text-duplicator-list"></ul>
       </li>
-    </ul>
+    </ul> --> 
+    <!-- The code above did not work so i just figured out a new way to write it simpler.  -->
+
+    <input type="text" id="text-duplicator-string-input" placeholder="Enter a string here">
+    <br> 
+    <input type="number" id="text-duplicator-number-input" placeholder="Enter a number here">
+    <br>
+    <button id="text-duplicator-button" onclick="textDuplicator()">submit</button>
+    <ul id="text-duplicator-list"></ul>
   </body>
 </html>

@@ -2,11 +2,12 @@
 <html>
   <head>
     <title>Number Statistics</title>
+    <script src="/numberStatistics.js" defer></script>
   </head>
   <body>
     <h1>Number Statistics</h1>
 
-    <ul>
+    <!-- <ul>
       <li>
         The user should be able to enter a number into a number input with
         id='number-statistics-number-input'
@@ -24,5 +25,13 @@
         and the third paragraph should show the minimum value.
       </li>
     </ul>
+     -->
+
+     <input type="number" id="number-statistics-number-input" placeholder="Enter number here">
+     <button id='number-statistics-button' onclick='statistics()'>submit</button>
+     <ul id='number-statistics-numbers'></ul>
+     <p id='number-statistics-average'></p>
+     <p id='number-statistics-maximum'></p>
+     <p id='number-statistics-minimum'></p>
   </body>
 </html>
