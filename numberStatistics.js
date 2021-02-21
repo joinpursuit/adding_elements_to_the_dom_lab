@@ -14,7 +14,6 @@ const numberSnek = () => {
     let sorter = inputArr.sort((lo, hi) => { return hi - lo })     
 
     max.textContent = `Maximum: ${sorter[0]}`
-    min.textContent = `Minimum: ${sorter[sorter.length - 1]}`
-    console.log(sorter[sorter.length-1])
+    min.textContent = `Minimum: ${sorter[sorter.length - 1]}`    
     avg.textContent = `Average: ${sorter.reduce((a, b) => { return (a + b) })/sorter.length}`    
 }
