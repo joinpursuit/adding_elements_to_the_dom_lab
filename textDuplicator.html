@@ -5,20 +5,29 @@
   </head>
   <body>
     <h1>Text Duplicator</h1>
-
+    <script src="textDuplicator.js" defer></script>
     <ul>
       <li>
         The user should be able to enter a string into a text input with
         id='text-duplicator-string-input'
+        <br>
+        <input id="text-duplicator-string-input" type="text" placeholder="Enter string here">
       </li>
       <li>
         The user should be able to enter a number into a number input with
         id='text-duplicator-number-input'
+        <br>
+        <input id="text-duplicator-number-input" type="number" placeholder="Enter number here">
       </li>
-      <li>They should then be able to click a "submit" button with id='text-duplicator-button'</li>
+      <li>They should then be able to click a "submit" button with id='text-duplicator-button'
+        <br>
+        <button id='text-duplicator-button' onclick="duplicator()" type="submit">Submit</button>
+      </li>
       <li>
         Clicking the submit button will add that many copies of the string as
         list items to an unordered list with id='text-duplicator-list'
+        <br>
+        <p id="text-duplicator-list">Waiting for input...</p>
       </li>
     </ul>
   </body>
