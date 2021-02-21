@@ -35,24 +35,19 @@ Make a website (`userList.html`) that displays a list with id='user-list' contai
 ```js
 {
   "results": [
-    {
-      "gender": "female",
-      "name": {
-        "title": "mademoiselle",
+    {  "gender": "female", "name": 
+      { "title": "mademoiselle",
         "first": "ruth",
-        "last": "nicolas"
-      },
-      "nat": "CH"
-    },
-    {
-      "gender": "female",
-      "name": {
-        "title": "miss",
-        "first": "رها",
-        "last": "سلطانی نژاد"
-      },
-      "nat": "IR"
-    },
+        "last": "nicolas" },
+      "nat": "CH" },
+      
+    { "gender": "female",
+        "name": {
+          "title": "miss",
+          "first": "رها",
+          "last": "سلطانی نژاد"
+        },
+      "nat": "IR" },
     {
       "gender": "female",
       "name": {

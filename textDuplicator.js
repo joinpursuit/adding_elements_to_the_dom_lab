@@ -6,8 +6,7 @@ const duplicator = () => {
     for (let i = 1; i <= inputNum; i++){
         let li = document.createElement('li')
         li.textContent = input;
-        output.appendChild(li)
-        console.log(i)
+        output.appendChild(li)        
     }
 }
 
