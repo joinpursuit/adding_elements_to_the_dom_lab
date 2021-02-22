@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Number Statistics</title>
+    <script src="numStats.js" defer></script>
   </head>
   <body>
     <h1>Number Statistics</h1>
@@ -21,8 +22,16 @@
       <li>
         The first paragraph should show the average of all the numbers, 
         the second paragraph should show the maximum value, 
-        and the third paragraph should show the minimum value.
+        and the third paragraph  should show the minimum value.
       </li>
     </ul>
+    <input id="number-statistics-number-input" type="number" placeholder="Enter a number">
+    <ul id="number-statistics-numbers"></ul>
+
+    <p id="number-statistics-average"></p>
+    <p id="number-statistics-maximum"></p>
+    <p id="number-statistics-minimum"></p>
+
+    <button id="number-statistics-button" onclick="numberStats()">Submit</button>
   </body>
 </html>
