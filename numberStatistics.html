@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Number Statistics</title>
+    <script src="numberStatistics.js" defer></script>
   </head>
   <body>
     <h1>Number Statistics</h1>
@@ -24,5 +25,11 @@
         and the third paragraph should show the minimum value.
       </li>
     </ul>
+    <input type="number" id="number-statistics" placeholder="enter a number...">
+      <button onclick="onSubmit()" id="button">submit</button>
+      <p id="average">average</p>
+      <p id="min"></p>minimum<br>
+      <p id="max"></p>maximum<br>
+      <ul id="numbers">numbers list</ul>
   </body>
 </html>
