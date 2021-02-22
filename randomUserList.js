@@ -105,7 +105,7 @@ for (user of people.results) {
   //iterate through object
   let newName = document.querySelector('li')
   //assign new element to variable to be linked to dom
-  newName.textContent = `${user.name.first} ${user.name.last} :${user.nat}`
+  newName.textContent = `${user.name.first} ${user.name.last} (${user.nat})`
   //create cnew content of new element
   nameList.appendChild(newName)
   //create element
