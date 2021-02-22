@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>Text Duplicator</title>
+    <script src="textDuplicate.js" defer></script>
   </head>
   <body>
     <h1>Text Duplicator</h1>
-
+    <ul id='text-duplicator-list'></ul>
     <ul>
       <li>
         The user should be able to enter a string into a text input with
@@ -21,5 +22,8 @@
         list items to an unordered list with id='text-duplicator-list'
       </li>
     </ul>
+    <input type = 'text' id='text-duplicator-string-input' placeholder="Enter text here"/>
+    <input type = 'number' id='text-duplicator-number-input' placeholder="Enter number here"/>
+    <button type = 'submit' id = 'text-duplicator-button' onclick='duplicate()'>Submit</button>
   </body>
 </html>
