@@ -225,6 +225,6 @@ let starWars = {
   let list = document.querySelector("#planets-list")
   for(let planet of starWars.results){
       let newList = document.createElement("li")
-      newList.textContent = `${per.name} (pop. ${per.population})`
+      newList.textContent = `${planet.name} (pop. ${planet.population})`
       list.appendChild(newList)
   }
