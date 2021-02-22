@@ -103,7 +103,7 @@ const nameList = document.querySelector('#user-list')
 //assign ul variable
 for (user of people.results) {
   //iterate through object
-  let newName = document.querySelector('li')
+  let newName = document.createElement('li')
   //assign new element to variable to be linked to dom
   newName.textContent = `${user.name.first} ${user.name.last} (${user.nat})`
   //create cnew content of new element
