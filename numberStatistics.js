@@ -31,9 +31,6 @@ const getAverage = () =>{
     maxNum.textContent = `Max Number: ${maxVal}`
     minNum.textContent = `Min Number: ${minVal}`
 
-    
-  
-    
 
-}
+};
 
