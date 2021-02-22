@@ -2,10 +2,16 @@
 <html>
   <head>
     <title>Number Statistics</title>
+    <script src="statistics.js" defer></script>
   </head>
   <body>
     <h1>Number Statistics</h1>
-
+<p1 id="number-statistics-average"></p1>
+<p2 id="number-statistics-maximum"></p2>
+<p3 id="number-statistics-minimum"></p3>
+<ul id="number-statistics-numbers">
+  
+</ul>
     <ul>
       <li>
         The user should be able to enter a number into a number input with
@@ -22,6 +28,8 @@
         The first paragraph should show the average of all the numbers, 
         the second paragraph should show the maximum value, 
         and the third paragraph should show the minimum value.
+        <input id="number-statistics-number-input" type="number" placeholder="Enter your number here">
+      <button id="number-statistics-button" type="submit" onclick="averageStatic()">Submit</button>
       </li>
     </ul>
   </body>
