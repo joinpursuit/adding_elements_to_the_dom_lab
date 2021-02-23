@@ -1,8 +1,11 @@
+// made into functions with Sparky's guidance
 const numberStatistics = () => {
 
 liNewTag()
 
   const listItems = [...document.querySelectorAll(".numbers")];
+  console.log(listItems)
+  debugger
 
   let sum = sumNum(listItems);
   let avg = sum / listItems.length;

@@ -1,3 +1,4 @@
+// by Vanessa
 const numberStatistics = () => {
     const userInput = Number(document.querySelector("#number-statistics-number-input").value);
     const divisor = Number(document.querySelectorAll("#number-statistics-numbers li").length + 1) ;

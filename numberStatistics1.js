@@ -1,3 +1,4 @@
+// by Jordan and Adam
 const nums = [];
 
 const numberStatistics = () => {
