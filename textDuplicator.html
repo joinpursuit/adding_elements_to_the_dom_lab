@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Text Duplicator</title>
+    <script src="textDuplicator.js" defer></script>
   </head>
   <body>
     <h1>Text Duplicator</h1>
@@ -11,6 +12,7 @@
         The user should be able to enter a string into a text input with
         id='text-duplicator-string-input'
       </li>
+      
       <li>
         The user should be able to enter a number into a number input with
         id='text-duplicator-number-input'
@@ -22,4 +24,11 @@
       </li>
     </ul>
   </body>
+
+<input type="text" id="text-duplicator-string-input" >
+<input type="number" id="text-duplicator-number-input" >
+<ul id="text-duplicator-list"></ul>
+<button id="text-duplicator-button" type="submit" onclick="duplicator()">Submit</button>
+
+
 </html>
