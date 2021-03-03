@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Text Duplicator</title>
+    <script src="textDuplicator.js" defer></script>
   </head>
   <body>
     <h1>Text Duplicator</h1>
@@ -15,11 +16,39 @@
         The user should be able to enter a number into a number input with
         id='text-duplicator-number-input'
       </li>
-      <li>They should then be able to click a "submit" button with id='text-duplicator-button'</li>
+      <li>
+        They should then be able to click a "submit" button with
+        id='text-duplicator-button'
+      </li>
       <li>
         Clicking the submit button will add that many copies of the string as
         list items to an unordered list with id='text-duplicator-list'
       </li>
     </ul>
+
+    <input type="text" id="text-duplicator-string-input" />
+
+    <input type="number" id="text-duplicator-number-input" min="0" />
+    <button onClick="textDuplicator()" type="submit" id="text-duplicator-button">Submit</button>
+
+    <ul id="text-duplicator-list"></ul>
+
+    <script>
+      const textDuplicator = () => {
+        const textInput = document.querySelector(
+          "#text-duplicator-string-input"
+        ).value;
+        const numberInput = Number(
+          document.querySelector("#text-duplicator-number-input").value
+        );
+        const ul = document.querySelector("#text-duplicator-list");
+
+        for (let i = 0; i < numberInput; i++) {
+          let li = document.createElement("li");
+          li.textContent = textInput;
+          ul.appendChild(li);
+        }
+      };
+    </script>
   </body>
 </html>
