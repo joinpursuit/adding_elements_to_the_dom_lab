@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/joinpursuit/adding_elements_to_the_dom_lab#readme",
   "devDependencies": {
-    "cypress": "^6.1.0"
+    "cypress": "^14.5.2"
   }
 }
